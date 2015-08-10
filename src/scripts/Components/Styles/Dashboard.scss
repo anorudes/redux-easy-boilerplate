@@ -1,0 +1,124 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+:local(.styles) {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 12px;
+  cursor: default;
+
+  .lineChart {
+    width: 400px;
+    height: 250px;
+  }
+
+  .tooltip {
+    clear: both;
+    box-sizing: border-box;
+    position: fixed;
+    text-align: center;
+
+    width: auto;
+    min-width: 50px;
+    height: 80px;
+
+    padding: 0 10px;
+    margin: 0;
+
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+
+    background: white;
+
+    border: 0;
+    border-radius: 2px;
+    pointer-events: none;
+    box-shadow: 0 0 5px 0 #CCC;
+
+    > {
+      #key {
+        min-height: 1px;
+        font-size: 14px;
+        height: auto;
+        margin-top: 3px;
+        font-weight: 300;
+        padding: 0;
+      }
+      #sep {
+        min-height: 1px;
+        padding: 0;
+        height: 2px;
+        margin: 3px auto;
+        background: #ddd;
+        width: 90%;
+      }
+      #date {
+        min-height: 1px;
+        height: auto;
+        padding: 0;
+        font-weight: 300;
+        font-size: 12px;
+        margin: 0;
+      }
+      #val {
+        min-height: 1px;
+        height: auto;
+        padding: 3px 0 0;
+        font-weight: 500;
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  }
+
+  .tooltip-tail {
+    position: fixed;
+    bottom: -8px;
+    left: -20px;
+
+    width: 0;
+    height: 0;
+
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid white;
+  }
+
+  .dashboard > .dataTable {
+    width: 400px;
+    overflow: scroll;
+    margin-bottom: 20px;
+
+    td {
+      padding: 2px 6px;
+
+      &.value {
+        text-align: right;
+      }
+    }
+
+    thead {
+      border-bottom: 1px;
+
+      > tr > td {
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
+        padding: 3px 6px;
+        border-bottom: 1px solid black;
+      }
+    }
+
+    > table {
+      width: 100%;
+    }
+
+    tfoot > tr > td {
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+      padding: 3px 6px;
+      border-top: 1px solid black;
+    }
+  }
+}

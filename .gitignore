@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.sass-cache/
+bower_components/
+app/bower_components
+.DS_Store
+.tmp
+ios
