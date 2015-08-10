@@ -51,13 +51,12 @@ module.exports = {
         loader: "url?limit=10000&minetype=image/svg+xml"
       }, {
         test: /\.js$/,
-        loaders: ['react-hot', 'babel-loader?optional[]=runtime&stage=0'],
+        loaders: ['react-hot', 'babel-loader?optional[]=runtime&stage=0&plugins=jsx-control-statements/babel'],
         exclude: /node_modules/
       }, {
         test: /\.scss$/,
         loader: "css!postcss-loader!sass"
-      }
-    ],
+      }]
   },
   postcss: function() {
     return [autoprefixer, csswring];

@@ -2,9 +2,8 @@
  * action types
  */
 
-export function setShops(shop) {
+export function Add() {
   return {
-    type: 'SETSHOPS',
-    shop
+    type: 'ADD'
   };
 }

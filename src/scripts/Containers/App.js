@@ -1,15 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import DashboardApp from '../Components/Dashboard';
-
-// Component styles
-import 'style!./../Components/Styles/Application.scss';
-let applicationStyles = require('./../Components/Styles/Application.scss').locals.styles;
+import Main from '../Components/Main';
 
 export default class App extends Component {
-  render() {  
+  render() {
     return (
-      <div className = { `${ applicationStyles }` }>
-        <DashboardApp />
+      <div>
+        <Main />
       </div>
     );
   }

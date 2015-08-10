@@ -1,8 +1,7 @@
-# Sales Dashboard
+# Redux Easy Boilerplate
 
-
-## Development
-
-```
-$ npm start
-```
+## About
+Redux<br />
+Bootstrap<br />
+Sass modules<br />
+For, If
