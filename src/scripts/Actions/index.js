@@ -2,9 +2,10 @@
  * action types
  */
 
-export function add() {
+export function add(text) {
   return {
-    type: 'ADD'
+    type: 'ADD',
+    text
   };
 }
 

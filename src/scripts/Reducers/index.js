@@ -5,7 +5,7 @@ export function items(state = initialState, action) {
 
   switch (action.type) {
   case 'ADD':
-    newState.push("test");
+    newState.push(action.text);
     return newState;
     case 'DELETE':
       newState.pop();
