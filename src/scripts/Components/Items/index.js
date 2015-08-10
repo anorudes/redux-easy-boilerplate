@@ -2,29 +2,32 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./Styles/items.scss';
-let mainStyles = require('./Styles/items.scss').locals.styles;
+import 'style!./styles.scss';
+let mainStyles = require('./styles.scss').locals.styles;
 
-import { Add } from '../Actions/Actions.js';
+import { add, del } from '../../Actions';
 
 class Items extends Component {
   render() {
     const { dispatch, items } = this.props;
     return (
       <div className="Main">
+        <hr />
         <For each="item" of={ items }>
           <div>{ item }</div>
         </For>
         <hr />
         <div className={ `${ mainStyles }` }>
-          <button className="btn btn-default" onClick={ () => dispatch(Add()) }>add</button>
+          <button className="btn btn-default" onClick={ () => dispatch(add()) }>add</button>
+          {' '}
+          <button className="btn btn-default" onClick={ () => dispatch(del()) }>delete</button>
         </div>
       </div>
     );
   }
 }
 
-function select(state) {
+let select = (state) => {
   return {
     items: state.items
   };
