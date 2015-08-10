@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./Styles/Main.scss';
-let mainStyles = require('./Styles/Main.scss').locals.styles;
+import 'style!./Styles/items.scss';
+let mainStyles = require('./Styles/items.scss').locals.styles;
 
 import { Add } from '../Actions/Actions.js';
 
-class Main extends Component {
+class Items extends Component {
   render() {
     const { dispatch, items } = this.props;
     return (
@@ -17,7 +17,7 @@ class Main extends Component {
         </For>
         <hr />
         <div className={ `${ mainStyles }` }>
-          <button onClick={ () => dispatch(Add()) }>add</button>
+          <button className="btn btn-default" onClick={ () => dispatch(Add()) }>add</button>
         </div>
       </div>
     );
@@ -30,4 +30,4 @@ function select(state) {
   };
 }
 
-export default connect(select)(Main);
+export default connect(select)(Items);

@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose stack Error: Invalid name: "Redux Easy Boilerplate"
+4 verbose stack     at ensureValidName (c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\fixer.js:327:15)
+4 verbose stack     at Object.module.exports.fixNameField (c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\fixer.js:210:5)
+4 verbose stack     at c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\normalize.js:32:38
+4 verbose stack     at Array.forEach (native)
+4 verbose stack     at normalize (c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\normalize.js:31:15)
+4 verbose stack     at final (c:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:338:5)
+4 verbose stack     at then (c:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:113:5)
+4 verbose stack     at c:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:300:12
+4 verbose stack     at evalmachine.<anonymous>:334:14
+4 verbose stack     at c:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:102:5
+5 verbose cwd C:\xamppN\htdocs\redux-easy
+6 error Windows_NT 6.3.9600
+7 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+8 error node v0.12.7
+9 error npm  v2.11.3
+10 error Invalid name: "Redux Easy Boilerplate"
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
