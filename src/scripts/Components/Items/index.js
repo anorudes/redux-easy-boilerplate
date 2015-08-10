@@ -20,7 +20,6 @@ class Items extends Component {
     }
     return (
       <div className={ `${ styles }`} >
-        <hr />
         <For each="item, index" of={ items }>
           <div key={ index }>{ item }</div>
         </For>
