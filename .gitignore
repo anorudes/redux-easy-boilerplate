@@ -53,3 +53,10 @@ app/bower_components
 .DS_Store
 .tmp
 ios
+.yo-rc.json
+.jshintrc
+.gitattributes
+.editorconfig
+.eslintrc
+.babelrc
+npm-debug.log
