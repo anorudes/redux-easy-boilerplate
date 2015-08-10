@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 // Component styles
 import 'style!./styles.scss';
 let styles = require('./styles.scss').locals.styles;
