@@ -4,6 +4,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer-core');
 var csswring = require('csswring');
 
+// Custome Bootstrap config
+require('./src/scripts/bootstrap.config.js');
+
 module.exports = {
 
   entry: [
