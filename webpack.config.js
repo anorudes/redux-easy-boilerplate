@@ -22,7 +22,10 @@ module.exports = {
     new ExtractTextPlugin('bundle.css'),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      jQuery: "jquery"
+    })
   ],
 
   resolve: {
