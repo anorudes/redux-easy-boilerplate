@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./styles/Items.scss';
-let styles = require('./styles/Items.scss').locals.styles;
+import styles from './styles.js';
 
 // Actions
 import { add, del } from '../../actions';

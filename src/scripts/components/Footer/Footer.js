@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./styles/Footer.scss';
-let styles = require('./styles/Footer.scss').locals.styles;
+import styles from './styles.js';
 
 export default class Footer extends Component {
   constructor() {
