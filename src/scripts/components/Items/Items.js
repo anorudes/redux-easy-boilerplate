@@ -22,6 +22,9 @@ class Items extends Component {
     }
     return (
       <div className={ `${ styles }`} >
+        <If condition={ !items.length }>
+          <span>Array is empty</span>
+        </If>
         <For each='item' of={ items }>
           <div key={ item }>{ item }</div>
         </For>
