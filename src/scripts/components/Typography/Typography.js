@@ -40,7 +40,7 @@ export default class Typography extends Component {
             Bootstrap
           </li>
           <li>
-            CSS Modules
+            SASS Modules
           </li>
         </ul>
       </div>
