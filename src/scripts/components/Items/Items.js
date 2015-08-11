@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./styles/Items.scss';
-let styles = require('./styles/Items.scss').locals.styles;
+import styles from './styles.js';
 
 // Actions
 import { add, del } from '../../actions';
@@ -23,6 +22,9 @@ class Items extends Component {
         <h3>
           Redux test
         </h3>
+        <If condition={ !items.length }>
+          <span>Array is empty</span>
+        </If>
         <For each='item' of={ items }>
           <div key={ item }>{ item }</div>
         </For>

@@ -1,7 +1,7 @@
 # Redux Easy Boilerplate
 
 ## About
-Redux<br />
+Redux 1.0.0-rc<br />
 Bootstrap<br />
 Sass modules<br />
 [jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)

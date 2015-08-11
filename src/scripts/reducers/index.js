@@ -5,11 +5,11 @@ export function items(state = initialState, action) {
 
   switch (action.type) {
   case 'ADD':
-    newState.push(action.text);
+    newState.push(action.text + 'max');
     return newState;
-    case 'DELETE':
-      newState.pop();
-      return newState;
+  case 'DELETE':
+    newState.pop();
+    return newState;
   default:
     return state;
   }
