@@ -21,8 +21,8 @@ class Items extends Component {
     }
     return (
       <div className={ `${ styles }`} >
-        <For each="item, index" of={ items }>
-          <div key={ index }>{ item }</div>
+        <For each="item" of={ items }>
+          <div key={ item }>{ item }</div>
         </For>
         <hr />
         <div className="form-group">
