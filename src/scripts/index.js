@@ -13,9 +13,9 @@ let devTools = true;
 React.render(
   <div>
     <Provider store={ store }>
-      {() => <Main />}
+      { () => <Main /> }
     </Provider>
-    {devTools && renderDevTools(store)}
+    { /* devTools && renderDevTools(store) */ }
   </div>,
   document.getElementById('App')
 );
