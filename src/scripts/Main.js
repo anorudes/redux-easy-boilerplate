@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 import 'bootstrap-webpack';
 
-import Items from './components/Items';
+// Global styles
+import 'style!./styles/main.scss';
+
+import Items from './components/Items.js';
 
 export default class Main extends Component {
   render() {

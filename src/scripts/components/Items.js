@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./styles.scss';
-let styles = require('./styles.scss').locals.styles;
+import 'style!./styles/Items.scss';
+let styles = require('./styles/Items.scss').locals.styles;
 
-import { add, del } from '../../actions';
+import { add, del } from '../actions';
 
 class Items extends Component {
   constructor() {
