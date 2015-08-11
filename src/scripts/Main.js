@@ -6,7 +6,7 @@ import 'bootstrap-webpack';
 import 'style!./styles/Main.scss';
 
 // Application components
-import { Header, Items, Footer } from './components/';
+import { Header, Typography, Items, Footer } from './components/';
 
 export default class Main extends Component {
   render() {
@@ -14,7 +14,14 @@ export default class Main extends Component {
       <section>
         <Header />
         <div className='container'>
-          <Items />
+          <div className='row'>
+            <div className='col-sm-6 col-ls-6'>
+              <Typography />
+            </div>
+            <div className='col-sm-6 col-ls-6'>
+              <Items />
+            </div>
+          </div>
         </div>
         <Footer />
       </section>

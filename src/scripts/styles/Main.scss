@@ -1,6 +1,10 @@
 /* 
   Global styles 
 */
+
+@import 'fonts/Roboto';
+@import 'typography';
+
 :global(body) {
-  position: relative;
+  position: relative; 
 }
