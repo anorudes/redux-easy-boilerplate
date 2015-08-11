@@ -4,7 +4,7 @@
 Redux<br />
 Bootstrap<br />
 Sass modules<br />
-For, If
+[jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)
 
 ## Installation
 ```
