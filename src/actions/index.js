@@ -3,4 +3,4 @@
  */
 
 export { add, del } from './items.js';
-export { complex } from './complex.js';
+export { ComplexComponent } from './ComplexComponent.js';

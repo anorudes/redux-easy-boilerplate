@@ -1,6 +1,6 @@
-let complexData = 'app data'
+let initialState = 'ComplexComponent Data';
 
-export function complex(state = complexData, action) {
+export function ComplexComponent(state = initialState, action) {
   let newState = {...state};
 
   switch (action.type) {

@@ -1,6 +1,6 @@
-let initialState = 'app data'
+let initialState = '<%= name %> Data';
 
-export function complex(state = initialState, action) {
+export function <%= name %>(state = initialState, action) {
   let newState = {...state};
 
   switch (action.type) {
