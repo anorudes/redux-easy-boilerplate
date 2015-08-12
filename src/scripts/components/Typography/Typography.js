@@ -21,22 +21,25 @@ export default class Typography extends Component {
             Webpack
           </li>
           <li>
+            Babel
+          </li>
+          <li>
             React and React Hot Reload
           </li>
           <li>
             Redux
           </li>
           <li>
-            Neater If and For for React JSX
-          </li>
-          <li>
-            Babel
+            SASS Modules
           </li>
           <li>
             Bootstrap
           </li>
           <li>
-            SASS Modules
+            Neater If and For for React JSX
+          </li>
+          <li>
+            Redux logger
           </li>
         </ul>
       </div>

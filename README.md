@@ -5,6 +5,7 @@ Redux 1.0.0-rc<br />
 Bootstrap<br />
 Sass modules<br />
 [jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)
+[redux-logger](https://github.com/fcomb/redux-logger)
 
 ## Installation
 ```

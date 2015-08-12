@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { combineReducers } from 'redux';
+import { applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import Main from './Main';
 import * as reducers from './reducers';
 import { createStore, renderDevTools } from './store_enhancers/devTools';
+import logger from 'redux-logger';
 
 let reducersApp = combineReducers(reducers);
-let store = createStore(reducersApp);
+const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+let store = createStoreWithMiddleware(reducersApp);
 
 let devTools = true;
 
