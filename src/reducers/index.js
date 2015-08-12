@@ -1,3 +1,5 @@
+import { GETAPPLICATIONSETTINGS } from '../actions/';
+
 let initialState = [];
 
 export function items(state = initialState, action) {
@@ -18,18 +20,17 @@ export function items(state = initialState, action) {
   }
 }
 
-// import complexData from './complex.js';
-let complexData = 'complex data';
-export function complex(state = complexData, action) {
+// import applicationData from './Application.js';
+let applicationData = 'app data'
+export function application(state = applicationData, action) {
   let newState = {...state};
 
   switch (action.type) {
-  
-    case 'GETDATA':
-      console.log(newState)
+
+    case 'GETAPPLICATIONSETTINGS':
       return newState;
 
     default:
-      return state;
-  }
+      return newState;
+    }
 }

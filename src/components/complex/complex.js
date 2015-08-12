@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import styles from './Complex.styles.js';
 
 // Actions
-import { getData } from '../../actions/';
+import { getApplicationData } from '../../actions/';
 
 // Note:
 //
@@ -27,9 +27,9 @@ export default class Complex extends Component {
   }
 }
 
-let select = (state) => {
+function select(state) {
   return {
-    data: state.complex
+    data: state.application,
   };
 }
 

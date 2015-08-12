@@ -14,9 +14,8 @@ export function del() {
   };
 }
 
-export function getData() {
+export function getApplicationSettings() {
   return {
-    type: 'GETDATA'
+    type: 'GETAPPLICATIONSETTINGS',
   };
 }
-
