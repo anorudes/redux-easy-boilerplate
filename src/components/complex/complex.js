@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import styles from './<%= name %>.styles.js';
+import styles from './complex.styles.js';
 
 // Actions
 // import { add, del } from '../../actions';
@@ -10,12 +10,12 @@ import styles from './<%= name %>.styles.js';
 // Note:
 //
 // To export compontn add line to the ./src/components/index.js:
-// export { default as <%= name %> } from './<%= name %>/<%= name %>.js';
+// export { default as complex } from './complex/complex.js';
 //
 // And to import component ./src/Main.js
-// import { <%= name %> } from './components/';
+// import { complex } from './components/';
 
-export default class <%= name %> extends Component {
+export default class complex extends Component {
   render() {
     const { dispatch, items } = this.props;
     return (

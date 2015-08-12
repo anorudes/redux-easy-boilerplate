@@ -23,7 +23,7 @@ class Items extends Component {
           <span>Array is empty</span>
         </If>
         <For each='item, index' of={ items }>
-          <div key={ index }>{item.numb}) { item.text }</div>
+          <div key={ index }>{ item.numb }) { item.text }</div>
         </For>
         <hr />
         <div className='form-group'>
