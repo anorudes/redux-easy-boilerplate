@@ -2,5 +2,5 @@
  * action types
  */
 
-export { add, del } from './items.js';
+export { add, del } from './Items.js';
 export { ComplexComponent } from './ComplexComponent.js';
