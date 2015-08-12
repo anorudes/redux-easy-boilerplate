@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   template = require('gulp-template'),
   fs = require('fs'),
-  yargs = require('yargs').argv,
+  yargs = require('yargs').argv;
 
 gulp.task('component', function() {
   var cap = function(val) {
