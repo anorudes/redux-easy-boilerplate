@@ -8,9 +8,6 @@ import styles from './styles.js';
 import { add, del } from '../../actions';
 
 class Items extends Component {
-  constructor() {
-    super();
-  }
   render() {
     const { dispatch, items } = this.props;
     let _addClick = () => {
