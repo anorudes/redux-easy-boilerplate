@@ -5,7 +5,20 @@ var gulp = require('gulp'),
   fs = require('fs'),
   yargs = require('yargs').argv;
 
-gulp.task('component', function() {
+var resolveToComponents = function(glob) {
+  glob = glob || '';
+  return path.join(root, 'src/components/', glob);
+};
+
+var root = './';
+
+var paths = {
+  js: resolveToComponents('**/*!(.spec.js).js'),
+  output: root,
+  blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**')
+};
+
+gulp.task('simple-component', function() {
   var cap = function(val) {
     return val.charAt(0).toUpperCase() + val.slice(1);
   };
