@@ -2,7 +2,7 @@
  * action types
  */
 
-export default function <%= name %>() {
+export function getData() {
   return {
     type: 'GETDATA',
   };

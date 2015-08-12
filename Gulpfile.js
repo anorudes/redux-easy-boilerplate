@@ -7,17 +7,9 @@ var gulp = require('gulp'),
 
 var root = './';
 
-var componentsFolder = function(glob) {
-  return path.join(root, 'src/components/');
-};
-
-var actionsFolder = function(glob) {
-  return path.join(root, 'src/actions/');
-};
-
-var reducersFolder = function(glob) {
-  return path.join(root, 'src/reducers/');
-};
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 var createComponent = function(simpleComponent) {
   var component;
@@ -34,11 +26,11 @@ var createComponent = function(simpleComponent) {
 
   var name = yargs.name,
       parentPath = yargs.parent || '',
-      destPath = path.join(componentsFolder(), parentPath, name);
+      destPath = path.join(path.join(root, 'src/components/'), parentPath, capitalizeFirstLetter(name));
 
   return gulp.src(component)
     .pipe(template({
-      name: name,
+      name: capitalizeFirstLetter(name),
       upCaseName: cap(name)
     }))
     .pipe(rename(function(path) {
@@ -47,27 +39,12 @@ var createComponent = function(simpleComponent) {
     .pipe(gulp.dest(destPath));
 };
 
-var createReducer = function() {
+var createTemplate = function(folder, file) {
   var name = yargs.name,
       parentPath = yargs.parent || '',
-      destPath = path.join(reducersFolder(), name);
+      destPath = path.join(path.join(root, folder));
 
-  return gulp.src(path.join(__dirname, 'generator', 'reducer/*.js'))
-    .pipe(template({
-      name: name,
-    }))
-    .pipe(rename(function(path) {
-      path.basename = path.basename.replace('temp', name);
-    }))
-    .pipe(gulp.dest(destPath));
-};
-
-var createAction = function() {
-  var name = yargs.name,
-      parentPath = yargs.parent || '',
-      destPath = path.join(actionsFolder());
-
-  return gulp.src(path.join(__dirname, 'generator', 'action/*.js'))
+  return gulp.src(path.join(__dirname, 'generator', file))
     .pipe(template({
       name: name,
     }))
@@ -83,6 +60,6 @@ gulp.task('simple-component', function() {
 
 gulp.task('component', function() {
   createComponent(false);
-  createAction();
-  createReducer();
+  createTemplate('src/actions/', 'action/*.js');
+  createTemplate('src/reducers/', 'reducer/*.js');
 });

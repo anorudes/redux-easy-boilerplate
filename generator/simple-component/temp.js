@@ -16,7 +16,7 @@ export default class <%= name %> extends Component {
   render() {
     return (
       <div className={ styles } >
-        Comonent
+        Component name: <%= name %>
       </div>
     );
   }

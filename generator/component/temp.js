@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import styles from './<%= name %>.styles.js';
 
 // Actions
-// import { add, del } from '../../actions';
+import { <%= name %>Actions } from '../../actions';
 
 // Note:
 //
@@ -17,20 +17,20 @@ import styles from './<%= name %>.styles.js';
 
 export default class <%= name %> extends Component {
   render() {
-    const { dispatch, items } = this.props;
+    const { dispatch, data } = this.props;
     return (
       <div className={ styles } >
-        Comonent
+        Component name: <%= name %>
+        Data: { data }
       </div>
     );
   }
 }
 
-
 let select = (state) => {
   return {
-    items: state.items
+    data: <%= name %>Actions()
   };
 }
 
-export default connect(select)(Items);
+export default connect(select)(<%= name %>);

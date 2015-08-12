@@ -2,10 +2,9 @@
  * action types
  */
 
-export function add(text) {
+export function add() {
   return {
-    type: 'ADD',
-    text
+    type: 'ADD'
   };
 }
 
@@ -14,3 +13,10 @@ export function del() {
     type: 'DELETE'
   };
 }
+
+export function getData() {
+  return {
+    type: 'GETDATA'
+  };
+}
+
