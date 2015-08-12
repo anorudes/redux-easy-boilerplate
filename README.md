@@ -17,5 +17,14 @@ $ npm install
 $ npm start
 ```
 
-## TODO
-1. [ ] Component generator
+## Component generator
+
+### Simple generator
+```
+$ gulp simple-component --name SimpleComponent
+```
+
+### Complex generator
+```
+$ gulp component --name ComplexComponent
+```
