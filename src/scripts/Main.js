@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import 'bootstrap-webpack';
 
 // Global styles
-import 'style!./styles/Main.scss';
+import 'style!./styles/main.scss';
 
 // Application components
 import { Header, Typography, Items, Footer } from './components/';
