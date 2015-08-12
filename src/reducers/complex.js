@@ -1,14 +1,14 @@
-let initialState = [];
+let complexData = 'app data'
 
-export function complex(state = initialState, action) {
-  let newState = [...state];
+export function complex(state = complexData, action) {
+  let newState = {...state};
 
   switch (action.type) {
 
-    case 'GETDATA':
+    case 'EXAMPLE':
       return newState;
 
     default:
-      return state;
-  }
+      return newState;
+    }
 }

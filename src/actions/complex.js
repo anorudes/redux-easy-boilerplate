@@ -2,8 +2,8 @@
  * action types
  */
 
-export function getData() {
+export function example() {
   return {
-    type: 'GETDATA',
+    type: 'EXAMPLE',
   };
 }

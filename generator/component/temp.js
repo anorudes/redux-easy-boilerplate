@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import styles from './<%= name %>.styles.js';
 
 // Actions
-import { <%= name %>Actions } from '../../actions';
+import { example } from '../../actions';
 
 // Note:
 //
@@ -14,6 +14,14 @@ import { <%= name %>Actions } from '../../actions';
 //
 // And to import component ./src/Main.js
 // import { <%= name %> } from './components/';
+//
+// Actions:
+// Add line to the ./src/actions/index.js:
+// export { <%= name %> } from './<%= name %>.js';
+//
+// Reducers:
+// Add line:
+// export { <%= name %> } from './<%= name %>.js';
 
 export default class <%= name %> extends Component {
   render() {
@@ -27,9 +35,9 @@ export default class <%= name %> extends Component {
   }
 }
 
-let select = (state) => {
+function select(state) {
   return {
-    data: <%= name %>Actions()
+    data: state.<%= name %>,
   };
 }
 
