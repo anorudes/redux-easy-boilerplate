@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import 'style!./styles/Typography.scss';
-let styles = require('./styles/Typography.scss').locals.styles;
+import styles from './styles.js';
 
 export default class Typography extends Component {
   constructor() {
@@ -34,7 +33,7 @@ export default class Typography extends Component {
             Neater If and For for React JSX
           </li>
           <li>
-            Bebel
+            Babel
           </li>
           <li>
             Bootstrap
