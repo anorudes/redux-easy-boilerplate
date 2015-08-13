@@ -7,8 +7,8 @@ Redux Easy Boilerplate
 - [Installation](#installation)
 - [Run](#run)
 - [Component generator](#component-generator)
-  - [Simple component](#simple-component)
-  - [Complex component](#complex-component)
+  - [Simple component](#simple-generator)
+  - [Complex component](#complex-generator)
 
 ## About
 React 0.13.3
