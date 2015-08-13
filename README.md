@@ -1,7 +1,17 @@
-# Redux Easy Boilerplate
+Redux Easy Boilerplate
+=========================
+
+## Table of Contents
+
+- [About](#about)
+- [Installation](#installation)
+- [Run](#run)
+- [Component generator](#component-generator)
+  - [Simple component](#simple-component)
+  - [Complex component](#complex-component)
 
 ## About
-React 0.13.3<br />
+React 0.13.3
 Redux 1.0.0-rc<br />
 React Router 1.0.0-beta3<br />
 Bootstrap<br />
