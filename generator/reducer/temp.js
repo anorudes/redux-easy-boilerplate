@@ -1,4 +1,4 @@
-let initialState = '<%= name %> Data';
+let initialState = { text: 'text' };
 
 export function <%= name %>(state = initialState, action) {
   let newState = {...state};
@@ -6,6 +6,7 @@ export function <%= name %>(state = initialState, action) {
   switch (action.type) {
 
     case 'EXAMPLE':
+      newState.text = "change";
       return newState;
 
     default:

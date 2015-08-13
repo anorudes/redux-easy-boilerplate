@@ -1,4 +1,5 @@
 import { ADD, DELETE, EXAMPLE } from '../actions/';
 
-export { Items } from './Items.js';
-export { ComplexComponent } from './ComplexComponent.js';
+export { items } from './items.js';
+export { test } from './test.js';
+

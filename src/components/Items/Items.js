@@ -10,7 +10,6 @@ import { add, del } from '../../actions';
 export default class Items extends Component {
   render() {
     const { dispatch, items } = this.props;
-
     let _addClick = () => {
       this.props.dispatch(add(React.findDOMNode(this.refs.text).value));
       React.findDOMNode(this.refs.text).value = '';
@@ -46,7 +45,7 @@ export default class Items extends Component {
 
 function select(state) {
   return {
-    items: state.Items,
+    items: state.items,
   };
 }
 

@@ -2,35 +2,35 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import styles from './ComplexComponent.styles.js';
+import styles from './Test.styles.js';
 
 // Actions
 import { example } from '../../actions';
 
 // To export component add line to the ./src/components/index.js:
-// export { default as ComplexComponent } from './ComplexComponent/ComplexComponent.js';
+// export { default as Test } from './Test/Test.js';
 //
 // And to import component ./src/Main.js
-// import { ComplexComponent } from './components/';
+// import { Test } from './components/';
 //
 // Actions
 // Add line to the ./src/actions/index.js:
-// export { ComplexComponent } from './ComplexComponent.js';
+// export { Test } from './Test.js';
 //
 // Reducers
 // Add line:
-// export { ComplexComponent } from './ComplexComponent.js';
+// export { Test } from './Test.js';
 
-export default class ComplexComponent extends Component {
+export default class Test extends Component {
   render() {
     const { dispatch, data } = this.props;
     return (
       <div className={ styles } >
         <h2>
-          ComplexComponent
+          Other component:
         </h2>
         <p>
-          Data: { data }
+          Data: { data.text }
         </p>
       </div>
     );
@@ -39,8 +39,8 @@ export default class ComplexComponent extends Component {
 
 function select(state) {
   return {
-    data: state.ComplexComponent,
+    data: state.test,
   };
 }
 
-export default connect(select)(ComplexComponent);
+export default connect(select)(Test);
