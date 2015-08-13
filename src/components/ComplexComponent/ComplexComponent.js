@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import styles from './<%= name %>.styles.js';
+import styles from './ComplexComponent.styles.js';
 
 // Actions
 import { example } from '../../actions';
 
-export default class <%= name %> extends Component {
+export default class ComplexComponent extends Component {
   render() {
     const { dispatch, data } = this.props;
     return (
       <div className={ styles } >
         <h2>
-          <%= name %>
+          ComplexComponent
         </h2>
         <p>
           Data: { data }
@@ -25,8 +25,8 @@ export default class <%= name %> extends Component {
 
 function select(state) {
   return {
-    data: state.<%= name %>,
+    data: state.ComplexComponent,
   };
 }
 
-export default connect(select)(<%= name %>);
+export default connect(select)(ComplexComponent);

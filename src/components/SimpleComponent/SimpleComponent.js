@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import styles from './<%= name %>.styles.js';
+import styles from './SimpleComponent.styles.js';
 
-export default class <%= name %> extends Component {
+export default class SimpleComponent extends Component {
   render() {
     return (
       <div className={ styles } >
         <h2>
-          <%= name %>
+          SimpleComponent
         </h2>
       </div>
     );

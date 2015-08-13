@@ -1,6 +1,6 @@
-let initialState = { text: "text" };
+let initialState = { text: 'text' };
 
-export function test(state = initialState, action) {
+export function ComplexComponent(state = initialState, action) {
   let newState = {...state};
 
   switch (action.type) {
