@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Component styles
-import styles from './styles.js';
+import styles from './Items.styles.js';
 
 // Actions
 import { add, del } from '../../actions';
 
-class Items extends Component {
+export default class Items extends Component {
   render() {
     const { dispatch, items } = this.props;
     let _addClick = () => {
       this.props.dispatch(add(React.findDOMNode(this.refs.text).value));
       React.findDOMNode(this.refs.text).value = '';
     }
+
     return (
-      <div className={ `${ styles }`} >
+      <div className={ styles } >
         <h3>
           Redux test
         </h3>
@@ -23,7 +24,7 @@ class Items extends Component {
           <span>Array is empty</span>
         </If>
         <For each='item, index' of={ items }>
-          <div key={ index }>{item.numb}) { item.text }</div>
+          <div key={ index }>{ item.numb }) { item.text }</div>
         </For>
         <hr />
         <div className='form-group'>
@@ -42,9 +43,9 @@ class Items extends Component {
   }
 }
 
-let select = (state) => {
+function select(state) {
   return {
-    items: state.items
+    items: state.items,
   };
 }
 

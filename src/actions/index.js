@@ -1,16 +1,5 @@
 /*
  * action types
  */
-
-export function add(text) {
-  return {
-    type: 'ADD',
-    text
-  };
-}
-
-export function del() {
-  return {
-    type: 'DELETE'
-  };
-}
+export { add, del } from './items.js';
+export { example } from './test.js';
