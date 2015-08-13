@@ -43,7 +43,7 @@ $ gulp simple-component --name SimpleComponent
 
 Simple component looks like:
 
-```
+```js
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -72,7 +72,7 @@ $ gulp component --name ComplexComponent
 
 Complex component looks like:
 
-```
+```js
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -110,7 +110,7 @@ export default connect(select)(<%= name %>);
 
 Action file:
 
-```
+```js
 /*
  * action types
  */
@@ -124,7 +124,7 @@ export function example() {
 
 Reducer file:
 
-```
+```js
 let initialState = { text: 'text' };
 
 export function <%= name %>(state = initialState, action) {
