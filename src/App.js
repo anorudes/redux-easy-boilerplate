@@ -1,26 +1,41 @@
 import React, { Component } from 'react';
-import { applyMiddleware, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import {  Provider } from 'react-redux';
 import Main from './Main';
 import * as reducers from './reducers';
-import { createStore, renderDevTools } from './store_enhancers/devTools';
 import logger from 'redux-logger';
+
+import { Router, Route } from 'react-router';
+import { history } from 'react-router/lib/HashHistory';
+
+import { Items, SimpleComponent } from './components/';
+
+let routes = {
+  path: '/',
+  component: App,
+  childRoutes: [
+    { path: 'items', component: Items },
+    { path: 'simple', component: SimpleComponent }
+  ]
+};
 
 let reducersApp = combineReducers(reducers);
 const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
 let store = createStoreWithMiddleware(reducersApp);
 
-let devTools = true;
-
 export default class App extends Component {
   render() {
     return (
-      <div>
         <Provider store={ store }>
-          { () => <Main /> }
+          { () =>
+            <Router history={history}>
+              <Route path="/" component={Main}>
+                <Route path="simple" component={SimpleComponent}></Route>
+                <Route path="items" component={Items}></Route>
+              </Route>
+            </Router>
+          }
         </Provider>
-        { /* devTools && renderDevTools(store) */ }
-      </div>
     )
   }
 }

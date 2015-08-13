@@ -1,7 +1,9 @@
 # Redux Easy Boilerplate
 
 ## About
+React 0.13.3<br />
 Redux 1.0.0-rc<br />
+React Router 1.0.0-beta3<br />
 Bootstrap<br />
 Sass modules<br />
 [jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)<br />

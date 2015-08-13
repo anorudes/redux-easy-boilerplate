@@ -27,6 +27,9 @@ export default class Typography extends Component {
             React and React Hot Reload
           </li>
           <li>
+            React Router
+          </li>
+          <li>
             Redux
           </li>
           <li>
