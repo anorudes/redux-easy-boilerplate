@@ -7,6 +7,8 @@ Sass modules<br />
 [jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)<br />
 [redux-logger](https://github.com/fcomb/redux-logger)
 
+![https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/browser.png](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/browser.png)
+
 ## Installation
 ```
 $ npm install
@@ -23,8 +25,11 @@ $ npm start
 ```
 $ gulp simple-component --name SimpleComponent
 ```
+![https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/simple-component.png](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/simple-component.png)
 
 ### Complex generator
 ```
 $ gulp component --name ComplexComponent
 ```
+
+![https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/complex-component.png](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/complex-component.png)
