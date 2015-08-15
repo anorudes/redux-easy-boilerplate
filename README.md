@@ -31,6 +31,8 @@ $ npm install
 $ npm start
 ```
 
+And open in browser: [http://localhost:3000](http://localhost:3000)
+
 ## Component generator
 
 ### Simple generator
