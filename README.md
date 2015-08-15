@@ -15,11 +15,9 @@ Redux Easy Boilerplate
 - [Redux 1.0](https://github.com/gaearon/redux)
 - [React Router 1.0.0-beta3](https://github.com/rackt/react-router)
 - [Bootstrap Webpack](https://github.com/bline/bootstrap-webpack)
-- Sass modules
+- Sass modules ([sass-loader](https://github.com/jtangelder/sass-loader) [css-loader](https://github.com/webpack/css-loader) [style-loader](https://github.com/webpack/style-loader))
 - [jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)
 - [redux-logger](https://github.com/fcomb/redux-logger)
-
-![https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/browser.png](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/browser.png)
 
 ## Installation
 ```
