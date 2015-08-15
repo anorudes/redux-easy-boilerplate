@@ -12,7 +12,7 @@ Redux Easy Boilerplate
 
 ## About
 - [React 0.13.3](https://github.com/facebook/react)
-- [Redux 1.0.0-rc](https://github.com/gaearon/redux)
+- [Redux 1.0](https://github.com/gaearon/redux)
 - [React Router 1.0.0-beta3](https://github.com/rackt/react-router)
 - [Bootstrap Webpack](https://github.com/bline/bootstrap-webpack)
 - Sass modules
