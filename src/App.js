@@ -10,18 +10,9 @@ import { history } from 'react-router/lib/HashHistory';
 
 import { Items, SimpleComponent } from './components/';
 
-let routes = {
-  path: '/',
-  component: App,
-  childRoutes: [
-    { path: 'items', component: Items },
-    { path: 'simple', component: SimpleComponent }
-  ]
-};
-
-let reducersApp = combineReducers(reducers);
+const reducersApp = combineReducers(reducers);
 const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
-let store = createStoreWithMiddleware(reducersApp);
+const store = createStoreWithMiddleware(reducersApp);
 
 export default class App extends Component {
   render() {
@@ -36,6 +27,6 @@ export default class App extends Component {
             </Router>
           }
         </Provider>
-    )
+    );
   }
 }
