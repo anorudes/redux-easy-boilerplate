@@ -57,6 +57,5 @@ ios
 .jshintrc
 .gitattributes
 .editorconfig
-.eslintrc
 .babelrc
 npm-debug.log
