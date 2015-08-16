@@ -8,6 +8,11 @@ import styles from './<%= name %>.styles.js';
 import { example } from '../../actions';
 
 export default class <%= name %> extends Component {
+  static propTypes = {
+    dispatch: React.PropTypes.func.isRequired,
+    data: React.PropTypes.React.PropTypes.string,
+  };
+
   render() {
     const { dispatch, data } = this.props;
     return (

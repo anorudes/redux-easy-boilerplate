@@ -8,13 +8,17 @@ import styles from './Items.styles.js';
 import { add, del } from '../../actions';
 
 export default class Items extends Component {
+  static propTypes = {
+    dispatch: React.PropTypes.func.isRequired,
+    items: React.PropTypes.string,
+  };
+
   render() {
     const { dispatch, items } = this.props;
     const _addClick = () => {
       this.props.dispatch(add(React.findDOMNode(this.refs.text).value));
       React.findDOMNode(this.refs.text).value = '';
     };
-
     return (
       <div className={ styles } >
         <h3>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 // Component styles
 import styles from './SimpleComponent.styles.js';

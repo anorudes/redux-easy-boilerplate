@@ -4,6 +4,11 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+      "If": true,
+      "For": true,
+      "connect": true
+  },
   "rules": {
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
