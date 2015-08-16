@@ -45,7 +45,6 @@ Simple component looks like:
 
 ```js
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 // Component styles
 import styles from './<%= name %>.styles.js';
@@ -83,6 +82,11 @@ import styles from './<%= name %>.styles.js';
 import { example } from '../../actions';
 
 export default class <%= name %> extends Component {
+  static propTypes = {
+    dispatch: React.PropTypes.func.isRequired,
+    data: React.PropTypes.string,
+  };
+
   render() {
     const { dispatch, data } = this.props;
     return (
@@ -125,19 +129,18 @@ export function example() {
 Reducer file:
 
 ```js
-let initialState = { text: 'text' };
+const initialState = { text: 'text' };
 
 export function <%= name %>(state = initialState, action) {
   let newState = {...state};
 
   switch (action.type) {
+  case 'EXAMPLE':
+    newState.text = "change";
+    return newState;
 
-    case 'EXAMPLE':
-      newState.text = "change";
-      return newState;
-
-    default:
-      return newState;
-    }
+  default:
+    return newState;
+  }
 }
 ```
