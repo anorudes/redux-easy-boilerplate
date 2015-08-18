@@ -128,7 +128,7 @@ export function <%= name %>(state = initialState, action) {
     }
 
   default:
-    return newState;
+    return state;
   }
 }
 ```
