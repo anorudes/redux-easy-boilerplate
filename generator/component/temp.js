@@ -11,9 +11,9 @@ import { example } from 'actions';
 export default class <%= name %> extends Component {
   render() {
     const { dispatch, data } = this.props;
-    
+
     return (
-      <div className={styles} >
+      <div className={styles}>
         <h2>
           <%= name %>
         </h2>
