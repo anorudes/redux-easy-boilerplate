@@ -52,7 +52,7 @@ import styles from './<%= name %>.styles.js';
 export default class <%= name %> extends Component {
   render() {
     return (
-      <div className={styles} >
+      <div className={styles}>
         <h2>
           ComponentName
         </h2>
@@ -87,7 +87,7 @@ export default class <%= name %> extends Component {
     const { dispatch, data } = this.props;
 
     return (
-      <div className={styles} >
+      <div className={styles}>
         <h2>
           <%= name %>
         </h2>
