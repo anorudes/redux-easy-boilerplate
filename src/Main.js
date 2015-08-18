@@ -25,12 +25,12 @@ export default class Main extends Component {
                 <Link to={`/simple/`}>
                   <button type="button" className="btn btn-default">Simple component</button>
                 </Link>
-                { ' ' }
+                {' '}
                 <Link to={`/items/`}>
                   <button type="button" className="btn btn-default">Complex component</button>
                 </Link>
               </div>
-              { this.props.children }
+              {this.props.children}
             </div>
           </div>
         </div>

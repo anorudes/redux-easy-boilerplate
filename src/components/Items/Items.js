@@ -15,16 +15,17 @@ export default class Items extends Component {
       this.props.dispatch(add(React.findDOMNode(this.refs.text).value));
       React.findDOMNode(this.refs.text).value = '';
     };
+    
     return (
-      <div className={ styles } >
+      <div className={styles}>
         <h3>
           Redux test
         </h3>
-        <If condition={ !items.length }>
+        <If condition={!items.length}>
           <span>Array is empty</span>
         </If>
-        <For each="item, index" of={ items }>
-          <div key={ index }>{ item.numb }) { item.text }</div>
+        <For each="item, index" of={items}>
+          <div key={index}>{item.numb}){item.text}</div>
         </For>
         <hr />
         <div className="form-group">
@@ -34,9 +35,9 @@ export default class Items extends Component {
             placeholder="Enter something" />
         </div>
         <div className="form-group">
-          <button className="btn btn-default" onClick={ () => _addClick() }>add</button>
+          <button className="btn btn-default" onClick={() => _addClick()}>add</button>
           {' '}
-          <button className="btn btn-default" onClick={ () => dispatch(del()) }>delete</button>
+          <button className="btn btn-default" onClick={() => dispatch(del())}>delete</button>
         </div>
       </div>
     );

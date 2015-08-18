@@ -6,7 +6,7 @@ import styles from './Note.styles.js';
 export default class Note extends Component {
   render() {
     return (
-      <div className={ styles } >
+      <div className={styles}>
         <h2>
           Note
         </h2>

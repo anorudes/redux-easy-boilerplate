@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
         <Provider store={ store }>
-          { () =>
+          {() =>
             <Router history={history}>
               <Route path="/" component={Main}>
                 <Route path="simple" component={SimpleComponent}></Route>
