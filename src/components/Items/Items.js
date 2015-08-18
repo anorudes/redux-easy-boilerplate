@@ -5,14 +5,10 @@ import { connect } from 'react-redux';
 import styles from './Items.styles.js';
 
 // Actions
-import { add, del } from '../../actions';
+import { add, del } from 'actions';
 
+@connect(state => state.items)
 export default class Items extends Component {
-  static propTypes = {
-    dispatch: React.PropTypes.func.isRequired,
-    items: React.PropTypes.string,
-  };
-
   render() {
     const { dispatch, items } = this.props;
     const _addClick = () => {
@@ -47,10 +43,3 @@ export default class Items extends Component {
   }
 }
 
-function select(state) {
-  return {
-    items: state.items,
-  };
-}
-
-export default connect(select)(Items);

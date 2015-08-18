@@ -79,14 +79,10 @@ import { connect } from 'react-redux';
 import styles from './<%= name %>.styles.js';
 
 // Actions
-import { example } from '../../actions';
+import { example } from 'actions';
 
+@connect(state => state.<%= name %>)
 export default class <%= name %> extends Component {
-  static propTypes = {
-    dispatch: React.PropTypes.func.isRequired,
-    data: React.PropTypes.string,
-  };
-
   render() {
     const { dispatch, data } = this.props;
     return (
@@ -101,14 +97,6 @@ export default class <%= name %> extends Component {
     );
   }
 }
-
-function select(state) {
-  return {
-    data: state.<%= name %>,
-  };
-}
-
-export default connect(select)(<%= name %>);
 
 ```
 
@@ -132,12 +120,12 @@ Reducer file:
 const initialState = { text: 'text' };
 
 export function <%= name %>(state = initialState, action) {
-  let newState = {...state};
-
   switch (action.type) {
   case 'EXAMPLE':
-    newState.text = "change";
-    return newState;
+    return {
+      ...state,
+      text: "change"
+    }
 
   default:
     return newState;

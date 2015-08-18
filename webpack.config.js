@@ -30,7 +30,7 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.jsx', '.js', '.json'],
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['src', 'node_modules']
   },
 
   module: {
