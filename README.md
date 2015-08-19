@@ -38,9 +38,6 @@ And open in browser: [http://localhost:3000](http://localhost:3000)
 ```
 $ gulp simple-component --name SimpleComponent
 ```
-
-![https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/simple-component.png](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/simple-component.png)
-
 Simple component looks like:
 
 ```js
@@ -66,9 +63,6 @@ export default class <%= name %> extends Component {
 ```
 $ gulp component --name ComplexComponent
 ```
-
-![https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/complex-component.png](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/src/images/complex-component.png)
-
 Complex component looks like:
 
 ```js
@@ -106,14 +100,8 @@ export default class <%= name %> extends Component {
 }
 
 ```
-
 Action file:
-
 ```js
-/*
- * action types
- */
-
 export function example() {
   return {
     type: 'EXAMPLE',

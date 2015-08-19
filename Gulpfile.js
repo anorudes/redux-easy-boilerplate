@@ -52,11 +52,8 @@ var createTemplate = function(type, folder, file) {
     parentPath = yargs.parent || '',
     destPath = path.join(path.join(root, folder));
 
-  if (type === 'action') {
-    console.log('\x1b[0m', '\t3. Actions. Add this line to the ./src/actions/index.js file:\n' +
-      '\x1b[35m', '\t   export { ' + name + ' } from ./' + name + '.js;\n');
-  } else {
-    console.log('\x1b[0m', '\t4. Reducers. Add this line to the ./src/reducers/index.js file:\n' +
+  if (type === 'reducer') {
+    console.log('\x1b[0m', '\t3. Reducers. Add this line to the ./src/reducers/index.js file:\n' +
       '\x1b[35m', '\t   export { ' + name + ' } from ./' + name + '.js;\n\n');
   }
 
