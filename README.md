@@ -74,17 +74,23 @@ Complex component looks like:
 ```js
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 // Component styles
 import styles from './<%= name %>.styles.js';
 
 // Actions
-import { example } from 'actions';
+import * as actionCreators from 'actions/<%= name %>';
 
 @connect(state => state.<%= name %>)
 export default class <%= name %> extends Component {
+  constructor(props) {
+    super(props);
+    this.actions = bindActionCreators(actionCreators, this.props.dispatch);
+  }
+
   render() {
-    const { dispatch, data } = this.props;
+    const { data } = this.props;
 
     return (
       <div className={styles}>

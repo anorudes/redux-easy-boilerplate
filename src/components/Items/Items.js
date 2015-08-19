@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 // Component styles
 import styles from './Items.styles.js';
 
 // Actions
-import { add, del } from 'actions';
+import * as actionCreators from 'actions/items';
 
 @connect(state => state.items)
 export default class Items extends Component {
+  constructor(props) {
+    super(props);
+    this.actions = bindActionCreators(actionCreators, this.props.dispatch);
+  }
   render() {
-    const { dispatch, items } = this.props;
+    const { items } = this.props;
     const _addClick = () => {
-      this.props.dispatch(add(React.findDOMNode(this.refs.text).value));
+      this.actions.add(React.findDOMNode(this.refs.text).value);
       React.findDOMNode(this.refs.text).value = '';
     };
     
@@ -37,7 +42,7 @@ export default class Items extends Component {
         <div className="form-group">
           <button className="btn btn-default" onClick={() => _addClick()}>add</button>
           {' '}
-          <button className="btn btn-default" onClick={() => dispatch(del())}>delete</button>
+          <button className="btn btn-default" onClick={() => this.actions.del()}>delete</button>
         </div>
       </div>
     );
