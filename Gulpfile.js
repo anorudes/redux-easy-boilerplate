@@ -29,12 +29,7 @@ var createComponent = function(simpleComponent) {
     destPath = path.join(path.join(root, 'src/components/'), parentPath, capitalizeFirstLetter(name));
 
   console.log('\n\n\tCongratulations!\n' +
-    '\n\tJust now you\'ve created a `' + name + '` component.' +
-    '\n\tTo use the component follow a few simple steps:\n\n' +
-    '\t1. To export the component add this line to the ./src/components/index.js file:\n' +
-    '\x1b[35m', "\t   export { default as " + name + " } from './" + name + "/" + name + ".js';\n\n" +
-    '\x1b[0m', '\t2. To import component add this line to the ./src/Main.js\n' +
-    '\x1b[35m', "\t   import { " + name + " } from './components/';\n");
+    '\tJust now you\'ve created a `' + name + '` component.\n\n');
 
   return gulp.src(component)
     .pipe(template({
@@ -51,11 +46,6 @@ var createTemplate = function(type, folder, file) {
   var name = yargs.name,
     parentPath = yargs.parent || '',
     destPath = path.join(path.join(root, folder));
-
-  if (type === 'reducer') {
-    console.log('\x1b[0m', '\t3. Reducers. Add this line to the ./src/reducers/index.js file:\n' +
-      '\x1b[35m', '\t   export { ' + name + ' } from ./' + name + '.js;\n\n');
-  }
 
   return gulp.src(path.join(__dirname, 'generator', file))
     .pipe(template({
