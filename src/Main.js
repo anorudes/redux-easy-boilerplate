@@ -10,6 +10,11 @@ import 'style!./styles/main.scss';
 import { Header, Typography, Footer } from 'components';
 
 export default class Main extends Component {
+
+  static propTypes = {
+    children: React.PropTypes.object,
+  }
+
   render() {
     return (
       <section>
@@ -30,7 +35,7 @@ export default class Main extends Component {
                   <button type="button" className="btn btn-default">Complex component</button>
                 </Link>
               </div>
-              {this.props.children}
+              { this.props.children }
             </div>
           </div>
         </div>
