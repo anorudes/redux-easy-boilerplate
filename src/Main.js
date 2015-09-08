@@ -25,7 +25,7 @@ export default class Main extends Component {
               <Typography />
             </div>
             <div className="col-sm-6 col-ls-6">
-              <h1>Examples:</h1>
+              <h1>Router examples:</h1>
               <div className="btn-group" role="group" aria-label="...">
                 <Link to={ `/simple/` }>
                   <button type="button" className="btn btn-default">Simple component</button>
