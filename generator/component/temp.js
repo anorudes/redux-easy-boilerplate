@@ -19,7 +19,7 @@ export default class <%= name %> extends Component {
     const { data } = this.props;
 
     return (
-      <div className={styles}>
+      <div className={ styles }>
         <h2>
           <%= name %>
         </h2>
