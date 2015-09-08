@@ -6,7 +6,7 @@ import styles from './styles.js';
 export default class Typography extends Component {
   render() {
     return (
-      <div className={ `${ styles }`} >
+      <div className={ `${ styles }` }>
         <h1>Redux Easy Boilerplate</h1>
 
         <h2>About Boilerplate</h2>

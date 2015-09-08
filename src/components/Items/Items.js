@@ -29,15 +29,15 @@ export default class Items extends Component {
     };
 
     return (
-      <div className={styles}>
+      <div className={ styles }>
         <h3>
           Redux test
         </h3>
-        <If condition={!items.length}>
+        <If condition={ !items.length }>
           <span>Array is empty</span>
         </If>
-        <For each="item, index" of={items}>
-          <div key={index}>{item.numb}){item.text}</div>
+        <For each="item, index" of={ items }>
+          <div key={ index }>{ item.numb }){ item.text }</div>
         </For>
         <hr />
         <div className="form-group">
