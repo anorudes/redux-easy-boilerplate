@@ -10,17 +10,24 @@ import * as actionCreators from 'actions/items';
 
 @connect(state => state.items)
 export default class Items extends Component {
+
+  static propTypes = {
+    dispatch: React.PropTypes.func,
+    items: React.PropTypes.object,
+  }
+
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
   }
+
   render() {
     const { items } = this.props;
     const _addClick = () => {
       this.actions.add(React.findDOMNode(this.refs.text).value);
       React.findDOMNode(this.refs.text).value = '';
     };
-    
+
     return (
       <div className={styles}>
         <h3>

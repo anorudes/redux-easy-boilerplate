@@ -27,11 +27,11 @@ export default class Main extends Component {
             <div className="col-sm-6 col-ls-6">
               <h1>Examples:</h1>
               <div className="btn-group" role="group" aria-label="...">
-                <Link to={`/simple/`}>
+                <Link to={ `/simple/` }>
                   <button type="button" className="btn btn-default">Simple component</button>
                 </Link>
                 {' '}
-                <Link to={`/items/`}>
+                <Link to={ `/items/` }>
                   <button type="button" className="btn btn-default">Complex component</button>
                 </Link>
               </div>
