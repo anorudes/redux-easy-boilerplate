@@ -20,10 +20,10 @@ export default class App extends Component {
     return (
         <Provider store={ store }>
           {() =>
-            <Router history={history}>
-              <Route path="/" component={Main}>
-                <Route path="simple" component={SimpleComponent}></Route>
-                <Route path="items" component={Items}></Route>
+            <Router history={ history }>
+              <Route path="/" component={ Main }>
+                <Route path="simple" component={ SimpleComponent } />
+                <Route path="items" component={ Items } />
               </Route>
             </Router>
           }
