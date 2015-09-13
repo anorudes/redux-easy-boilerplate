@@ -13,7 +13,7 @@ export default class Items extends Component {
 
   static propTypes = {
     dispatch: React.PropTypes.func,
-    items: React.PropTypes.object,
+    items: React.PropTypes.array,
   }
 
   constructor(props) {
@@ -24,8 +24,8 @@ export default class Items extends Component {
   render() {
     const { items } = this.props;
     const _addClick = () => {
-      this.actions.add(React.findDOMNode(this.refs.text).value);
-      React.findDOMNode(this.refs.text).value = '';
+      this.actions.add(this.refs.text.value);
+      this.refs.text.value = '';
     };
 
     return (
