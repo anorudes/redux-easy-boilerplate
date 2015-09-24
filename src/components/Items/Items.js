@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import DocumentMeta from 'react-document-meta';
 
 // Component styles
 import styles from './Items.styles.js';
@@ -28,8 +29,21 @@ export default class Items extends Component {
       this.refs.text.value = '';
     };
 
+    const metaData = {
+      title: 'Items Title',
+      description: 'I am a description, and I can create multiple tags',
+      canonical: 'http://example.com/path/to/page',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'react,meta,document,html,tags',
+        },
+      },
+    };
+
     return (
       <div className={ styles }>
+        <DocumentMeta {...metaData} />
         <h3>
           Redux test
         </h3>

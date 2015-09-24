@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-
+import DocumentMeta from 'react-document-meta';
 import 'bootstrap-webpack';
 
 // Global styles
@@ -16,6 +16,17 @@ export default class Main extends Component {
   }
 
   render() {
+    const metaData = {
+      title: 'Redux Easy Boilerplate',
+      description: 'I am a description, and I can create multiple tags',
+      canonical: 'http://example.com/path/to/page',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'react,meta,document,html,tags',
+        },
+      },
+    };
     return (
       <section>
         <Header />
