@@ -29,6 +29,7 @@ export default class Main extends Component {
     };
     return (
       <section>
+        <DocumentMeta {...metaData} />
         <Header />
         <div className="container">
           <div className="row">

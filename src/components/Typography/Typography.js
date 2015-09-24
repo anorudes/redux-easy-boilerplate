@@ -43,6 +43,9 @@ export default class Typography extends Component {
           <li>
             Redux logger
           </li>
+          <li>
+            React Document Meta
+          </li>
         </ul>
       </div>
     );
