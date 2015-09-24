@@ -8,7 +8,7 @@ import createLogger from 'redux-logger';
 
 import { Router, Route, history } from 'react-router';
 
-import { Items, SimpleComponent } from './components/';
+import { Items, SimpleComponent } from './containers/';
 
 const logger = createLogger({collapsed: true});
 const reducersApp = combineReducers(reducers);
