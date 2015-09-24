@@ -1,6 +1,8 @@
 Redux Easy Boilerplate
 =========================
 
+- [Demo](http://anorudes.github.io/redux-easy-boilerplate/)
+
 ## Table of Contents
 
 - [About](#about)
