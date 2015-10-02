@@ -18,7 +18,7 @@ export default class SimpleComponent extends Component {
       },
     };
     return (
-      <div className={ styles }>
+      <div className={styles}>
         <DocumentMeta {...metaData} />
         <h2>
           SimpleComponent

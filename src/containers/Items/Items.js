@@ -9,6 +9,18 @@ import styles from './Items.styles.js';
 // Actions
 import * as actionCreators from 'actions/items';
 
+const metaData = {
+  title: 'Items title',
+  description: 'I\'m a description. I can to create multiple tags.',
+  canonical: 'http://example.com/path/to/page',
+  meta: {
+    charset: 'utf-8',
+    name: {
+      keywords: 'react,meta,document,html,tags',
+    },
+  },
+};
+
 @connect(state => state.items)
 export default class Items extends Component {
 
@@ -29,29 +41,17 @@ export default class Items extends Component {
       this.refs.text.value = '';
     };
 
-    const metaData = {
-      title: 'Items Title',
-      description: 'I am a description, and I can create multiple tags',
-      canonical: 'http://example.com/path/to/page',
-      meta: {
-        charset: 'utf-8',
-        name: {
-          keywords: 'react,meta,document,html,tags',
-        },
-      },
-    };
-
     return (
-      <div className={ styles }>
+      <div className={styles}>
         <DocumentMeta {...metaData} />
         <h3>
           Redux test
         </h3>
-        <If condition={ !items.length }>
+        <If condition={!items.length}>
           <span>Array is empty</span>
         </If>
-        <For each="item, index" of={ items }>
-          <div key={ index }>{ item.numb }){ item.text }</div>
+        <For each="item, index" of={items}>
+          <div key={index}>{item.numb}){item.text}</div>
         </For>
         <hr />
         <div className="form-group">
