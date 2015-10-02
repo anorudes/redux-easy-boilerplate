@@ -5,7 +5,7 @@ import * as reducers from 'reducers';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { Router, Route } from 'react-router';
-import createHistory from 'history/lib/createBrowserHistory';
+import createHistory from 'history/lib/createHashHistory';
 
 import Main from './Main';
 import {
