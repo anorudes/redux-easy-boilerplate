@@ -20,7 +20,7 @@ export function items(state = initialState, action) {
     return {
       ...state,
       items: [
-        ...state.items.slice(0, state.items.length - 1)
+        ...state.items.slice(0, state.items.length - 1),
       ],
     };
 

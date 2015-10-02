@@ -3,10 +3,10 @@ import { Link } from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import 'bootstrap-webpack';
 
-// Global styles
+/* global styles */
 import 'style!./styles/main.scss';
 
-// Application components
+/* application components */
 import { Header, Typography, Footer } from 'components';
 
 export default class Main extends Component {
@@ -18,7 +18,7 @@ export default class Main extends Component {
   render() {
     const metaData = {
       title: 'Redux Easy Boilerplate',
-      description: 'I am a description, and I can create multiple tags',
+      description: 'I am a description, and I can to create a multiple tags',
       canonical: 'http://example.com/path/to/page',
       meta: {
         charset: 'utf-8',

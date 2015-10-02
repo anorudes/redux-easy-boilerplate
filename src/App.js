@@ -5,10 +5,9 @@ import Main from './Main';
 import * as reducers from 'reducers';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
-
 import { Router, Route, history } from 'react-router';
 
-import { Items, SimpleComponent } from './containers/';
+import * as containers from 'containers';
 
 const logger = createLogger({collapsed: true});
 const reducersApp = combineReducers(reducers);
@@ -21,8 +20,8 @@ export default class App extends Component {
         <Provider store={ store }>
           <Router history={ history }>
             <Route path="/" component={ Main }>
-              <Route path="simple" component={ SimpleComponent } />
-              <Route path="items" component={ Items } />
+              <Route path="simple" component={ containers.SimpleComponent } />
+              <Route path="items" component={ containers.Items } />
             </Route>
           </Router>
         </Provider>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// Component styles
+/* component styles */
 import styles from './styles.js';
 
 export default class Typography extends Component {
