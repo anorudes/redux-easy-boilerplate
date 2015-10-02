@@ -6,7 +6,7 @@ import styles from './SimpleComponent.styles.js';
 
 const metaData = {
   title: 'SimpleComponent Title',
-  description: 'I am a description, and I can create multiple tags',
+  description: 'I\'m a description. I can to create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {
     charset: 'utf-8',

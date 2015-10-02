@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import DocumentMeta from 'react-document-meta';
 
-// Component styles
+/* component styles */
 import styles from './Items.styles.js';
 
-// Actions
+/* actions */
 import * as actionCreators from 'actions/items';
 
 const metaData = {
