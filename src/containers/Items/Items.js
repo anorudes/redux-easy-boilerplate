@@ -23,7 +23,6 @@ const metaData = {
 
 @connect(state => state.items)
 export default class Items extends Component {
-
   static propTypes = {
     dispatch: React.PropTypes.func,
     items: React.PropTypes.array,
