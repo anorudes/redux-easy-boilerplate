@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "build": "webpack -p",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -39,12 +41,19 @@
     "eslint": "^1.1.0",
     "eslint-config-airbnb": "0.1.0",
     "eslint-plugin-react": "^3.2.3",
+    "expect": "^1.12.0",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "history": "^1.11.1",
     "imports-loader": "^0.6.4",
+    "jasmine-core": "^2.3.4",
     "jquery": "^2.1.4",
     "jsx-control-statements": "^1.1.1",
+    "karma": "^0.13.3",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.2.5",
     "node-sass": "^3.1.2",
     "postcss-loader": "^0.6.0",
     "react": "^0.14.0-rc1",
