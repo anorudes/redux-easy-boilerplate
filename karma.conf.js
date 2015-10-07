@@ -2,16 +2,16 @@ var path = require('path');
 
 module.exports = function (config) {
     config.set({
-        basePath: '',
+        basePath: 'src',
         singleRun: true,
         frameworks: ['mocha'],
         reporters: ['dots'],
         browsers: ['Chrome'],
         files: [
-            'test/**/*.js'
+            'test/**/*.spec.js'
         ],
         preprocessors: {
-            'test/**/*.js': ['webpack']
+            'test/**/*.spec.js': ['webpack']
         },
         webpack: {
             resolve: {
