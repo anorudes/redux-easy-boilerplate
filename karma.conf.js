@@ -8,10 +8,10 @@ module.exports = function (config) {
         reporters: ['dots'],
         browsers: ['Chrome'],
         files: [
-            'tests/**/*.js'
+            'test/**/*.js'
         ],
         preprocessors: {
-            'tests/**/*.js': ['webpack']
+            'test/**/*.js': ['webpack']
         },
         webpack: {
             resolve: {

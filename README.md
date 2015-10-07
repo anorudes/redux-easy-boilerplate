@@ -24,9 +24,14 @@ Redux Easy Boilerplate
 $ npm install
 ```
 
-## Run
+## Run app
 ```
 $ npm start
+```
+
+## Run karma
+```
+$ npm test
 ```
 
 And open in browser: [http://localhost:3000](http://localhost:3000)
