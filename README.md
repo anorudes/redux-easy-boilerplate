@@ -18,6 +18,8 @@ Redux Easy Boilerplate
 - [jsx-control-statements](https://github.com/valtech-au/jsx-control-statements)
 - [redux-logger](https://github.com/fcomb/redux-logger)
 - [react-document-meta@2.0.0-rc2](https://github.com/kodyl/react-document-meta)
+- [karma](https://github.com/karma-runner/karma)
+- [mocha](https://github.com/mochajs/mocha)
 
 ## Installation
 ```
@@ -28,11 +30,9 @@ $ npm install
 ```
 $ npm start
 ```
+And open in browser: [http://localhost:3000](http://localhost:3000)
 
 ## Run karma
 ```
 $ npm test
 ```
-
-And open in browser: [http://localhost:3000](http://localhost:3000)
-
