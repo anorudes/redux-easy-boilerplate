@@ -16,7 +16,7 @@ module.exports = function (config) {
         webpack: {
             resolve: {
                 extensions: ['', '.js', '.ts'],
-                modulesDirectories: ['src', 'node_modules']
+                modulesDirectories: ['node_modules', 'src']
             },
             module: {
                 loaders: [
