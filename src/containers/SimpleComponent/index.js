@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 /* component styles */
-import styles from './styles.js';
+import styles from './styles';
 
 const metaData = {
   title: 'SimpleComponent Title',
