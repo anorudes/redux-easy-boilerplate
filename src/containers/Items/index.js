@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import DocumentMeta from 'react-document-meta';
 
 /* component styles */
-import styles from './Items.styles.js';
+import styles from './styles.js';
 
 /* actions */
 import * as actionCreators from 'actions/items';
