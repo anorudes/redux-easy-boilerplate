@@ -7,12 +7,7 @@ import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { Router, Route } from 'react-router';
 import createHistory from 'history/lib/createHashHistory';
-
-import { App } from 'containers';
-import {
-  Simple,
-  Items,
-} from 'containers';
+import routes from './routes';
 
 const logger = createLogger({collapsed: true});
 const reducersApp = combineReducers(reducers);
@@ -21,11 +16,6 @@ const store = createStoreWithMiddleware(reducersApp);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={createHistory()}>
-      <Route path="/" component={App}>
-        <Route path="simple" component={Simple}/>
-        <Route path="items" component={Items}/>
-      </Route>
-    </Router>
+    <Router history={createHistory()} children={routes} />
   </Provider>,
 document.getElementById('App'));
