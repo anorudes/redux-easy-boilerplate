@@ -1,2 +1,2 @@
 export { default as Items } from './Items';
-export { default as SimpleComponent } from './SimpleComponent';
+export { default as Simple } from './Simple';

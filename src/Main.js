@@ -39,11 +39,11 @@ export default class Main extends Component {
               <h1>Router examples:</h1>
               <div className="btn-group" role="group" aria-label="...">
                 <Link to={`/simple/`}>
-                  <button type="button" className="btn btn-default">Simple component</button>
+                  <button type="button" className="btn btn-default">Simple</button>
                 </Link>
                 {' '}
                 <Link to={`/items/`}>
-                  <button type="button" className="btn btn-default">Complex component</button>
+                  <button type="button" className="btn btn-default">Items</button>
                 </Link>
               </div>
               {this.props.children}

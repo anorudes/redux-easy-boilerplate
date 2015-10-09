@@ -9,7 +9,7 @@ import createHistory from 'history/lib/createHashHistory';
 
 import Main from './Main';
 import {
-  SimpleComponent,
+  Simple,
   Items,
 } from 'containers';
 
@@ -24,7 +24,7 @@ export default class App extends Component {
         <Provider store={store}>
           <Router history={createHistory()}>
             <Route path="/" component={Main}>
-              <Route path="simple" component={SimpleComponent}/>
+              <Route path="simple" component={Simple}/>
               <Route path="items" component={Items}/>
             </Route>
           </Router>

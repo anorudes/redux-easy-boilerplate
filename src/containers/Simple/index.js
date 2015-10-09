@@ -5,7 +5,7 @@ import DocumentMeta from 'react-document-meta';
 import styles from './styles';
 
 const metaData = {
-  title: 'SimpleComponent Title',
+  title: 'Simple Title',
   description: 'I\'m a description. I can to create multiple tags',
   canonical: 'http://example.com/path/to/page',
   meta: {
@@ -16,13 +16,13 @@ const metaData = {
   },
 };
 
-export default class SimpleComponent extends Component {
+export default class Simple extends Component {
   render() {
     return (
       <div className={styles}>
         <DocumentMeta {...metaData} />
         <h2>
-          SimpleComponent
+          Simple
         </h2>
       </div>
     );
