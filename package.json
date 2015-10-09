@@ -73,7 +73,6 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.8.2",
-    "yargs": "^3.18.0",
-    "recompose": "^0.2.3"
+    "yargs": "^3.18.0"
   }
 }
