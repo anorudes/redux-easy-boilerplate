@@ -5,7 +5,7 @@ const initialState = {
   items: [],
 };
 
-describe("Items reducer:", () => {
+describe('Items reducer:', () => {
   it('should return the initial state', () => {
     expect(
       items(undefined, {})

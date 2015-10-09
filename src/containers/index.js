@@ -1,3 +1,3 @@
-export { default as App } from './App';
-export { default as Items } from './Items';
-export { default as Simple } from './Simple';
+export { App } from './App';
+export { Home } from './Home';
+export { List } from './List';

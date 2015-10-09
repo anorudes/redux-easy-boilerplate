@@ -3,8 +3,10 @@ import React from 'react';
 /* component styles */
 import styles from './styles';
 
-export const Header = () => (
+export const Simple = () => (
   <div className={`${styles}`}>
-    Redux easy boilerplate
+    <h2>
+      Simple
+    </h2>
   </div>
 );

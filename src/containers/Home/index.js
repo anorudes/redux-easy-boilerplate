@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import DocumentMeta from 'react-document-meta';
 
-/* component styles */
-import styles from './styles';
+import { Simple } from 'components';
 
 const metaData = {
   title: 'Simple Title',
@@ -16,15 +15,9 @@ const metaData = {
   },
 };
 
-export default class Simple extends Component {
-  render() {
-    return (
-      <div className={styles}>
-        <DocumentMeta {...metaData} />
-        <h2>
-          Simple
-        </h2>
-      </div>
-    );
-  }
-}
+export const Home = () => (
+  <div>
+    <DocumentMeta {...metaData} />
+    <Simple />
+  </div>
+);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import DocumentMeta from 'react-document-meta';
 
 /* component styles */
 import styles from './styles';
@@ -9,20 +8,8 @@ import styles from './styles';
 /* actions */
 import * as actionCreators from 'actions/items';
 
-const metaData = {
-  title: 'Items title',
-  description: 'I\'m a description. I can to create multiple tags.',
-  canonical: 'http://example.com/path/to/page',
-  meta: {
-    charset: 'utf-8',
-    name: {
-      keywords: 'react,meta,document,html,tags',
-    },
-  },
-};
-
 @connect(state => state.items)
-export default class Items extends Component {
+export class Items extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     items: React.PropTypes.array,
@@ -42,7 +29,6 @@ export default class Items extends Component {
 
     return (
       <div className={styles}>
-        <DocumentMeta {...metaData} />
         <h3>
           Redux test
         </h3>
@@ -68,4 +54,3 @@ export default class Items extends Component {
     );
   }
 }
-
