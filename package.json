@@ -58,12 +58,12 @@
     "node-sass": "^3.1.2",
     "postcss-loader": "^0.6.0",
     "qs": "^5.2.0",
-    "react": "^0.14.0-rc1",
+    "react": "^0.14.0",
     "react-document-meta": "^2.0.0-rc2",
     "react-dom": "^0.14.0-rc1",
     "react-hot-loader": "^1.2.7",
     "react-redux": "^3.0.1",
-    "react-router": "1.0.0-rc2",
+    "react-router": "1.0.0-rc3",
     "redux": "^3.0.0",
     "redux-logger": "2.0.3",
     "redux-react-router": "^1.0.0-beta1",
@@ -73,6 +73,7 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.8.2",
-    "yargs": "^3.18.0"
+    "yargs": "^3.18.0",
+    "recompose": "^0.2.3"
   }
 }
