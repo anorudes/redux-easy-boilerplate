@@ -4,12 +4,12 @@ import DocumentMeta from 'react-document-meta';
 import 'bootstrap-webpack';
 
 /* global styles */
-import 'style!./styles/main.scss';
+import 'style!./styles/app.scss';
 
 /* application components */
 import { Header, Typography, Footer } from 'components';
 
-export default class Main extends Component {
+export default class App extends Component {
   static propTypes = {
     children: React.PropTypes.object,
   }
