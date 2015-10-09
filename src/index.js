@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import * as reducers from 'reducers';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
-import { Router, Route } from 'react-router';
+import { Router } from 'react-router';
 import createHistory from 'history/lib/createHashHistory';
 import routes from './routes';
 
