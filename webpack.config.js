@@ -1,10 +1,10 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var csswring = require('csswring');
+import path from 'path';
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import autoprefixer from 'autoprefixer';
+import csswring from 'csswring';
 
-module.exports = {
+export default {
 
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
@@ -61,7 +61,5 @@ module.exports = {
       loader: "css!postcss-loader!sass"
     }]
   },
-  postcss: function() {
-    return [autoprefixer, csswring];
-  }
+  postcss: () => [autoprefixer, csswring]
 };
