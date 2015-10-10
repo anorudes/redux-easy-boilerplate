@@ -34,9 +34,6 @@ export const Typography = () => (
         Bootstrap
       </li>
       <li>
-        Neater If and For for React JSX
-      </li>
-      <li>
         Redux logger
       </li>
       <li>
