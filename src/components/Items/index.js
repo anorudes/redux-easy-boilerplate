@@ -20,6 +20,10 @@ export class Items extends Component {
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
   }
 
+  renderItem(item, index) {
+    return <div key={index}>{item.numb}) {item.text}</div>;
+  }
+
   render() {
     const { items } = this.props;
     const _addClick = () => {
@@ -32,12 +36,9 @@ export class Items extends Component {
         <h3>
           Redux test
         </h3>
-        <If condition={!items.length}>
-          <span>Array is empty</span>
-        </If>
-        <For each="item, index" of={items}>
-          <div key={index}>{item.numb}){item.text}</div>
-        </For>
+        {! items.length ? <span>Array is empty</span> : null}
+
+        {items.map(this.renderItem)}
         <hr />
         <div className="form-group">
           <input type="text"
