@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 /* component styles */
 import styles from './styles';
 
-export const Simple = () => (
-  <div className={`${styles}`}>
-    <h2>
-      Simple
-    </h2>
-  </div>
-);
+@connect(state => state.simple)
+export class Simple extends Component {
+  static propTypes = {
+    dispatch: React.PropTypes.func,
+    simple: React.PropTypes.object,
+  }
+
+  render() {
+    const { simple } = this.props;
+    return (
+      <div className={`${styles}`}>
+        <h2>
+          { simple.text }
+        </h2>
+      </div>
+    );
+  }
+}
