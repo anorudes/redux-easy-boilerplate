@@ -11,7 +11,7 @@ export function items(state = initialState, action) {
         ...state.items,
         {
           text: action.text,
-          numb: state.items.length + 10,
+          numb: state.items.length + 1,
         },
       ],
     };
