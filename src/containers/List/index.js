@@ -18,6 +18,7 @@ const metaData = {
 export const List = () => (
   <div>
     <DocumentMeta {...metaData} />
+    <h1>List page:</h1>
     <Items />
   </div>
 );

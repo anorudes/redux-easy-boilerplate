@@ -14,9 +14,9 @@ export class Simple extends Component {
   render() {
     const { simple } = this.props;
     return (
-      <div className={`${styles}`}>
+      <div className={styles}>
         <h2>
-          { simple.text }
+          {simple.text}
         </h2>
       </div>
     );

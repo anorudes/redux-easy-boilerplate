@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './styles';
 
 export const Footer = () => (
-  <div className={`${styles}`}>
+  <div className={styles}>
     <a href="https://github.com/anorudes/redux-easy-boilerplate">GitHub</a>
   </div>
 );

@@ -1,15 +1,32 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
+var http = require('http');
+var express = require('express');
+var app = express();
 
-new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
-  hot: true,
-  historyApiFallback: true
-}).listen(3000, 'localhost', function (err, result) {
-  if (err) {
-    console.log(err);
-  }
+app.use(require('morgan')('short'));
 
-  console.log('Listening at localhost:3000');
+(function initWebpack() {
+  var webpack = require('webpack');
+  var webpackConfig = require('./webpack.config');
+  var compiler = webpack(webpackConfig);
+
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+  }));
+
+  app.use(require('webpack-hot-middleware')(compiler, {
+    log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
+  }));
+})();
+
+app.get('/', function root(req, res) {
+  res.sendFile(__dirname + '/index.html');
 });
+
+if (require.main === module) {
+  var server = http.createServer(app);
+  server.listen(process.env.PORT || 3000, function onListen() {
+    var address = server.address();
+    console.log('Listening on: %j', address);
+    console.log(' -> that probably means: http://localhost:%d', address.port);
+  });
+}

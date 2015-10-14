@@ -18,6 +18,8 @@ const metaData = {
 export const Home = () => (
   <div>
     <DocumentMeta {...metaData} />
+    <h1>Home Page:</h1>
+    <hr />
     <Simple />
   </div>
 );

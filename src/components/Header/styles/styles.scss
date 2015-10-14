@@ -1,8 +1,15 @@
 /* Header styles */
 
 :local(.styles) {
-  background: #000;
-  color: #FFF;
-
+  background: black;
   padding: 10px 20px;
+  .navbar-brand {
+    color: white !important;
+  }
+  ul a {
+    color: #FFF !important;
+    text-decoration: underline;
+    width: 100%;
+    display: inline-block;
+  }
 }

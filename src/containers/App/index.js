@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 import 'bootstrap-webpack';
 
@@ -7,7 +6,7 @@ import 'bootstrap-webpack';
 import 'style!./styles/app.scss';
 
 /* application components */
-import { Header, Typography, Footer } from 'components';
+import { Header, Footer } from 'components';
 
 const metaData = {
   title: 'Redux Easy Boilerplate',
@@ -20,31 +19,20 @@ const metaData = {
     },
   },
 };
-
-export const App = (props) => (
-  <section>
-    <DocumentMeta {...metaData} />
-    <Header />
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-6 col-ls-6">
-          <Typography />
-        </div>
-        <div className="col-sm-6 col-ls-6">
-          <h1>Router examples:</h1>
-          <div className="btn-group" role="group" aria-label="...">
-            <Link to={`/home/`}>
-              <button type="button" className="btn btn-default">Home</button>
-            </Link>
-            {' '}
-            <Link to={`/list/`}>
-              <button type="button" className="btn btn-default">List</button>
-            </Link>
-          </div>
-          {props.children}
-        </div>
+export class App extends Component {
+  static propTypes = {
+    children: React.PropTypes.any,
+  }
+  render() {
+    return (
+      <div>
+        <DocumentMeta {...metaData} />
+        <Header />
+        <main className="container">
+          {this.props.children}
+        </main>
+        <Footer />
       </div>
-    </div>
-    <Footer />
-  </section>
-);
+    );
+  }
+}
