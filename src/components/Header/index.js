@@ -22,7 +22,7 @@ export default () => (
             <Link to="/home" activeClassName="active">Home</Link>
           </li>
           <li>
-            <Link to="/list" activeClassName="active">List123</Link>
+            <Link to="/list" activeClassName="active">List</Link>
           </li>
         </ul>
       </div>
