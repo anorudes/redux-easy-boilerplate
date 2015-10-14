@@ -9,7 +9,7 @@ import styles from './styles';
 import * as actionCreators from 'actions/items';
 
 @connect(state => state.items)
-export class Items extends Component {
+export default class Items extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     items: React.PropTypes.array,

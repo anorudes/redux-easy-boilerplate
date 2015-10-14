@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 import { Items } from 'components';
@@ -15,10 +15,14 @@ const metaData = {
   },
 };
 
-export const List = () => (
-  <div>
-    <DocumentMeta {...metaData} />
-    <h1>List page:</h1>
-    <Items />
-  </div>
-);
+export default class List extends Component {
+  render() {
+    return (
+      <div>
+        <DocumentMeta {...metaData} />
+        <h1>List page:</h1>
+        <Items />
+      </div>
+    );
+  }
+}

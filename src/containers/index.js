@@ -1,3 +1,3 @@
-export { App } from './App';
-export { Home } from './Home';
-export { List } from './List';
+export { default as App } from './App';
+export { default as Home } from './Home';
+export { default as List } from './List';

@@ -1,4 +1,4 @@
-export { Simple } from './Simple';
-export { Items } from './Items';
+export { default as Simple } from './Simple';
+export { default as Items } from './Items';
 export { Header } from './Header';
-export { Footer } from './Footer';
+export { default as Footer } from './Footer';

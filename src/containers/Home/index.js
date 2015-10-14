@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
 import { Simple } from 'components';
@@ -15,11 +15,15 @@ const metaData = {
   },
 };
 
-export const Home = () => (
-  <div>
-    <DocumentMeta {...metaData} />
-    <h1>Home Page:</h1>
-    <hr />
-    <Simple />
-  </div>
-);
+export default class Home extends Component {
+  render() {
+    return (
+      <div>
+        <DocumentMeta {...metaData} />
+        <h1>Home Page:</h1>
+        <hr />
+        <Simple />
+      </div>
+    );
+  }
+}

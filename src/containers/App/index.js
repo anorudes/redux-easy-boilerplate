@@ -19,14 +19,14 @@ const metaData = {
     },
   },
 };
-export class App extends Component {
+
+export default class App extends Component {
   static propTypes = {
     children: React.PropTypes.any,
   }
   render() {
     return (
       <div>
-        <DocumentMeta {...metaData} />
         <Header />
         <main className="container">
           {this.props.children}
