@@ -15,7 +15,7 @@ const metaData = {
   },
 };
 
-export default class List extends Component {
+export class List extends Component {
   render() {
     return (
       <div>

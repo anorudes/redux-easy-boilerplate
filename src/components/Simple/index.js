@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import styles from './styles';
 
 @connect(state => state.simple)
-export default class Simple extends Component {
+export class Simple extends Component {
   static propTypes = {
     dispatch: React.PropTypes.func,
     simple: React.PropTypes.object,
