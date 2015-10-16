@@ -1,6 +1,6 @@
 const initialState = {
   simple: {
-    text: "Hello",
+    text: 'Hello',
   },
 };
 

@@ -5,7 +5,7 @@ import { items } from './items';
 
 const rootReducer = combineReducers({
   simple,
-  items
+  items,
 });
 
 export default rootReducer;
