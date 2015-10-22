@@ -27,8 +27,10 @@ export class Items extends Component {
   render() {
     const { items } = this.props;
     const _addClick = () => {
-      this.actions.add(this.refs.text.value);
-      this.refs.text.value = '';
+      if (this.refs.text.value !== '') {
+        this.actions.add(this.refs.text.value);
+        this.refs.text.value = '';
+      }
     };
 
     return (
