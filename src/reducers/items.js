@@ -4,7 +4,7 @@ const initialState = {
 
 export function items(state = initialState, action) {
   switch (action.type) {
-  case 'ADD':
+  case 'ADD_ITEM':
     return {
       ...state,
       items: [
@@ -16,7 +16,7 @@ export function items(state = initialState, action) {
       ],
     };
 
-  case 'DELETE':
+  case 'DELETE_ITEM':
     return {
       ...state,
       items: [

@@ -20,25 +20,29 @@ export class Items extends Component {
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
   }
 
-  renderItem(item, index) {
-    return <div key={index}>{item.numb}) {item.text}</div>;
+  onAddClick() {
+    if (this.refs.text.value) {
+      this.actions.add(this.refs.text.value);
+      this.refs.text.value = '';
+    }
+  }
+
+  onDeleteClick() {
+    this.actions.del();
   }
 
   render() {
     const { items } = this.props;
-    const _addClick = () => {
-      this.actions.add(this.refs.text.value);
-      this.refs.text.value = '';
-    };
 
     return (
       <div className={styles}>
         <h3>
           Redux test
         </h3>
-        {! items.length ? <span>Array is empty</span> : null}
-
-        {items.map(this.renderItem)}
+        {!items.length ? <span>Array is empty</span> : null}
+        {items.map((item, index) => <div key={index}>
+            {item.numb}) {item.text}
+        </div>)}
         <hr />
         <div className="form-group">
           <input type="text"
@@ -47,9 +51,9 @@ export class Items extends Component {
             placeholder="Enter something" />
         </div>
         <div className="form-group">
-          <button className="btn btn-default" onClick={() => _addClick()}>add</button>
+          <button className="btn btn-default" onClick={() => this.onAddClick()}>add</button>
           {' '}
-          <button className="btn btn-default" onClick={() => this.actions.del()}>delete</button>
+          <button className="btn btn-default" onClick={() => this.onDeleteClick()}>delete</button>
         </div>
       </div>
     );

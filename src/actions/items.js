@@ -1,13 +1,12 @@
 export function add(text) {
   return {
-    type: 'ADD',
+    type: 'ADD_ITEM',
     text,
   };
 }
 
-export function del(text) {
+export function del() {
   return {
-    type: 'DELETE',
-    text,
+    type: 'DELETE_ITEM',
   };
 }

@@ -6,8 +6,7 @@ import styles from './styles';
 
 @connect(state => state.simple)
 export class Simple extends Component {
-  static propTypes = {
-    dispatch: React.PropTypes.func,
+  static propTypes = {    
     simple: React.PropTypes.object,
   }
 
