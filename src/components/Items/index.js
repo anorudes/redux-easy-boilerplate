@@ -25,10 +25,21 @@ export class Items extends Component {
   }
 
   render() {
+    let editing = false;
     const { items } = this.props;
     const _addClick = () => {
-      this.actions.add(this.refs.text.value);
-      this.refs.text.value = '';
+      if (this.refs.text.value !== '') {
+        this.actions.add(this.refs.text.value);
+        this.refs.text.value = '';
+      }
+    };
+
+    const checkEnter = (event) => {
+      if (editing && event.key === 'Enter') {
+        _addClick();
+      } else {
+        editing = true;
+      }
     };
 
     return (
@@ -44,7 +55,10 @@ export class Items extends Component {
           <input type="text"
             className="form-control"
             ref="text"
-            placeholder="Enter something" />
+            placeholder="Enter something"
+            onFocus={() => editing = true}
+            onBlur={() => editing = false}
+            onKeyPress={checkEnter} />
         </div>
         <div className="form-group">
           <button className="btn btn-default" onClick={() => _addClick()}>add</button>
