@@ -18,11 +18,11 @@ const metaData = {
 export class List extends Component {
   render() {
     return (
-      <div>
+      <section>
         <DocumentMeta {...metaData} />
         <h1>List page:</h1>
         <Items />
-      </div>
+      </section>
     );
   }
 }

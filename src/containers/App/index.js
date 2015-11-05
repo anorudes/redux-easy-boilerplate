@@ -13,13 +13,11 @@ export class App extends Component {
   }
   render() {
     return (
-      <div>
+      <section>
         <Header />
-        <main className="container">
-          {this.props.children}
-        </main>
+        { this.props.children }
         <Footer />
-      </div>
+      </section>
     );
   }
 }

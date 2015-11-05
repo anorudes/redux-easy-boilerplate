@@ -9,10 +9,10 @@ import routes from './routes';
 const store = configureStore();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={createHistory()}>
+  <Provider store={ store }>
+    <Router history={ createHistory() }>
       <Redirect from="/" to="home" />
-      {routes}
+      { routes }
     </Router>
   </Provider>,
   document.getElementById('root')
