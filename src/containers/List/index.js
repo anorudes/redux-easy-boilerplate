@@ -18,7 +18,7 @@ const metaData = {
 export class List extends Component {
   render = () =>
     <section>
-      <DocumentMeta { ...metaData } />
+      <DocumentMeta {...metaData} />
       <Items />
     </section>
 }

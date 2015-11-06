@@ -20,7 +20,7 @@ const metaData = {
 export class Home extends Component {
   render = () =>
     <section>
-      <DocumentMeta { ...metaData } />
+      <DocumentMeta {...metaData} />
       <TopImage />
       <Tools />
     </section>

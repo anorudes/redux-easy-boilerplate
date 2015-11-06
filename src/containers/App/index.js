@@ -5,16 +5,18 @@ import 'bootstrap-webpack';
 import 'style!./styles/app.scss';
 
 /* application components */
-import { Header, Footer } from 'components';
+import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
 
 export class App extends Component {
   static propTypes = {
     children: React.PropTypes.any,
   }
+
   render = () =>
     <section>
       <Header />
-      { this.props.children }
+        {this.props.children}
       <Footer />
     </section>
 }
