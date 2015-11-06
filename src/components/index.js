@@ -1,4 +1,4 @@
-export { Simple } from './Simple';
-export { Items } from './Items';
+/* common components */
+
 export { Header } from './Header';
 export { Footer } from './Footer';

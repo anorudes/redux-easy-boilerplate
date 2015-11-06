@@ -2,12 +2,7 @@
 
 @import 'fonts/roboto';
 @import 'typography';
-@import 'links';
 
 :global(body) {
   position: relative;
-
-  img {
-    width: 100%;
-  }
 }

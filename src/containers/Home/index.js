@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
-import { Simple } from 'components';
+/* components */
+import { TopImage } from 'components/TopImage';
+import { Tools } from 'components/Tools';
 
 const metaData = {
-  title: 'Simple Title',
-  description: 'I\'m a description. I can to create multiple tags',
+  title: 'Redux Easy Boilerplate',
+  description: 'Start you project easy and fast with modern tools',
   canonical: 'http://example.com/path/to/page',
   meta: {
     charset: 'utf-8',
@@ -16,14 +18,10 @@ const metaData = {
 };
 
 export class Home extends Component {
-  render() {
-    return (
-      <div>
-        <DocumentMeta {...metaData} />
-        <h1>Home Page:</h1>
-        <hr />
-        <Simple />
-      </div>
-    );
-  }
+  render = () =>
+    <section>
+      <DocumentMeta { ...metaData } />
+      <TopImage />
+      <Tools />
+    </section>
 }
