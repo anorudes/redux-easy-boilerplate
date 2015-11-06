@@ -11,10 +11,13 @@ export class App extends Component {
   static propTypes = {
     children: React.PropTypes.any,
   }
-  render = () =>
-    <section>
-      <Header />
-      { this.props.children }
-      <Footer />
-    </section>
+  render() {
+    return (
+      <section>
+        <Header />
+        { this.props.children }
+        <Footer />
+      </section>
+    );
+  }
 }

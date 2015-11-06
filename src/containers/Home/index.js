@@ -18,10 +18,13 @@ const metaData = {
 };
 
 export class Home extends Component {
-  render = () =>
-    <section>
-      <DocumentMeta { ...metaData } />
-      <TopImage />
-      <Tools />
-    </section>
+  render() {
+    return (
+      <section>
+        <DocumentMeta { ...metaData } />
+        <TopImage />
+        <Tools />
+      </section>
+    );
+  }
 }
