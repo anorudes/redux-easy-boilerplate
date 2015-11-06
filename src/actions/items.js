@@ -5,9 +5,8 @@ export function addItem(text) {
   };
 }
 
-export function delItem(index) {
+export function delItem() {
   return {
     type: 'DELETE_ITEM',
-    index,
   };
 }
