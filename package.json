@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "build": "webpack -p --config webpack/prod.config.js",
+    "build": "webpack --verbose --colors --display-error-details --config webpack/prod.config.js",
     "test": "karma start"
   },
   "repository": {

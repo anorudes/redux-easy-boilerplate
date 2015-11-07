@@ -9,8 +9,8 @@ Redux Easy Boilerplate
 
 ## About
 - [React 0.14](https://github.com/facebook/react)
-- [Redux 3.0.1](https://github.com/gaearon/redux)
-- [React Router 1.0.0-rc4](https://github.com/rackt/react-router)
+- [Redux 3.0.0](https://github.com/gaearon/redux)
+- [React Router 1.0.0-rc3](https://github.com/rackt/react-router)
 - [Bootstrap Webpack](https://github.com/bline/bootstrap-webpack)
 - Sass modules ([sass-loader](https://github.com/jtangelder/sass-loader) [css-loader](https://github.com/webpack/css-loader) [style-loader](https://github.com/webpack/style-loader))
 - [react transform](https://github.com/gaearon/react-transform)
@@ -29,6 +29,11 @@ $ npm install
 $ npm start
 ```
 And open in browser: [http://localhost:3000](http://localhost:3000)
+
+## Build
+```
+$ npm run build
+```
 
 ## Run karma
 ```

@@ -3,10 +3,10 @@ const initialState = {
     text: 'React 0.14',
     done: true,
   }, {
-    text: 'Redux 3.0.1',
+    text: 'Redux 3.0.0',
     done: true,
   }, {
-    text: 'React Router 1.0.0-rc4',
+    text: 'React Router 1.0.0-rc3',
     done: true,
   }, {
     text: 'Bootstrap Webpack',
