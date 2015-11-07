@@ -5,23 +5,26 @@ var autoprefixer = require('autoprefixer');
 var csswring = require('csswring');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
-    'webpack-hot-middleware/client',
     './src/index',
   ],
 
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, '/dist/'),
-    publicPath: '/dist/',
+    path: path.join(__dirname, '../dist/'),
+    publicPath: 'dist/',
   },
 
   plugins: [
     new ExtractTextPlugin('bundle.css'),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
     }),
@@ -55,18 +58,18 @@ module.exports = {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=image/svg+xml',
     }, {
-      test: /\.png(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=image/png',
-    }, {
-      test: /\.jpg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=image/jpg',
-    }, {
       test: /\.js$/,
       loaders: ['react-hot', 'babel?stage=0&loose[]=es6.modules'],
       exclude: /node_modules/,
     }, {
       test: /\.scss$/,
       loader: 'css!postcss-loader!sass',
+    }, {
+      test: /\.png$/,
+      loader: 'file?name=[name].[ext]',
+    }, {
+      test: /\.jpg$/,
+      loader: 'file?name=[name].[ext]',
     }],
   },
   postcss: function() {

@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 /* component styles */
 import styles from './styles';
 
+const reactjs = require('./files/reactjs.png');
+const redux = require('./files/redux.png');
+const babel = require('./files/babel.png');
+const webpack = require('./files/webpack.png');
+const bootstrap = require('./files/bootstrap.png');
+const mocha = require('./files/mocha.png');
+
 export class Tools extends Component {
   render() {
     return (
@@ -19,42 +26,42 @@ export class Tools extends Component {
 
           <div className="row">
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
-              <img src="/src/files/logos/reactjs.png" />
+              <img src={reactjs} />
               <h4>
                 React
               </h4>
             </div>
 
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
-              <img src="/src/files/logos/redux.png" />
+              <img src={redux} />
               <h4>
                 Redux
               </h4>
             </div>
 
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
-              <img src="/src/files/logos/babel.png" />
+              <img src={babel} />
               <h4>
                 Babel
               </h4>
             </div>
 
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
-              <img src="/src/files/logos/webpack.png" />
+              <img src={webpack} />
               <h4>
                 Webpack
               </h4>
             </div>
 
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
-              <img src="/src/files/logos/bootstrap.png" />
+              <img src={bootstrap} />
               <h4>
                 Bootstrap
               </h4>
             </div>
 
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
-              <img src="/src/files/logos/mocha.png" />
+              <img src={mocha} />
               <h4>
                 Mocha
               </h4>
