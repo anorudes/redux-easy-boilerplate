@@ -45,8 +45,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
-.gitignore
-dist/
 node_modules/
 .sass-cache/
 bower_components/
