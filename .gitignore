@@ -36,7 +36,6 @@
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
-
 # JIRA plugin
 atlassian-ide-plugin.xml
 
@@ -44,7 +43,7 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
-
+dist/
 node_modules/
 .sass-cache/
 bower_components/
