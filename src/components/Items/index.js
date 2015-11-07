@@ -18,18 +18,18 @@ export class Items extends Component {
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
-    this.onDeleteClick = this.onDeleteClick.bind(this);
-    this.onAddClick = this.onAddClick.bind(this);
+    this.onDelete = this.onDelete.bind(this);
+    this.onAdd = this.onAdd.bind(this);
   }
 
-  onAddClick() {
+  onAdd() {
     if (this.refs.text.value) {
       this.actions.addItem(this.refs.text.value);
       this.refs.text.value = '';
     }
   }
 
-  onDeleteClick() {
+  onDelete() {
     this.actions.delItem();
   }
 
@@ -65,7 +65,7 @@ export class Items extends Component {
                              defaultChecked={item.done} />
                       {`${item.text}`}
                       <span className="remove"
-                            onClick={this.onDeleteClick}>
+                            onClick={this.onDelete}>
                             x
                       </span>
                     </label>
@@ -84,10 +84,10 @@ export class Items extends Component {
                   placeholder="Enter something" />
               </div>
               <div className="form-group">
-                <button className="btn btn-default" onClick={this.onAddClick}>
+                <button className="btn btn-default" onClick={this.onAdd}>
                   Add to store
                 </button>
-                <button className="btn btn-default" onClick={this.onDeleteClick}>
+                <button className="btn btn-default" onClick={this.onDelete}>
                   Remove from store
                 </button>
               </div>
