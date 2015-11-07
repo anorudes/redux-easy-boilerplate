@@ -1,33 +1,33 @@
 const initialState = {
   items: [{
-    text: 'React 0.14',
+    text: 'React',
     done: true,
   }, {
-    text: 'Redux 3.0.0',
+    text: 'Redux',
     done: true,
   }, {
-    text: 'React Router 1.0.0-rc3',
+    text: 'React router',
     done: true,
   }, {
-    text: 'Bootstrap Webpack',
+    text: 'Bootstrap webpack',
     done: true,
   }, {
     text: 'Sass modules (sass-loader css-loader style-loader)',
     done: true,
   }, {
-    text: 'react transform',
+    text: 'React transform',
     done: true,
   }, {
-    text: 'redux-logger',
+    text: 'Redux logger',
     done: true,
   }, {
-    text: 'react-document-meta@2.0.0-rc2',
+    text: 'React document meta',
     done: true,
   }, {
-    text: 'karma',
+    text: 'Karma',
     done: true,
   }, {
-    text: 'mocha',
+    text: 'Mocha',
     done: true,
   }, {
     text: 'Server-side rendering',
