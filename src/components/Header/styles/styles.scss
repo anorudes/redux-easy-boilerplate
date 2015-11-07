@@ -1,15 +1,37 @@
-/* Header styles */
-
 :local(.styles) {
-  background: black;
-  padding: 10px 20px;
-  .navbar-brand {
-    color: white !important;
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+
+  padding: 20px 0;
+  opacity: 1;
+
+  background: rgba(0, 0, 0, .7);
+
+  &:hover {
+    background: rgba(0, 0, 0, .7);
   }
-  ul a {
-    color: #FFF !important;
-    text-decoration: underline;
-    width: 100%;
-    display: inline-block;
+
+  a {
+    color: #FFF;
+  }
+
+  .logo {
+
+    a {
+      font-weight: bold;
+    }
+  }
+  
+  nav {
+
+    a {
+      margin-right: 20px;
+      
+      &.active {
+        font-weight: bold;
+      }
+    }
   }
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 
-import { Items } from 'components';
+import { Items } from 'components/Items';
 
 const metaData = {
-  title: 'Items title',
-  description: 'I\'m a description. I can to create multiple tags.',
+  title: 'Redux test',
+  description: 'Start you project easy and fast with modern tools.',
   canonical: 'http://example.com/path/to/page',
   meta: {
     charset: 'utf-8',
@@ -18,11 +18,10 @@ const metaData = {
 export class List extends Component {
   render() {
     return (
-      <div>
-        <DocumentMeta {...metaData} />
-        <h1>List page:</h1>
+      <section>
+        <DocumentMeta { ...metaData } />
         <Items />
-      </div>
+      </section>
     );
   }
 }

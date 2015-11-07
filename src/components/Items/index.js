@@ -18,44 +18,83 @@ export class Items extends Component {
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
+    this.onDelete = this.onDelete.bind(this);
+    this.onAdd = this.onAdd.bind(this);
   }
 
-  onAddClick() {
+  onAdd() {
     if (this.refs.text.value) {
-      this.actions.add(this.refs.text.value);
+      this.actions.addItem(this.refs.text.value);
       this.refs.text.value = '';
     }
   }
 
-  onDeleteClick() {
-    this.actions.del();
+  onDelete() {
+    this.actions.delItem();
   }
 
   render() {
     const { items } = this.props;
 
     return (
-      <div className={styles}>
-        <h3>
-          Redux test
-        </h3>
-        {!items.length ? <span>Array is empty</span> : null}
-        {items.map((item, index) => <div key={index}>
-            {item.numb}) {item.text}
-        </div>)}
-        <hr />
-        <div className="form-group">
-          <input type="text"
-            className="form-control"
-            ref="text"
-            placeholder="Enter something" />
+      <section className={`${styles}`}>
+        <div className="container">
+
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
+                            col-md-offset-3 col-lg-offset-3">
+              <h1>
+                Redux
+              </h1>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
+                            col-md-offset-3 col-lg-offset-3">
+              <h2>
+                Boilerplate contains:
+              </h2>
+
+              {!items.length ? <span>Array is empty</span> : null}
+              {
+                items.map((item, index) =>
+                  <div className="checkbox" key={index}>
+                    <label>
+                      <input type="checkbox"
+                             defaultChecked={item.done} />
+                      {`${item.text}`}
+                      <span className="remove"
+                            onClick={this.onDelete}>
+                            x
+                      </span>
+                    </label>
+                  </div>
+                )
+              }
+            </div>
+
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
+                            col-md-offset-3 col-lg-offset-3">
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  ref="text"
+                  placeholder="Enter something" />
+              </div>
+              <div className="form-group">
+                <button className="btn btn-default" onClick={this.onAdd}>
+                  Add to store
+                </button>
+                <button className="btn btn-default" onClick={this.onDelete}>
+                  Remove from store
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="form-group">
-          <button className="btn btn-default" onClick={() => this.onAddClick()}>add</button>
-          {' '}
-          <button className="btn btn-default" onClick={() => this.onDeleteClick()}>delete</button>
-        </div>
-      </div>
+      </section>
     );
   }
 }
