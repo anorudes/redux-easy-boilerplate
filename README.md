@@ -1,7 +1,7 @@
 Redux Easy Boilerplate
 =========================
 
-![browser](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/gh/browser.png)
+![browser](https://anorudes.github.io/redux-easy-boilerplate/gh/browser.png)
 [Demo](http://anorudes.github.io/redux-easy-boilerplate/)
 
 ## Table of Contents
