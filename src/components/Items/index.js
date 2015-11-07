@@ -17,26 +17,27 @@ export class Items extends Component {
 
   constructor(props) {
     super(props);
-
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
+    this.onDeleteClick = this.onDeleteClick.bind(this);
+    this.onAddClick = this.onAddClick.bind(this);
   }
 
-  addItem() {
+  onAddClick() {
     if (this.refs.text.value) {
-      this.actions.add(this.refs.text.value);
+      this.actions.addItem(this.refs.text.value);
       this.refs.text.value = '';
     }
   }
 
-  removeItem(index) {
-    this.actions.del(index);
+  onDeleteClick() {
+    this.actions.delItem();
   }
 
   render() {
     const { items } = this.props;
 
     return (
-      <section className={ `${ styles }` }>
+      <section className={`${styles}`}>
         <div className="container">
 
           <div className="row">
@@ -55,16 +56,16 @@ export class Items extends Component {
                 Boilerplate contains:
               </h2>
 
-              { !items.length ? <span>Array is empty</span> : null }
+              {!items.length ? <span>Array is empty</span> : null}
               {
                 items.map((item, index) =>
-                  <div className="checkbox" key={ index }>
+                  <div className="checkbox" key={index}>
                     <label>
                       <input type="checkbox"
-                             defaultChecked={ item.done } />
-                      { `${ item.text }` }
+                             defaultChecked={item.done} />
+                      {`${item.text}`}
                       <span className="remove"
-                            onClick={ () => this.removeItem(index) }>
+                            onClick={this.onDeleteClick}>
                             x
                       </span>
                     </label>
@@ -83,10 +84,10 @@ export class Items extends Component {
                   placeholder="Enter something" />
               </div>
               <div className="form-group">
-                <button className="btn btn-default" onClick={ ::this.addItem }>
+                <button className="btn btn-default" onClick={this.onAddClick}>
                   Add to store
                 </button>
-                <button className="btn btn-default" onClick={ ::this.removeItem }>
+                <button className="btn btn-default" onClick={this.onDeleteClick}>
                   Remove from store
                 </button>
               </div>

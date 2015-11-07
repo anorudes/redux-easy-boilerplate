@@ -6,7 +6,7 @@ import styles from './styles';
 export class Tools extends Component {
   render() {
     return (
-      <section className={ `${ styles }` }>
+      <section className={`${styles}`}>
         <div className="container">
 
           <div className="row">
@@ -18,7 +18,6 @@ export class Tools extends Component {
           </div>
 
           <div className="row">
-
             <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
               <img src="/src/files/logos/reactjs.png" />
               <h4>
@@ -60,7 +59,6 @@ export class Tools extends Component {
                 Mocha
               </h4>
             </div>
-
           </div>
 
         </div>

@@ -1,11 +1,11 @@
-export function add(text) {
+export function addItem(text) {
   return {
     type: 'ADD_ITEM',
     text,
   };
 }
 
-export function del(index) {
+export function delItem(index) {
   return {
     type: 'DELETE_ITEM',
     index,

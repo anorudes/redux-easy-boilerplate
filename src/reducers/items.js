@@ -6,7 +6,7 @@ const initialState = {
     text: 'Redux 3.0.1',
     done: true,
   }, {
-    text: 'React Router 1.0.0-rc3',
+    text: 'React Router 1.0.0-rc4',
     done: true,
   }, {
     text: 'Bootstrap Webpack',
@@ -30,10 +30,7 @@ const initialState = {
     text: 'mocha',
     done: true,
   }, {
-    text: 'Express',
-    done: false,
-  }, {
-    text: 'React server rendering',
+    text: 'Server-side rendering',
     done: false,
   }],
 };
@@ -54,8 +51,6 @@ export function items(state = initialState, action) {
     return {
       ...state,
       items: [
-        // TODO:
-        // ...state.items.slice(action.index, state.items.length),
         ...state.items.slice(0, state.items.length - 1),
       ],
     };
