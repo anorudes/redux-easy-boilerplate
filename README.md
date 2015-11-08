@@ -19,6 +19,8 @@ Redux Easy Boilerplate
 - [react transform](https://github.com/gaearon/react-transform)
 - [redux-logger](https://github.com/fcomb/redux-logger)
 - [react-document-meta@2.0.0-rc2](https://github.com/kodyl/react-document-meta)
+- [redux-form](https://github.com/erikras/redux-form)
+- [redux-simple-router](https://github.com/jlongster/redux-simple-router)
 - [karma](https://github.com/karma-runner/karma)
 - [mocha](https://github.com/mochajs/mocha)
 

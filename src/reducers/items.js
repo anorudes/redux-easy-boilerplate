@@ -27,6 +27,9 @@ const initialState = {
     text: 'Redux form',
     done: true,
   }, {
+    text: 'Redux simple router',
+    done: true,
+  }, {
     text: 'Karma',
     done: true,
   }, {
