@@ -1,12 +1,13 @@
-export function addItem(text) {
+export function addItem(fields) {
   return {
     type: 'ADD_ITEM',
-    text,
+    fields,
   };
 }
 
-export function delItem() {
+export function delItem(index) {
   return {
     type: 'DELETE_ITEM',
+    index,
   };
 }

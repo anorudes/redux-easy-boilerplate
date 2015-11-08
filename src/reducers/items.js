@@ -24,6 +24,9 @@ const initialState = {
     text: 'React document meta',
     done: true,
   }, {
+    text: 'Redux form',
+    done: true,
+  }, {
     text: 'Karma',
     done: true,
   }, {
@@ -42,7 +45,7 @@ export function items(state = initialState, action) {
       ...state,
       items: [
         ...state.items, {
-          text: action.text,
+          text: action.fields.name.value,
         },
       ],
     };
@@ -51,7 +54,8 @@ export function items(state = initialState, action) {
     return {
       ...state,
       items: [
-        ...state.items.slice(0, state.items.length - 1),
+        ...state.items.slice(0, action.index),
+        ...state.items.slice(+action.index + 1),
       ],
     };
 

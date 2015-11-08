@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 /* component styles */
 import styles from './styles';
@@ -19,82 +19,36 @@ export class Items extends Component {
     super(props);
     this.actions = bindActionCreators(actionCreators, this.props.dispatch);
     this.onDelete = this.onDelete.bind(this);
-    this.onAdd = this.onAdd.bind(this);
   }
 
-  onAdd() {
-    if (this.refs.text.value) {
-      this.actions.addItem(this.refs.text.value);
-      this.refs.text.value = '';
-    }
-  }
-
-  onDelete() {
-    this.actions.delItem();
+  onDelete(event) {
+    const index = event.currentTarget.dataset.index;
+    this.actions.delItem(index);
   }
 
   render() {
     const { items } = this.props;
 
     return (
-      <section className={`${styles}`}>
-        <div className="container">
-
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
-                            col-md-offset-3 col-lg-offset-3">
-              <h1>
-                Redux
-              </h1>
+      <div className={styles}>
+        {!items.length ? <span>Array is empty</span> : null}
+        {
+          items.map((item, index) =>
+            <div className="checkbox" key={index}>
+              <label>
+                <input type="checkbox"
+                       defaultChecked={item.done} />
+                {`${item.text}`}
+                <span className="remove"
+                      data-index={index}
+                      onClick={this.onDelete}>
+                      x
+                </span>
+              </label>
             </div>
-          </div>
-
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
-                            col-md-offset-3 col-lg-offset-3">
-              <h2>
-                Boilerplate contains:
-              </h2>
-
-              {!items.length ? <span>Array is empty</span> : null}
-              {
-                items.map((item, index) =>
-                  <div className="checkbox" key={index}>
-                    <label>
-                      <input type="checkbox"
-                             defaultChecked={item.done} />
-                      {`${item.text}`}
-                      <span className="remove"
-                            onClick={this.onDelete}>
-                            x
-                      </span>
-                    </label>
-                  </div>
-                )
-              }
-            </div>
-
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
-                            col-md-offset-3 col-lg-offset-3">
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  ref="text"
-                  placeholder="Enter something" />
-              </div>
-              <div className="form-group">
-                <button className="btn btn-default" onClick={this.onAdd}>
-                  Add to store
-                </button>
-                <button className="btn btn-default" onClick={this.onDelete}>
-                  Remove from store
-                </button>
-              </div>
-            </div>
-          </div>
+          )
+        }
         </div>
-      </section>
     );
   }
 }

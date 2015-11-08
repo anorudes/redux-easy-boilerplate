@@ -1,18 +1,9 @@
 :local(.styles) {
-  position: relative;
-
-  padding-top: 100px;
-
-  h2 {
-    margin-bottom: 20px;
-  }
-  
   label {
     margin: 3px 0 7px;
 
     span.remove {
-      display: none;
-      // display: inline-block;
+      display: inline-block;
       position: relative;
       
       top: -8px;
@@ -25,9 +16,5 @@
         color: red;
       }
     }
-  }
-
-  button {
-    margin-right: 10px;
   }
 }

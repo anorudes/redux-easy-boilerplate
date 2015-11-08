@@ -25,7 +25,7 @@ export class Header extends Component {
 
   render() {
     return (
-      <section className={`${styles}`} ref="header">
+      <header className={`${styles}`} ref="header">
         <div className="container">
           <div className="row">
             <div className="col-xs-5 col-sm-3 col-md-3 col-lg-3 logo">
@@ -52,7 +52,7 @@ export class Header extends Component {
             </div>
           </div>
         </div>
-      </section>
+      </header>
     );
   }
 }

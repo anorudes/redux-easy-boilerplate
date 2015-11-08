@@ -6,7 +6,7 @@ import styles from './styles';
 export class Footer extends Component {
   render() {
     return (
-      <section className={ `${ styles }` }>
+      <footer className={ `${ styles }` }>
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -14,7 +14,7 @@ export class Footer extends Component {
             </div>
           </div>
         </div>
-      </section>
+      </footer>
     );
   }
 }

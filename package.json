@@ -64,6 +64,7 @@
     "react-document-meta": "^2.0.0-rc2",
     "react-dom": "^0.14.2",
     "react-hot-loader": "^1.2.7",
+    "redux-form": "^3.0.5",
     "redux-logger": "2.0.4",
     "sass-loader": "^3.0.0",
     "style-loader": "^0.13.0",
@@ -78,6 +79,7 @@
     "react": "^0.14.2",
     "redux": "^3.0.4",
     "redux-react-router": "^1.0.0-beta1",
+    "redux-simple-router": "0.0.7",
     "redux-thunk": "^1.0.0",
     "react-redux": "^4.0.0",
     "react-router": "1.0.0-rc4",
@@ -85,3 +87,4 @@
     "bootstrap": "^3.3.5"
   }
 }
+

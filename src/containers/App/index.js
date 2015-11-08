@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap-webpack';
 
-/* global styles */
+/* global styles for app */
 import 'style!./styles/app.scss';
 
 /* application components */
