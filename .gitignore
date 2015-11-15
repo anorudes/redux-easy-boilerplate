@@ -43,7 +43,6 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
-dist/
 node_modules/
 .sass-cache/
 bower_components/
