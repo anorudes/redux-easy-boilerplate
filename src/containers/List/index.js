@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
 import DocumentMeta from 'react-document-meta';
 
 import { Items } from 'components/Items';
 import { AddItem } from 'components/AddItem';
+
+/* actions */
+import * as actionCreators from 'actions/items';
 
 const metaData = {
   title: 'Redux test',
@@ -16,7 +22,15 @@ const metaData = {
   },
 };
 
+@connect(
+  state => state.items,
+  dispatch => bindActionCreators(actionCreators, dispatch)
+)
 export class List extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <section>
@@ -38,12 +52,12 @@ export class List extends Component {
               <h2>
                 Boilerplate contains:
               </h2>
-              <Items />
+              <Items {...this.props} />
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
                             col-md-offset-3 col-lg-offset-3">
-              <AddItem />
+              <AddItem {...this.props} />
             </div>
           </div>
         </div>

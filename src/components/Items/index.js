@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
 /* component styles */
 import styles from './styles';
 
-/* actions */
-import * as actionCreators from 'actions/items';
-
-@connect(state => state.items)
 export class Items extends Component {
   static propTypes = {
-    dispatch: React.PropTypes.func,
     items: React.PropTypes.array,
+    delItem: React.PropTypes.func,
   }
 
   constructor(props) {
     super(props);
-    this.actions = bindActionCreators(actionCreators, this.props.dispatch);
     this.onDelete = this.onDelete.bind(this);
   }
 
   onDelete(event) {
     const index = event.currentTarget.dataset.index;
-    this.actions.delItem(index);
+    this.props.delItem(index);
   }
 
   render() {
