@@ -8,7 +8,7 @@ const AUTHORS = ['anorudes', 'keske'];
 
 export class Footer extends Component {
   render() {
-    function renderGitHUBFollowButton(user) {
+    function renderGitHubFollowButton(user) {
       return (
         <a className="github-button" href={`https://github.com/${user}`}
            data-count-href={`/${user}/followers`}
@@ -34,7 +34,7 @@ export class Footer extends Component {
                Star
             </a>
               {
-                AUTHORS.map((author) => renderGitHUBFollowButton(author))
+                AUTHORS.map((author) => renderGitHubFollowButton(author))
               }
             </div>
           </div>
