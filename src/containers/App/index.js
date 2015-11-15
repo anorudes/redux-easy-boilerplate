@@ -16,7 +16,7 @@ export class App extends Component {
     return (
       <section>
         <Header />
-        { this.props.children }
+        {this.props.children}
         <Footer />
       </section>
     );

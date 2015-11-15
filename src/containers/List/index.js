@@ -20,7 +20,7 @@ export class List extends Component {
   render() {
     return (
       <section>
-        <DocumentMeta { ...metaData } />
+        <DocumentMeta {...metaData} />
         <div className="container">
 
           <div className="row">
