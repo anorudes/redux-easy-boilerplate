@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 /* component styles */
 import styles from './styles';
 
+/* images */
 const reactjs = require('./files/reactjs.png');
 const redux = require('./files/redux.png');
 const babel = require('./files/babel.png');
@@ -25,42 +26,42 @@ export class Tools extends Component {
           </div>
 
           <div className="row">
-            <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 tool">
               <img src={reactjs} />
               <h4>
                 React
               </h4>
             </div>
 
-            <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 tool">
               <img src={redux} />
               <h4>
                 Redux
               </h4>
             </div>
 
-            <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 tool">
               <img src={babel} />
               <h4>
                 Babel
               </h4>
             </div>
 
-            <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 tool">
               <img src={webpack} />
               <h4>
                 Webpack
               </h4>
             </div>
 
-            <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 tool">
               <img src={bootstrap} />
               <h4>
                 Bootstrap
               </h4>
             </div>
 
-            <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2 tool">
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 tool">
               <img src={mocha} />
               <h4>
                 Mocha

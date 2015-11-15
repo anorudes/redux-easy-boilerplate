@@ -16,7 +16,7 @@
     "react/react-in-jsx-scope": 2,
     "block-scoped-var": 0,
     "padded-blocks": 0,
-    "no-console": 0
+    "no-console": 0,
   },
   "plugins": [
     "react"
