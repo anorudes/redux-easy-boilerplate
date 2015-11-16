@@ -18,6 +18,9 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      __DEVELOPMENT__: true
+    }),
     new ExtractTextPlugin('bundle.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
