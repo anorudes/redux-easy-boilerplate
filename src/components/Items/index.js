@@ -24,7 +24,7 @@ export class Items extends Component {
 
     return (
       <div className={styles}>
-        {!items.length ? <span>Array is empty</span> : null}
+        {!items.length && <span>Array is empty</span>}
         {
           items.map((item, index) =>
             <div className="checkbox" key={index}>
