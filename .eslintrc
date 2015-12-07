@@ -6,8 +6,6 @@
     "mocha": true
   },
   "globals": {
-      "If": true,
-      "For": true,
       "connect": true
   },
   "rules": {
@@ -17,6 +15,8 @@
     "block-scoped-var": 0,
     "padded-blocks": 0,
     "no-console": 0,
+    "id-length": 0,
+    "no-unused-expressions": 0,
   },
   "plugins": [
     "react"
