@@ -4,21 +4,18 @@ import React, { Component } from 'react';
 import styles from './styles';
 
 /* authors */
-const AUTHORS = ['anorudes', 'keske'];
+const AUTHORS = [
+  {
+    id: 1,
+    name: 'anorudes'
+  }, {
+    id: 2,
+    name: 'keske'
+  }
+];
 
 export class Footer extends Component {
   render() {
-    function renderGitHubFollowButton(user) {
-      return (
-        <a className="github-button" href={`https://github.com/${user}`}
-           data-count-href={`/${user}/followers`}
-           data-count-api={`/users/${user}#followers`}
-           data-count-aria-label="# followers on GitHub"
-           aria-label={`Follow @${user} on GitHub`}>
-          @{user}
-        </a>
-      );
-    }
     return (
       <footer className={`${ styles }`}>
         <div className="container">
@@ -33,9 +30,17 @@ export class Footer extends Component {
                aria-label="Star anorudes/redux-easy-boilerplate on GitHub">
                Star
             </a>
-              {
-                AUTHORS.map((author) => renderGitHubFollowButton(author))
-              }
+              {AUTHORS.map(function(author) {
+                return <div key={author.id}>
+                  <a className="github-button" href={`https://github.com/${author.name}`}
+                    data-count-href={`/${author.name}/followers`}
+                    data-count-api={`/users/${author.name}#followers`}
+                    data-count-aria-label="# followers on GitHub"
+                    aria-label={`Follow @${author.name} on GitHub`}>
+                    @{author.name}
+                  </a>
+                </div>
+              })}
             </div>
           </div>
         </div>
