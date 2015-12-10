@@ -8,13 +8,14 @@ const AUTHORS = ['anorudes', 'keske'];
 
 export class Footer extends Component {
   render() {
-    function renderGitHubFollowButton(user) {
+    function renderGitHubFollowButton(user, key) {
       return (
         <a className="github-button" href={`https://github.com/${user}`}
            data-count-href={`/${user}/followers`}
            data-count-api={`/users/${user}#followers`}
            data-count-aria-label="# followers on GitHub"
-           aria-label={`Follow @${user} on GitHub`}>
+           aria-label={`Follow @${user} on GitHub`}
+           key={key}>
           @{user}
         </a>
       );
@@ -34,7 +35,7 @@ export class Footer extends Component {
                Star
             </a>
               {
-                AUTHORS.map((author) => renderGitHubFollowButton(author))
+                AUTHORS.map((author, key) => renderGitHubFollowButton(author, key))
               }
             </div>
           </div>
