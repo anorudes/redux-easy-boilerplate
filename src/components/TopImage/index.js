@@ -33,14 +33,14 @@ export class TopImage extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <ReactCSSTransitionGroup transitionName="title-animation"
-                                       transitionAppear={true}
+                                       transitionAppear
                                        transitionAppearTimeout={1300}>
                 <h1 className="title">
                   Redux Easy Boilerplate
                 </h1>
               </ReactCSSTransitionGroup>
               <ReactCSSTransitionGroup transitionName="text-animation"
-                                       transitionAppear={true}
+                                       transitionAppear
                                        transitionAppearTimeout={1300}>
                 <p>
                   Start your project easy and fast with modern tools
