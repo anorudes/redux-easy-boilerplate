@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* component styles */
-import { styles } from './styles/styles.scss';
+import { styles } from './styles';
 
 export class Items extends Component {
   static propTypes = {

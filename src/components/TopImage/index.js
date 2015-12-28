@@ -5,7 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { setParallax } from '../../utils/parallax';
 
 /* component styles */
-import { styles } from './styles/styles.scss';
+import { styles } from './styles';
 
 export class TopImage extends Component {
 
