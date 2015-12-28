@@ -3,7 +3,7 @@ import { reduxForm } from 'redux-form';
 import { reset } from 'redux-form';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles/styles.scss';
 
 export class AddItem extends Component {
   static propTypes = {
