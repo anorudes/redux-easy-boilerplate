@@ -16,29 +16,6 @@
     height: 320px;
   }
 
-  /* animation */
-  .title-animation-appear {
-    opacity: 0.01;
-    margin-top: 30%;
-  }
-
-  .title-animation-appear.title-animation-appear-active {
-    opacity: 1;
-    margin-top: 20%;
-    transition: .5s linear;
-  }
-
-  .text-animation-appear {
-    opacity: 0.01;
-    margin-top: 30px;
-  }
-
-  .text-animation-appear.text-animation-appear-active {
-    opacity: 1;
-    margin-top: 0;
-    transition: .5s linear;
-  }
-
   h1.title {
     color: #FFF;
     font-size: 60px;

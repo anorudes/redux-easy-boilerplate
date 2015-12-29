@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import LoadingOrderAnimation from 'react-loading-order-with-animation';
 
 /* utils */
 import { setParallax } from '../../utils/parallax';
@@ -32,20 +32,24 @@ export class TopImage extends Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <ReactCSSTransitionGroup transitionName="title-animation"
-                                       transitionAppear
-                                       transitionAppearTimeout={1300}>
+              <LoadingOrderAnimation animation="fade-in"
+                                     move="from-bottom-to-top"
+                                     distance={30}
+                                     speed={700}
+                                     wait={700}>
                 <h1 className="title">
                   Redux Easy Boilerplate
                 </h1>
-              </ReactCSSTransitionGroup>
-              <ReactCSSTransitionGroup transitionName="text-animation"
-                                       transitionAppear
-                                       transitionAppearTimeout={1300}>
+              </LoadingOrderAnimation>
+              <LoadingOrderAnimation animation="fade-in"
+                                     move="from-bottom-to-top"
+                                     distance={60}
+                                     speed={700}
+                                     wait={900}>
                 <p>
                   Start your project easy and fast with modern tools
                 </p>
-              </ReactCSSTransitionGroup>
+              </LoadingOrderAnimation>
             </div>
           </div>
         </div>
