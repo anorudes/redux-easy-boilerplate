@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles';
 
 /* authors */
 const AUTHORS = ['anorudes', 'keske'];

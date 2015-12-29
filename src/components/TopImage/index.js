@@ -5,7 +5,7 @@ import LoadingOrderAnimation from 'react-loading-order-with-animation';
 import { setParallax } from '../../utils/parallax';
 
 /* component styles */
-import styles from './styles';
+import { styles } from './styles';
 
 export class TopImage extends Component {
 
