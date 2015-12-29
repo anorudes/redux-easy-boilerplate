@@ -12,6 +12,7 @@ ios
 .babelrc
 npm-debug.log
 .gitignore
+dist/
 .idea_modules/
 /out/
 atlassian-ide-plugin.xml
