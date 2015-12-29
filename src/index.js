@@ -8,7 +8,9 @@ import routes from './routes';
 import { syncReduxAndRouter } from 'redux-simple-router';
 
 const store = configureStore();
-const history = createHistory();
+const history = createHistory({
+  queryKey: false,
+});
 
 syncReduxAndRouter(history, store);
 
