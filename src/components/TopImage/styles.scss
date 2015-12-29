@@ -1,9 +1,9 @@
-@import '../../../../src/containers/App/styles/screens';
+@import '../../../src/containers/App/styles/screens';
 
 :local(.styles) {
   position: relative;
 
-  background: url(../files/nyc.jpg);
+  background: url(files/nyc.jpg);
   background-size: 100% auto;
 
   height: 500px;
