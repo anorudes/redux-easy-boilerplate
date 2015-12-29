@@ -15,6 +15,7 @@ export class Items extends Component {
   }
 
   onDelete(event) {
+    event.preventDefault();
     const index = event.currentTarget.dataset.index;
     this.props.delItem(index);
   }
