@@ -31,7 +31,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json'],
+    extensions: ['', '.jsx', '.js', '.json', '.scss'],
     modulesDirectories: ['node_modules', 'src'],
   },
 
@@ -63,7 +63,7 @@ module.exports = {
       exclude: /node_modules/,
     }, {
       test: /\.scss$/,
-      loader: 'css?localIdentName=[path]!postcss-loader!sass',
+      loader: 'style!css?localIdentName=[path]!postcss-loader!sass',
     }, {
       test: /\.png$/,
       loader: 'file?name=[name].[ext]',
