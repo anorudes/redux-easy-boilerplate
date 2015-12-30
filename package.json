@@ -1,6 +1,6 @@
 {
   "name": "redux-easy-boilerplate",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Start your project easy and fast with modern tools",
   "scripts": {
     "start": "node server.js",
