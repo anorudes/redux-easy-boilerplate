@@ -9,6 +9,9 @@ const initialState = {
     text: 'React router',
     done: true,
   }, {
+    text: 'Babel 6',
+    done: true,
+  }, {
     text: 'Bootstrap webpack',
     done: true,
   }, {

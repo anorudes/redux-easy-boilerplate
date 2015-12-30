@@ -1,7 +1,7 @@
 Redux Easy Boilerplate
 =========================
 
-![browser](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/gh/browser.png)
+![http://anorudes.github.io/redux-easy-boilerplate/](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/gh/browser.png)
 [Demo](http://anorudes.github.io/redux-easy-boilerplate/)
 
 ## Table of Contents
@@ -14,6 +14,7 @@ Redux Easy Boilerplate
 - [React 0.14.2](https://github.com/facebook/react)
 - [Redux 3.0.4](https://github.com/gaearon/redux)
 - [React Router 1.0.0-beta1](https://github.com/rackt/react-router)
+- [Babel 6](https://github.com/babel/babel)
 - [Bootstrap Webpack](https://github.com/bline/bootstrap-webpack)
 - Sass modules ([sass-loader](https://github.com/jtangelder/sass-loader) [css-loader](https://github.com/webpack/css-loader) [style-loader](https://github.com/webpack/style-loader))
 - [react transform](https://github.com/gaearon/react-transform)
@@ -24,7 +25,7 @@ Redux Easy Boilerplate
 - [karma](https://github.com/karma-runner/karma)
 - [mocha](https://github.com/mochajs/mocha)
 
-## Installation
+## Development
 ```
 $ npm install
 ```

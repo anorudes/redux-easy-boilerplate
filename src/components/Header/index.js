@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import { styles } from './styles.scss';
 
 export class Header extends Component {
+
   constructor(props) {
     super(props);
     this.hideHeader = this.hideHeader.bind(this);

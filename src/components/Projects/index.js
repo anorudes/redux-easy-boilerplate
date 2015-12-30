@@ -17,8 +17,6 @@ const PROJECTS = [{
 const icons = [];
 PROJECTS.map(project => icons.push(require(`./files/${project.name.replace(' ', '')}.png`)));
 
-// const reactjs = require('./files/reactjs.png');
-
 export class Projects extends Component {
   render() {
     return (

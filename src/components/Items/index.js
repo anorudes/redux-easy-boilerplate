@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { styles } from './styles.scss';
 
 export class Items extends Component {
+
   static propTypes = {
     items: React.PropTypes.array,
     delItem: React.PropTypes.func,
