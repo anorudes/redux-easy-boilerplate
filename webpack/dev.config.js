@@ -2,7 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
-var csswring = require('csswring');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
