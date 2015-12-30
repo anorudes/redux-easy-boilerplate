@@ -9,7 +9,6 @@ ios
 .jshintrc
 .gitattributes
 .editorconfig
-.babelrc
 npm-debug.log
 .gitignore
 dist/
