@@ -62,7 +62,7 @@ module.exports = {
       exclude: /node_modules/,
     }, {
       test: /\.scss$/,
-      loader: 'style!css?localIdentName=[path]!postcss-loader!sass',
+      loader: 'style!css?localIdentName=[path][name]--[local]!postcss-loader!sass',
     }, {
       test: /\.png$/,
       loader: 'file?name=[name].[ext]',
