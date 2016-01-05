@@ -8,7 +8,6 @@ export class Header extends Component {
 
   constructor(props) {
     super(props);
-    this.hideHeader = this.hideHeader.bind(this);
   }
 
   componentDidMount() {
@@ -19,7 +18,7 @@ export class Header extends Component {
     window.removeEventListener('scroll', this.hideHeader);
   }
 
-  hideHeader() {
+  hideHeader = () => {
     const opacity = 1 - (window.pageYOffset / 200).toFixed(1);
     this.refs.header.style.opacity = opacity;
   }

@@ -15,10 +15,9 @@ export class AddItem extends Component {
 
   constructor(props) {
     super(props);
-    this.onAdd = this.onAdd.bind(this);
   }
 
-  onAdd(event) {
+  onAdd = (event) => {
     if (this.props.fields.name.value) {
       /* add item*/
       this.props.addItem(this.props.fields);
@@ -31,7 +30,7 @@ export class AddItem extends Component {
 
   render() {
     const {
-      fields: {name},
+      fields: { name },
     } = this.props;
 
     return (
