@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 /* component styles */
 import { styles } from './styles.scss';
 
-/* authors */
-const AUTHORS = ['anorudes', 'keske'];
-
 export class Footer extends Component {
 
   render() {
@@ -36,9 +33,6 @@ export class Footer extends Component {
                aria-label="Star anorudes/redux-easy-boilerplate on GitHub">
                Star
             </a>
-              {
-                AUTHORS.map((author, key) => renderGitHubFollowButton(author, key))
-              }
             </div>
           </div>
         </div>
