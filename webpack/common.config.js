@@ -17,7 +17,10 @@ const PATHS = {
 process.env.BABEL_ENV = TARGET;
 
 const common = {
-  entry: PATHS.app,
+  entry: [
+    'bootstrap-loader',
+    PATHS.app,
+  ],
 
   output: {
     path: PATHS.build,
@@ -32,9 +35,6 @@ const common = {
 
   module: {
     loaders: [{
-      test: /bootstrap\/js\//,
-      loader: 'imports?jQuery=jquery',
-    }, {
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff',
     }, {
