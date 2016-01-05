@@ -12,10 +12,9 @@ export class Items extends Component {
 
   constructor(props) {
     super(props);
-    this.onDelete = this.onDelete.bind(this);
   }
 
-  onDelete(event) {
+  onDelete = (event) => {
     event.preventDefault();
     const index = event.currentTarget.dataset.index;
     this.props.delItem(index);

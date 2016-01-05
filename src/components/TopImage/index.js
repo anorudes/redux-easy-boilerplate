@@ -11,7 +11,6 @@ export class TopImage extends Component {
 
   constructor(props) {
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
@@ -22,7 +21,7 @@ export class TopImage extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll() {
+  handleScroll = () => {
     setParallax(this.refs.parallax, 10);
   }
 
