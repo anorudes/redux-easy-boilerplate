@@ -85,7 +85,7 @@
     "redux": "^3.0.4",
     "redux-react-router": "^1.0.0-beta1",
     "react-redux": "^4.0.0",
-    "react-router": "1.0.3",
+    "react-router": "^2.0.0-rc4",
     "jquery": "^2.1.4",
     "bootstrap": "^3.3.5"
   }
