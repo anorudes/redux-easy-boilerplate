@@ -1,6 +1,4 @@
-var path = require('path');
-
-module.exports = function(config) {
+module.exports = (config) => {
   config.set({
     basePath: 'src',
     singleRun: true,
@@ -33,5 +31,4 @@ module.exports = function(config) {
       },
     },
   });
-
 };
