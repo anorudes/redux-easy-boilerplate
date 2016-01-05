@@ -23,4 +23,11 @@ module.exports = {
       jQuery: 'jquery',
     }),
   ],
+  
+  module: {
+    loaders: [{
+      test: /\.scss$/,
+      loader: 'style!css!postcss-loader!sass',
+    }]
+  },
 };
