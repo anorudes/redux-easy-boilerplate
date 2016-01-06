@@ -79,7 +79,7 @@ import { Router, Redirect, browserHistory as history } from 'react-router';
 ```
 
 the use of history push api requires that all your requests point to index.html
-since react-router is keeping track of the navigation (e.g this can be done with `.htaccess` file the web root or `nginx` configuration)
+since react-router is keeping track of the navigation (e.g this can be done with `.htaccess` file at the web root or with `nginx` configuration)
 
 ## Run karma
 ```
