@@ -15,7 +15,7 @@ Redux Easy Boilerplate
 - [Redux 3.0.4](https://github.com/gaearon/redux)
 - [React Router 2.0.0-rc4](https://github.com/rackt/react-router)
 - [Babel 6](https://github.com/babel/babel)
-- [Bootstrap-loader](https://github.com/shakacode/bootstrap-loader)
+- [Bootstrap-loader](https://github.com/shakacode/bootstrap-loader) (configurable with .bootstraprc)
 - Sass modules ([sass-loader](https://github.com/jtangelder/sass-loader) [css-loader](https://github.com/webpack/css-loader) [style-loader](https://github.com/webpack/style-loader))
 - [react transform](https://github.com/gaearon/react-transform)
 - [redux-logger](https://github.com/fcomb/redux-logger)
