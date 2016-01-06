@@ -36,7 +36,8 @@ $ npm install
 ```
 $ npm start
 ```
-Development mode has hot-reloading of `src` folder, just point your browser to [http://localhost:3000](http://localhost:3000).
+Runs the project in development mode with hot-reloading of `src` folder. 
+Open your browser at [http://localhost:3000](http://localhost:3000).
 
 
 
@@ -59,7 +60,7 @@ runs scripts `clean` and `build`
 To run your server in production simply place the `index.html` and `dist` folder into
 your `web root`.
 
-In development mode the app runs using `hashHistory` (e.g /#/home?_k=x928123) which
+In development mode the app uses `hashHistory` (e.g /#/home?_k=x928123) which
 keeps track of your currently location on and the state of the page. It is adviced
 for production to use `browserHistory` instead of `hashHistory`
 
