@@ -51,11 +51,11 @@ Using rimraf clean the `dist` folder, which is the target of the `build`
 ```
 $ npm run build
 ```
-Bundles and outputs the app into the 'dist' folder
+Builds the app into the 'dist' folder for deployment 
 ```
 $ npm run build:production
 ```
-runs scripts `clean` and `build`
+clean the `dist` folder and rebuilds the app for deployment
 ### Production
 To run your server in production simply place the `index.html` and `dist` folder into
 your `web root`.
