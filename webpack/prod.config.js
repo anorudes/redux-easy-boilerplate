@@ -1,10 +1,20 @@
+const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
 
-  entry: ['bootstrap-loader/extractStyles'],
+  entry: [
+    'bootstrap-loader/extractStyles',
+    './src/index',
+  ],
+
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, '../dist/'),
+    publicPath: 'dist/',
+  },
 
   plugins: [
     new webpack.DefinePlugin({
@@ -20,6 +30,9 @@ module.exports = {
       compress: {
         warnings: false,
       },
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
     }),
   ],
 
