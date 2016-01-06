@@ -20,4 +20,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
+
+  module: {
+    loaders: [{
+      test: /\.scss$/,
+      loader: 'style!css?localIdentName=[path][name]--[local]!postcss-loader!sass',
+    }]
+  },
 };
