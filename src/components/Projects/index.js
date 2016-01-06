@@ -15,7 +15,7 @@ const PROJECTS = [{
 
 /* images */
 const icons = [];
-PROJECTS.map(project => icons.push(require(`./files/${project.name.replace(' ', '')}.jpg`)));
+PROJECTS.map(project => icons.push(require(`./files/${project.name.replace(' ', '')}.png`)));
 
 export class Projects extends Component {
   render() {
