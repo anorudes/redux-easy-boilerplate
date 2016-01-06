@@ -8,7 +8,8 @@ Redux Easy Boilerplate
 
 - [About](#about)
 - [Installation](#installation)
-- [Run](#run)
+- [Development](#development)
+- [Build](#run)(#build--buildproduction)
 
 ## About
 - [React 0.14.2](https://github.com/facebook/react)
