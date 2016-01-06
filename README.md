@@ -27,7 +27,7 @@ Redux Easy Boilerplate
 
 ## Installation
 ```
-$ git clone https://github.com/inertum/redux-easy-boilerplate.git
+$ git clone https://github.com/anorudes/redux-easy-boilerplate.git
 $ cd redux-easy-boilerplate
 $ npm install
 ```
