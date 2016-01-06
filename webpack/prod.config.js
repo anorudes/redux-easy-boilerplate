@@ -4,6 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
 
+  entry: ['bootstrap-loader/extractStyles'],
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -18,9 +20,6 @@ module.exports = {
       compress: {
         warnings: false,
       },
-    }),
-    new webpack.ProvidePlugin({
-      jQuery: 'jquery',
     }),
   ],
 };

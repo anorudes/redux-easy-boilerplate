@@ -18,7 +18,6 @@ process.env.BABEL_ENV = TARGET;
 
 const common = {
   entry: [
-    'bootstrap-loader',
     PATHS.app,
   ],
 
@@ -35,6 +34,9 @@ const common = {
 
   module: {
     loaders: [{
+      test: /bootstrap-sass\/assets\/javascripts\//,
+      loader: 'imports?jQuery=jquery',
+    }, {
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff',
     }, {
@@ -74,10 +76,9 @@ const common = {
 };
 
 if (TARGET === 'start' || !TARGET) {
-  module.exports = merge(common, development);
+  module.exports = merge(development, common);
 }
 
 if (TARGET === 'build' || !TARGET) {
-  module.exports = merge(common, production);
+  module.exports = merge(production, common);
 }
-
