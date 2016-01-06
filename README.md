@@ -36,47 +36,49 @@ $ npm install
 ```
 $ npm start
 ```
-And open in browser: [http://localhost:3000](http://localhost:3000)
-Development mode has hot-reloading of src folder
+Development mode has hot-reloading of `src` folder, just point your browser to [http://localhost:3000](http://localhost:3000).
+
+
 
 ## Clean
 ```
 $ npm run clean
 ```
-Using rimraf clean the "dist" folder, which is the target of the build
+Using rimraf clean the `dist` folder, which is the target of the `build`
 
-## Build & Build:Production
+## Build & build:production
 ```
 $ npm run build
 ```
-Bundles and output the app into dist folder
+Bundles and outputs the app into the 'dist' folder
 ```
 $ npm run build:production
 ```
-runs scripts clean and build
+runs scripts `clean` and `build`
 ### Production
-To run your server in production simply place the index.html and dist folder into
-your web root.
+To run your server in production simply place the `index.html` and `dist` folder into
+your `web root`.
 
-In development mode the app runs using hashHistory (e.g /#/home?_k=x928123) which
+In development mode the app runs using `hashHistory` (e.g /#/home?_k=x928123) which
 keeps track of your currently location on and the state of the page. It is adviced
-for production to use browserHistory instead of hashHistory
+for production to use `browserHistory` instead of `hashHistory`
 
-To make this change edit src/index.js
+To make this change edit `src/index.js`
 ```
 // before change
 ...
 import { Router, Redirect, hashHistory as history } from 'react-router'; 
 ...
+
 // after change
 ...
 import { Router, Redirect, browserHistory as history } from 'react-router';
+...
 
 ```
 
 the use of history push api requires that all your requests point to index.html
-since react-router is keeping track of the navigation, you want to prevent
-the normal navigation behaviour. For e.g this can be done with .htaccess file the web root or nginx configuration
+since react-router is keeping track of the navigation (e.g this can be done with `.htaccess` file the web root or `nginx` configuration)
 
 ## Run karma
 ```
