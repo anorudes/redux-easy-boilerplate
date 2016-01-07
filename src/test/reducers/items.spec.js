@@ -36,4 +36,3 @@ describe('Items reducer:', () => {
     ).toEqual(initialState);
   });
 });
-

@@ -41,7 +41,7 @@ export class AddItem extends Component {
             className="form-control"
             placeholder="Enter something"
             {...name}
-            />
+          />
         </div>
         <div className="form-group">
           <button className="btn btn-default" onClick={this.onAdd}>

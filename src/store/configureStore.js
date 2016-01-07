@@ -6,7 +6,7 @@ import rootReducer from '../reducers';
 const logger = createLogger(
   {
     collapsed: true,
-    predicate: (getState, action) => process.env.NODE_ENV === `development`,
+    predicate: (getState, action) => process.env.NODE_ENV === `development`, // eslint-disable-line no-unused-vars
   }
 );
 
