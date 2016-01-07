@@ -6,6 +6,13 @@ module.exports = {
 
   entry: ['bootstrap-loader/extractStyles'],
 
+  module: {
+    loaders: [{
+      test: /\.scss$/,
+      loader: 'style!css!postcss-loader!sass',
+    }],
+  },
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
