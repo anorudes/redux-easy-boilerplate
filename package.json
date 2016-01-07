@@ -27,7 +27,6 @@
     "edit",
     "webpack"
   ],
-  "author": "https://github.com/anorudes, https://github.com/keske",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.0.2",
