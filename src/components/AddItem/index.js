@@ -11,7 +11,7 @@ export class AddItem extends Component {
     fields: React.PropTypes.object.isRequired,
     items: React.PropTypes.array,
     addItem: React.PropTypes.func,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -26,7 +26,7 @@ export class AddItem extends Component {
       this.props.dispatch(reset('addItem'));
     }
     event.preventDefault();
-  }
+  };
 
   render() {
     const {

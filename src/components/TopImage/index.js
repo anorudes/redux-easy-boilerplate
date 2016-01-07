@@ -23,7 +23,7 @@ export class TopImage extends Component {
 
   handleScroll = () => {
     setParallax(this.refs.parallax, 10);
-  }
+  };
 
   render() {
     return (
@@ -32,19 +32,21 @@ export class TopImage extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <LoadingOrderAnimation animation="fade-in"
-                                     move="from-bottom-to-top"
-                                     distance={30}
-                                     speed={700}
-                                     wait={700}>
+                move="from-bottom-to-top"
+                distance={30}
+                speed={700}
+                wait={700}
+              >
                 <h1 className="title">
                   Redux Easy Boilerplate
                 </h1>
               </LoadingOrderAnimation>
               <LoadingOrderAnimation animation="fade-in"
-                                     move="from-bottom-to-top"
-                                     distance={60}
-                                     speed={700}
-                                     wait={900}>
+                move="from-bottom-to-top"
+                distance={60}
+                speed={700}
+                wait={900}
+              >
                 <p>
                   Start your project easy and fast with modern tools
                 </p>
