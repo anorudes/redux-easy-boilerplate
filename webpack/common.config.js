@@ -10,7 +10,12 @@ const TARGET = process.env.npm_lifecycle_event;
 
 process.env.BABEL_ENV = TARGET;
 
+var entry = [
+    './src/index'
+  ];
+
 const common = {
+
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.scss'],
     modulesDirectories: ['node_modules', 'src'],
@@ -57,9 +62,13 @@ const common = {
 };
 
 if (TARGET === 'start' || !TARGET) {
-  module.exports = merge(development, common);
+  var config = merge(development, common);
 }
 
 if (TARGET === 'build' || !TARGET) {
-  module.exports = merge(production, common);
+  var config = merge(production, common);
 }
+
+config.entry = config.entry.concat(entry);
+
+module.exports = config;

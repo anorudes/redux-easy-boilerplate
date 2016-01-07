@@ -6,8 +6,7 @@ module.exports = {
   devtool: 'source-map',
 
   entry: [
-    'bootstrap-loader/extractStyles',
-    './src/index',
+    'bootstrap-loader/extractStyles'
   ],
 
   output: {

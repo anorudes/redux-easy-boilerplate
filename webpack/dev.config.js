@@ -7,8 +7,7 @@ module.exports = {
 
   entry: [
     'bootstrap-loader',
-    'webpack-hot-middleware/client',
-    './src/index',
+    'webpack-hot-middleware/client'
   ],
 
   output: {
