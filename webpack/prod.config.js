@@ -6,6 +6,10 @@ module.exports = {
 
   entry: ['bootstrap-loader/extractStyles'],
 
+  output: {
+    publicPath: 'dist/',
+  },
+
   module: {
     loaders: [{
       test: /\.scss$/,

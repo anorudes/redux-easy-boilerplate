@@ -8,6 +8,9 @@ module.exports = {
     'webpack-hot-middleware/client',
     './src/index',
   ],
+  output: {
+    publicPath: '/dist/',
+  },
 
   module: {
     loaders: [{
