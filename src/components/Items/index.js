@@ -7,8 +7,8 @@ export class Items extends Component {
 
   static propTypes = {
     items: React.PropTypes.array,
-    delItem: React.PropTypes.func,
-  }
+    delItem: React.PropTypes.func
+  };
 
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ export class Items extends Component {
     event.preventDefault();
     const index = event.currentTarget.dataset.index;
     this.props.delItem(index);
-  }
+  };
 
   render() {
     const { items } = this.props;
