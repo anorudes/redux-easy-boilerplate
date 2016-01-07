@@ -1,6 +1,6 @@
 {
   "name": "redux-easy-boilerplate",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Start your project easy and fast with modern tools",
   "scripts": {
     "clean": "rimraf dist",
