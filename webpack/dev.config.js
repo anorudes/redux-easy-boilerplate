@@ -1,22 +1,23 @@
-const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-
   entry: [
     'bootstrap-loader',
     'webpack-hot-middleware/client',
     './src/index',
   ],
-
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, '/dist/'),
     publicPath: '/dist/',
   },
 
+  module: {
+    loaders: [{
+      test: /\.scss$/,
+      loader: 'style!css?localIdentName=[path][name]--[local]!postcss-loader!sass',
+    }],
+  },
 
   plugins: [
     new webpack.DefinePlugin({
@@ -33,11 +34,4 @@ module.exports = {
       jQuery: 'jquery',
     }),
   ],
-
-  module: {
-    loaders: [{
-      test: /\.scss$/,
-      loader: 'style!css?localIdentName=[path][name]--[local]!postcss-loader!sass',
-    }]
-  },
 };
