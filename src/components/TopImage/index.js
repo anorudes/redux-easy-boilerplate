@@ -23,7 +23,7 @@ export class TopImage extends Component {
 
   handleScroll = () => {
     setParallax(this.refs.parallax, 10);
-  }
+  };
 
   render() {
     return (

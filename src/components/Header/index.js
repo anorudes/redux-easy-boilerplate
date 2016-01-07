@@ -21,7 +21,7 @@ export class Header extends Component {
   hideHeader = () => {
     const opacity = 1 - (window.pageYOffset / 200).toFixed(1);
     this.refs.header.style.opacity = opacity;
-  }
+  };
 
   render() {
     return (
