@@ -18,19 +18,20 @@ syncReduxAndRouter(history, store);
 
 
 const rootRoute = {
-  component: 'div',
-  childRoutes: [{
-    path: '/',
-    component: require('./components/App'),
-    childRoutes: [
+  path: '/',
+  component: App,
+  indexRoute: {
+      component: Home
+  },
+  childRoutes: [
       { path: 'home', component: Home },
-      { path: 'list', component: List }
-    ]
-  }]
+      { path: 'list', component: List },
+      require('./containers/LazyPage/routes')
+  ]
 };
 
 
-render(
+ReactDOM.render(
     <Provider store={store}>
         <Router history={history} routes={rootRoute}></Router>
     </Provider>,

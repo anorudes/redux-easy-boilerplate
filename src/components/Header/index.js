@@ -42,6 +42,9 @@ export class Header extends Component {
                 <Link to="/list" activeClassName="active">
                   Redux
                 </Link>
+                <Link to="/lazypage" activeClassName="active">
+                  LazyPage
+                </Link>
               </nav>
             </div>
 
