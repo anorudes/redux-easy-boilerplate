@@ -6,7 +6,7 @@ import rootReducer from '../reducers';
 const logger = createLogger(
   {
     collapsed: true,
-    predicate: (getState, action) => process.env.NODE_ENV === `development`,
+    predicate: (getState, action) => process.env.NODE_ENV === `development`, // eslint-disable-line no-unused-vars
   }
 );
 
@@ -21,7 +21,7 @@ export default function configureStore(initialState) {
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => {
-      const nextRootReducer = require('../reducers/index');
+      const nextRootReducer = require('../reducers/index').default;
       store.replaceReducer(nextRootReducer);
     });
   }
