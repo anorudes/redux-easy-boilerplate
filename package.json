@@ -30,7 +30,7 @@
   "author": "https://github.com/anorudes, https://github.com/keske",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.0.2",
+    "autoprefixer": "^6.2.3",
     "babel-core": "^6.3.26",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.0",
