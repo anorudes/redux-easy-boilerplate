@@ -91,7 +91,6 @@
   "dependencies": {
     "react": "^0.14.2",
     "redux": "^3.0.4",
-    "redux-react-router": "^1.0.0-beta1",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.0-rc4",
     "jquery": "^2.2.0"
