@@ -4,7 +4,7 @@
   "description": "Start your project easy and fast with modern tools",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack --verbose --colors --display-error-details --config webpack/common.config.js",
+    "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.js",
     "build:production": "npm run clean && npm run build",
     "lint": "eslint src",
     "start": "node server.js",
