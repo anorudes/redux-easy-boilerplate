@@ -30,7 +30,7 @@
   "author": "https://github.com/anorudes, https://github.com/keske",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.2.3",
+    "autoprefixer": "6.2.3",
     "babel-core": "^6.3.26",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.0",
@@ -94,6 +94,6 @@
     "redux-react-router": "^1.0.0-beta1",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.0-rc4",
-    "jquery": "^2.1.4"
+    "jquery": "^2.2.0"
   }
 }
