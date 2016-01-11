@@ -1,6 +1,5 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const postcssImport = require('postcss-import');
 const merge = require('webpack-merge');
 
 const development = require('./dev.config.js');
@@ -67,12 +66,9 @@ const common = {
     }],
   },
 
-  postcss: (webpack) => {
-    return [
-      autoprefixer({ browsers: ['last 2 versions'] }),
-      postcssImport({ addDependencyTo: webpack }),
-    ];
-  },
+  postcss: [
+    autoprefixer({ browsers: ['last 2 versions'] }),
+  ],
 };
 
 if (TARGET === 'start' || !TARGET) {
