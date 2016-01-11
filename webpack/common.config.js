@@ -1,11 +1,12 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
+const postcssImport = require('postcss-import');
 const merge = require('webpack-merge');
 
 const development = require('./dev.config.js');
 const production = require('./prod.config.js');
 
-require('babel-polyfill');
+require('babel-polyfill').default;
 
 const TARGET = process.env.npm_lifecycle_event;
 
@@ -66,9 +67,12 @@ const common = {
     }],
   },
 
-  postcss: [
-    autoprefixer({ browsers: ['last 2 versions'] }),
-  ],
+  postcss: (webpack) => {
+    return [
+      autoprefixer({ browsers: ['last 2 versions'] }),
+      postcssImport({ addDependencyTo: webpack }),
+    ];
+  },
 };
 
 if (TARGET === 'start' || !TARGET) {
