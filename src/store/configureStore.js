@@ -3,12 +3,11 @@ import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from '../reducers';
 
-const logger = createLogger(
-  {
-    collapsed: true,
-    predicate: (getState, action) => process.env.NODE_ENV === `development`, // eslint-disable-line no-unused-vars
-  }
-);
+const logger = createLogger({
+  collapsed: true,
+  predicate: () =>
+    process.env.NODE_ENV === `development`, // eslint-disable-line no-unused-vars
+});
 
 const createStoreWithMiddleware = applyMiddleware(
   thunkMiddleware,

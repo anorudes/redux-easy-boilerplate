@@ -39,8 +39,7 @@ export class List extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
-                            col-md-offset-3 col-lg-offset-3"
-            >
+                            col-md-offset-3 col-lg-offset-3">
               <h1>
                 Redux
               </h1>
@@ -49,8 +48,7 @@ export class List extends Component {
 
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
-                            col-md-offset-3 col-lg-offset-3"
-            >
+                            col-md-offset-3 col-lg-offset-3">
               <h2>
                 Boilerplate contains:
               </h2>
@@ -58,8 +56,7 @@ export class List extends Component {
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6
-                            col-md-offset-3 col-lg-offset-3"
-            >
+                            col-md-offset-3 col-lg-offset-3">
               <AddItem {...this.props} />
             </div>
           </div>
