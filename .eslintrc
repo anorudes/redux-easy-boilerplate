@@ -7,7 +7,7 @@
     "mocha": true
   },
   "globals": {
-      "connect": true
+    "connect": true
   },
   "rules": {
     "react/jsx-uses-react": 2,
