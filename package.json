@@ -7,7 +7,7 @@
     "build": "webpack --progress --verbose --colors --display-error-details --config webpack/common.config.js",
     "build:production": "npm run clean && npm run build",
     "lint": "eslint src",
-    "start": "node server.js",
+    "start": "node bin/server.js",
     "test": "karma start"
   },
   "repository": {
@@ -97,10 +97,11 @@
     "webpack-merge": "^0.7.1"
   },
   "dependencies": {
+    "babel-preset-react-hmre": "^1.0.1",
+    "jquery": "^2.2.0",
     "react": "^0.14.2",
-    "redux": "^3.0.4",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.0-rc4",
-    "jquery": "^2.2.0"
+    "redux": "^3.0.4"
   }
 }
