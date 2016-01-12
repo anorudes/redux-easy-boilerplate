@@ -34,13 +34,24 @@ $ npm install
 ```
 
 ## Development
+
+Before push commit make sure that all modules are added in package.json
+
+### Try
+```
+$ rm -rf node_modules
+$ npm i
+$ npm start
+```
+
+
 ```
 $ npm start
 ```
 Runs the project in development mode with hot-reloading of `src` folder. 
 Open your browser at [http://localhost:3000](http://localhost:3000).
 
-
+## Contribution
 
 ## Clean
 ```
@@ -86,4 +97,6 @@ since react-router is keeping track of the navigation (e.g this can be done with
 ```
 $ npm test
 ```
-TODO: Write more tests!
+## TODO
+1. [ ] Write more tests!
+2. [ ] Server-side rendering
