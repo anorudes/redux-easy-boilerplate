@@ -24,11 +24,9 @@ app.get(/.*/, function root(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-if (require.main === module) {
-  const server = http.createServer(app);
-  server.listen(process.env.PORT || 3000, function onListen() {
-    const address = server.address();
-    console.log('Listening on: %j', address);
-    console.log(' -> that probably means: http://localhost:%d', address.port);
-  });
-}
+const server = http.createServer(app);
+server.listen(process.env.PORT || 3000, function onListen() {
+  const address = server.address();
+  console.log('Listening on: %j', address);
+  console.log(' -> that probably means: http://localhost:%d', address.port);
+});
