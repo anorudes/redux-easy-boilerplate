@@ -34,6 +34,13 @@ $ npm install
 ```
 
 ## Development
+```
+$ npm start
+```
+Runs the project in development mode with hot-reloading of `src` folder. 
+Open your browser at [http://localhost:3000](http://localhost:3000).
+
+## Contribution
 
 Before push commit make sure that all modules are added in package.json
 
@@ -43,15 +50,6 @@ $ rm -rf node_modules
 $ npm i
 $ npm start
 ```
-
-
-```
-$ npm start
-```
-Runs the project in development mode with hot-reloading of `src` folder. 
-Open your browser at [http://localhost:3000](http://localhost:3000).
-
-## Contribution
 
 ## Clean
 ```
