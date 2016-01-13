@@ -7,13 +7,9 @@
   padding: 20px 0;
   opacity: 1;
 
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .8);
 
-  &:hover {
-    background: rgba(0, 0, 0, .7);
-  }
-
-  a {
+  a, a:hover {
     color: #FFF;
   }
 

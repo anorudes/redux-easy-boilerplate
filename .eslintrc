@@ -7,7 +7,7 @@
     "mocha": true
   },
   "globals": {
-      "connect": true
+    "connect": true
   },
   "rules": {
     "max-len": 0,

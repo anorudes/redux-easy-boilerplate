@@ -1,8 +1,7 @@
 Redux Easy Boilerplate
 =========================
 
-![http://anorudes.github.io/redux-easy-boilerplate/](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/master/gh/browser.png)
-[Demo](http://anorudes.github.io/redux-easy-boilerplate/)
+![http://anorudes.github.io/redux-easy-boilerplate/](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/569905d1aabc33ce385b1895984141764d364b54/gh/browser.png)
 
 ## Table of Contents
 
@@ -40,7 +39,16 @@ $ npm start
 Runs the project in development mode with hot-reloading of `src` folder. 
 Open your browser at [http://localhost:3000](http://localhost:3000).
 
+## Contribution
 
+Before push commit make sure that all modules are added in package.json
+
+### Try
+```
+$ rm -rf node_modules
+$ npm i
+$ npm start
+```
 
 ## Clean
 ```
@@ -86,4 +94,6 @@ since react-router is keeping track of the navigation (e.g this can be done with
 ```
 $ npm test
 ```
-TODO: Write more tests!
+## TODO
+1. [ ] Write more tests!
+2. [ ] Server-side rendering

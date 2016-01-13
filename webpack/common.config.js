@@ -69,8 +69,12 @@ const common = {
 
   postcss: (webpack) => {
     return [
-      autoprefixer({ browsers: ['last 2 versions'] }),
-      postcssImport({ addDependencyTo: webpack }),
+      autoprefixer({
+        browsers: ['last 2 versions'],
+      }),
+      postcssImport({
+        addDependencyTo: webpack,
+      }),
     ];
   },
 };

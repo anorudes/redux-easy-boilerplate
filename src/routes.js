@@ -10,5 +10,6 @@ export default (
   <Route path="/" component={App}>
     <Route path="home" component={Home} />
     <Route path="list" component={List} />
+    <Route status={404} path="*" component={Home} />
   </Route>
 );
