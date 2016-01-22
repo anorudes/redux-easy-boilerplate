@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 
 /* containers */
 import { App } from 'containers/App';
@@ -8,7 +8,7 @@ import { List } from 'containers/List';
 
 export default (
   <Route path="/" component={App}>
-    <Route path="home" component={Home} />
+    <IndexRoute component={Home} />
     <Route path="list" component={List} />
     <Route status={404} path="*" component={Home} />
   </Route>
