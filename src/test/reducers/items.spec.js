@@ -8,30 +8,35 @@ const initialState = {
 describe('Items reducer:', () => {
   it('should return the initial state', () => {
     expect(
-      items(undefined, {})
+      items(initialState, {})
     ).toEqual(initialState);
   });
 
-  const stateAfterAdd = {
-    items: [{
-      text: 'test',
-      numb: 1,
-    }],
-  };
-
   it('should handle ADD', () => {
+    const stateAfterAdd = {
+      items: [{
+        text: 'test'
+      }],
+    };
+    const fields =  { name: { value: 'test'}};
     expect(
       items(initialState, {
-        type: 'ADD',
-        text: 'test',
+        type: 'ADD_ITEM',
+        fields: fields,
       })
     ).toEqual(stateAfterAdd);
   });
 
   it('should handle DELETE', () => {
+    const stateWithItem = {
+      items: [{
+        text: 'test'
+      }],
+    };
     expect(
-      items(initialState, {
-        type: 'DELETE',
+      items(stateWithItem, {
+        type: 'DELETE_ITEM',
+        index: 0
       })
     ).toEqual(initialState);
   });
