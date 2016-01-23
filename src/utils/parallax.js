@@ -1,4 +1,4 @@
-import { isMobileAndTablet } from './isMobileAndTablet';
+import { isMobileOrTablet } from './isMobileOrTablet';
 
 /*
  * Add parallax effect to element
@@ -9,7 +9,7 @@ import { isMobileAndTablet } from './isMobileAndTablet';
 export function setParallax(elem, speed = 30) {
   const top = (window.pageYOffset - elem.offsetTop) / speed;
 
-  isMobileAndTablet
+  isMobileOrTablet()
     ? elem.style.backgroundPosition = `0px ${ top }px`
     : null;
 }
