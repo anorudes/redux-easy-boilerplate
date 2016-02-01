@@ -21,7 +21,7 @@ Redux Easy Boilerplate
 - [redux-logger](https://github.com/fcomb/redux-logger)
 - [react-document-meta](https://github.com/kodyl/react-document-meta)
 - [redux-form](https://github.com/erikras/redux-form)
-- [redux-simple-router](https://github.com/jlongster/redux-simple-router)
+- [react-router-redux](https://github.com/rackt/react-router-redux)
 - [karma](https://github.com/karma-runner/karma)
 - [mocha](https://github.com/mochajs/mocha)
 
