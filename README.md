@@ -11,17 +11,15 @@ Redux Easy Boilerplate
 - [Build](#build--buildproduction)
 
 ## About
-- [React 0.14.2](https://github.com/facebook/react)
-- [Redux 3.0.4](https://github.com/gaearon/redux)
-- [React Router 2.0.0-rc4](https://github.com/rackt/react-router)
-- [Babel 6](https://github.com/babel/babel)
+- [React](https://github.com/facebook/react)
+- [Redux](https://github.com/gaearon/redux)
+- [React Router](https://github.com/rackt/react-router)
 - [Bootstrap-loader](https://github.com/shakacode/bootstrap-loader) (configurable with .bootstraprc)
 - Sass modules ([sass-loader](https://github.com/jtangelder/sass-loader) [css-loader](https://github.com/webpack/css-loader) [style-loader](https://github.com/webpack/style-loader))
 - [react transform](https://github.com/gaearon/react-transform)
 - [redux-logger](https://github.com/fcomb/redux-logger)
 - [react-document-meta](https://github.com/kodyl/react-document-meta)
 - [redux-form](https://github.com/erikras/redux-form)
-- [redux-simple-router](https://github.com/jlongster/redux-simple-router)
 - [karma](https://github.com/karma-runner/karma)
 - [mocha](https://github.com/mochajs/mocha)
 
@@ -36,7 +34,7 @@ $ npm install
 ```
 $ npm start
 ```
-Runs the project in development mode with hot-reloading of `src` folder. 
+Runs the project in development mode with hot-reloading of `src` folder.
 Open your browser at [http://localhost:3000](http://localhost:3000).
 
 ## Contribution
@@ -60,7 +58,7 @@ Using rimraf clean the `dist` folder, which is the target of the `build`
 ```
 $ npm run build
 ```
-Builds the app into the 'dist' folder for deployment 
+Builds the app into the 'dist' folder for deployment
 ```
 $ npm run build:production
 ```
@@ -77,7 +75,7 @@ To make this change edit `src/index.js`
 ```
 // before change
 ...
-import { Router, Redirect, hashHistory as history } from 'react-router'; 
+import { Router, Redirect, hashHistory as history } from 'react-router';
 ...
 
 // after change

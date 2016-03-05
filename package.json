@@ -84,7 +84,6 @@
     "react-transform-hmr": "^1.0.1",
     "redux-form": "^4.1.5",
     "redux-logger": "2.4.0",
-    "redux-simple-router": "^2.0.4",
     "redux-thunk": "^1.0.3",
     "resolve-url-loader": "^1.4.3",
     "rimraf": "^2.5.0",
