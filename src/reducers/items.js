@@ -9,9 +9,6 @@ const initialState = {
     text: 'React router',
     done: true,
   }, {
-    text: 'Babel 6',
-    done: true,
-  }, {
     text: 'Bootstrap webpack',
     done: true,
   }, {
@@ -28,9 +25,6 @@ const initialState = {
     done: true,
   }, {
     text: 'Redux form',
-    done: true,
-  }, {
-    text: 'Redux simple router',
     done: true,
   }, {
     text: 'Karma',
