@@ -28,7 +28,7 @@ styleLoaders:
 # Thus, derived Bootstrap variables can depend on values from here.
 # See the Bootstrap _variables.scss file for examples of derived Bootstrap variables.
 #
-# preBootstrapCustomizations: ./path/to/bootstrap/pre-customizations.scss
+preBootstrapCustomizations: ./app/containers/Root/styles/bootstrap/customizations.scss
 
 
 # This gets loaded after bootstrap/variables is loaded

@@ -1,7 +1,7 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  // devtool: 'source-map',
   devtool: 'eval-cheap-module-source-map',
 
   entry: {
@@ -15,11 +15,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.scss$/,
-      loader: 'style-loader!css!postcss-loader!sass-loader',
+      loader: ExtractTextPlugin.extract('style-loader', 'css?minimize!postcss-loader!sass-loader'),
     }],
   },
 
   plugins: [
+    new ExtractTextPlugin('bundle.css'),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],

@@ -1,97 +1,74 @@
-Redux Easy Boilerplate
+Redux Universal Boilerplate
 =========================
 
-![http://anorudes.github.io/redux-easy-boilerplate/](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/569905d1aabc33ce385b1895984141764d364b54/gh/browser.png)
-
-## Table of Contents
-
-- [About](#about)
-- [Installation](#installation)
-- [Development](#development)
-- [Build](#build--buildproduction)
-
 ## About
-- [React](https://github.com/facebook/react)
-- [Redux](https://github.com/gaearon/redux)
-- [React Router](https://github.com/rackt/react-router)
-- [Bootstrap-loader](https://github.com/shakacode/bootstrap-loader) (configurable with .bootstraprc)
-- Sass modules ([sass-loader](https://github.com/jtangelder/sass-loader) [css-loader](https://github.com/webpack/css-loader) [style-loader](https://github.com/webpack/style-loader))
-- [react transform](https://github.com/gaearon/react-transform)
-- [redux-logger](https://github.com/fcomb/redux-logger)
-- [react-document-meta](https://github.com/kodyl/react-document-meta)
-- [redux-form](https://github.com/erikras/redux-form)
-- [karma](https://github.com/karma-runner/karma)
-- [mocha](https://github.com/mochajs/mocha)
+
+Really easy react universal boilerplate with small code base and many commentaries
+
+- React
+- Redux
+- Server Side Rendering
+- Immutable
+- React Router
+- Express
+- Sass
+- Mocha
+- Chai
+- Enzyme
+- Sinon
+- Others: api + promise middleware, bundle.css for server-side-rendering, vendor bundle, async pages, alias, 4 modes for run (with auto rimraf dist)
+
+Doesnt'have redux-form and bootstrap for your choice
+
+## How it works
+
+See commentaries in code
 
 ## Installation
-```
-$ git clone https://github.com/anorudes/redux-easy-boilerplate.git
-$ cd redux-easy-boilerplate
-$ npm install
-```
 
-## Development
-```
-$ npm start
-```
-Runs the project in development mode with hot-reloading of `src` folder.
-Open your browser at [http://localhost:3000](http://localhost:3000).
+Install [nodemon](https://github.com/remy/nodemon)<br />
+Install [concurrently](https://github.com/kimmobrunfeldt/concurrently)
 
-## Contribution
+## Start development
 
-Before push commit make sure that all modules are added in package.json
+```$ npm run api-mon```
 
-### Try
-```
-$ rm -rf node_modules
-$ npm i
-$ npm start
-```
+```$ npm run start```
 
-## Clean
-```
-$ npm run clean
-```
-Using rimraf clean the `dist` folder, which is the target of the `build`
+after: open 'http://localhost:3000' in browser<br />
+hint: use this mode for dev
 
-## Build & build:production
-```
-$ npm run build
-```
-Builds the app into the 'dist' folder for deployment
-```
-$ npm run build:production
-```
-clean the `dist` folder and rebuilds the app for deployment
-### Production
-To run your server in production simply place the `index.html` and `dist` folder into
-your `web root`.
+## Start development (server-side-rendering)
 
-In development mode the app uses `hashHistory` (e.g /#/home?_k=x928123) which
-keeps track of your currently location on and the state of the page. It is adviced
-for production to use `browserHistory` instead of `hashHistory`
+```$ npm run api-mon```
 
-To make this change edit `src/index.js`
-```
-// before change
-...
-import { Router, Redirect, hashHistory as history } from 'react-router';
-...
+```$ npm run start-ssr```
 
-// after change
-...
-import { Router, Redirect, browserHistory as history } from 'react-router';
-...
+after: open 'http://localhost:3000' in browser<br />
+hint: doesn't have hot reload, but you can mannualy refresh page in browser.<br />
+This mode need for test before build prod
 
-```
+## Start production
 
-the use of history push api requires that all your requests point to index.html
-since react-router is keeping track of the navigation (e.g this can be done with `.htaccess` file at the web root or with `nginx` configuration)
+```$ npm run api:prod```
 
-## Run karma
-```
-$ npm test
-```
-## TODO
-1. [ ] Write more tests!
-2. [ ] Server-side rendering
+```$ npm run start:prod```
+
+after: open 'http://localhost' in browser<br />
+hint: this mode need if you dont' want server-side-rendering
+
+## Start production (server-side-rendering)
+
+```$ npm run build```
+
+```$ npm run api:prod```
+
+```$ npm run start-ssr:prod```
+
+after: open 'http://localhost' in browser<br />
+hint: this mode doesn't have hot-reload and works only with build.<br />
+Use for production on server
+
+## Run tests
+
+```$ npm run test```
