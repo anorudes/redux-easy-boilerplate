@@ -1,4 +1,4 @@
-Redux Universal Boilerplate
+Redux Easy Universal Boilerplate
 =========================
 
 ## About
