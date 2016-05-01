@@ -125,13 +125,6 @@ function handleRender(req, res) {
 }
 
 app.use(handleRender);
-app.use((err, req, res, next) => {
-  if (err) {
-    fs.appendFile(logPath, err);
-    console.log(err);
-  }
-  next();
-});
 app.listen(port, (error) => {
   if (error) {
     console.error(error);

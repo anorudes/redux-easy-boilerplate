@@ -25,13 +25,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(helmet());
 app.use(routes);
-app.use((err, req, res, next) => {
-  if (err) {
-    fs.appendFile(logPath, err);
-    console.log(err);
-  }
-  next();
-});
 
 server.listen(3030, () => {
   const host = server.address().address;
