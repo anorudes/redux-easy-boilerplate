@@ -14,7 +14,7 @@ export default (
     <Route path="/async-example" getComponent={(location, callback) =>
       __CLIENT__
         ? asyncComponent(require.ensure([], require => callback('', require('./components/Pages/AsyncExample').default), 'async-example'))
-        : callback()
+        : callback('', require('./components/Pages/AsyncExample').default)
     } />
 
     <Route path="/posts" component={Posts} />
