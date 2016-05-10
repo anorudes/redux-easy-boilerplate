@@ -1,0 +1,9 @@
+verbose: false
+instrumentation:
+    root: .
+    extensions:
+        - .js
+        - .jsx
+    excludes:
+        - "shared/helpers/**"
+        - "**/__tests__/**"

@@ -1,0 +1,22 @@
+{
+  "middlewares": {
+    "dns-prefetch-control": ["dnsPrefetchControl"],
+    "dont-sniff-mimetype": ["nosniff", "noSniff"],
+    "frameguard": ["frameguard", "frameGuard", "xframe", "xFrame"],
+    "helmet-csp": ["csp", "contentSecurityPolicy"],
+    "hide-powered-by": ["hidePoweredBy", "hideXPoweredBy"],
+    "hpkp": ["hpkp", "publicKeyPinning", "publicKeyPins", "hPkp", "hkpk"],
+    "hsts": ["hsts"],
+    "ienoopen": ["ienoopen", "ieNoOpen", "IENoOpen"],
+    "nocache": ["nocache", "noCache"],
+    "x-xss-protection": ["xssFilter", "xssfilter", "xXSSProtection"]
+  },
+  "defaultMiddleware": [
+    "dont-sniff-mimetype",
+    "frameguard",
+    "hide-powered-by",
+    "hsts",
+    "ienoopen",
+    "x-xss-protection"
+  ]
+}
