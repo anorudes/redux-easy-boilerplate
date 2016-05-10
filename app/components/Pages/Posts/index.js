@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import superagent from 'superagent';
 
 import * as actionCreators from 'redux/modules';
 
@@ -14,33 +15,30 @@ require('./styles.scss');
   }, dispatch),
 )
 export default class Posts extends Component {
-
-  static propTypes = {
-    posts: PropTypes.array,
-    apiGetPosts: PropTypes.func,
-  };
+  constructor() {
+    super();
+    this.state = { policies: {} };
+  }
 
   componentDidMount() {
     const { apiGetPosts } = this.props;
 
     // Get posts from api server
     apiGetPosts();
+    superagent
+      .get('/policies')
+      .query({ coverageAmount: 500000, term: 25 })
+      .end((err, res) => {
+        this.setState({ policies: res.body.underwritten_policies });
+      });
   }
 
   render() {
-    const { posts } = this.props;
-
     return (
       <section className="posts">
-        <h1>Posts page</h1>
+        <h1>Heres ur data</h1>
         <div className="posts__list">
-          {
-            posts.get('items').map(post =>
-              <div className="post__item" key={post.id}>
-                {post.id}) {post.text}
-              </div>
-            )
-          }
+          { JSON.stringify(this.state.policies) }
         </div>
       </section>
     );
