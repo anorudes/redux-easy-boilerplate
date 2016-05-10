@@ -1,0 +1,6 @@
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+specs/
+src/
