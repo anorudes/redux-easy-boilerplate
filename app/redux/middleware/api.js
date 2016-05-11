@@ -6,14 +6,15 @@ import request from 'superagent-bluebird-promise';
 
 export const apiMiddleware = store => next => action => {
   if (action.url) {
+
     // Generate promise
     const requestPromise = action.mode === 'GET'
       ? request.get(API_URL + action.url)
-        .query({
+        .query({ // add query (if get)
           ...action.data,
         })
       : request.post(API_URL + action.url)
-        .send({
+        .send({ // add body (if post)
           ...action.data,
         });
 
@@ -25,10 +26,6 @@ export const apiMiddleware = store => next => action => {
           .then(res => res.body)
           .catch(res => {
             const data = res.res;
-            store.dispatch({
-              type: 'CATCH_ERROR_FROM_SERVER',
-              payload: data,
-            });
             if (action.callback) {
               action.callback(data, store.dispatch);
             }

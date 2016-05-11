@@ -1,5 +1,6 @@
 import { createReducer } from '../../utils/createReducer';
 
+// initial state before request data from server
 const initialState = {
   items: [],
 };
@@ -17,24 +18,34 @@ export default createReducer({
     console.log('error'), // for example, error from server
 }, initialState);
 
-// Work with api middleware. See in app/redux/middleware/api
+// Work with api middleware (will generate request promise).
+// See in app/redux/middleware/api
 export const apiGetPosts = () => ({
-  mode: 'GET',
-  type: 'GET_POSTS',
-  url: 'posts',
-  callback: (res, dispatch) => {
-    // callback (success and failure)
-    console.log(res);
-    // dispatch(OthereExampleAction)
+  mode: 'GET', // GET, POST
+  type: 'GET_POSTS', // see: createReducer in this file
+  url: 'posts', // => api/posts (see in api/routes/posts)
+  data: {
+    testParam: '1', // query (if GET), body (if POST) (see in api/routes/posts)
   },
   onSuccess: (res, dispatch) => {
-    // on success
-    console.log(res);
+    // callback on success
+    console.log(res); // respond from server
+
+    // we can dispatch other action
     // dispatch(OthereExampleAction)
   },
   onFailure: (res, dispatch) => {
-    // faiulre
-    console.log(res);
+    // callback on faiulre
+    console.log(res); // respond from server
+
+    // we can dispatch other action
+    // dispatch(OthereExampleAction)
+  },
+  callback: (res, dispatch) => {
+    // callback (success and failure)
+    console.log(res); // respond from server
+
+    // We can dispatch other action
     // dispatch(OthereExampleAction)
   },
 });
