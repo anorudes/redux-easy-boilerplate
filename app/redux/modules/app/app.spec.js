@@ -12,7 +12,7 @@ describe('app reducer', () => {
       type: 'SHOW_SPINNER_ASYNC_PAGE',
     };
 
-    expect(app(state, action).toJS()).to.eql(expectedState);
+    expect(app(state, action)).to.eql(expectedState);
   });
 
   it('hide spinner async page', () => {
@@ -26,6 +26,6 @@ describe('app reducer', () => {
       type: 'HIDE_SPINNER_ASYNC_PAGE',
     };
 
-    expect(app(state, action).toJS()).to.eql(expectedState);
+    expect(app(state, action)).to.eql(expectedState);
   });
 });

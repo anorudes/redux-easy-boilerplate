@@ -1,10 +1,10 @@
 import About from './';
 import { shallow } from 'enzyme';
 
-describe('About component', () => {
+describe('Async example component', () => {
   const element = shallow(<About />);
 
   it('render', () => {
-    expect(element.find('.about')).to.exist;
+    expect(element.find('.example')).to.exist;
   });
 });

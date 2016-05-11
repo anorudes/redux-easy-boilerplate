@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 import cookieParser from 'cookie-parser';
 import fs from 'fs';
 import morgan from 'morgan';
+import compression from 'compression';
 
 global.location = {};
 global.window = {};
@@ -45,6 +46,18 @@ app.use(/\/api\/(.*)/, (req, res) => {
   req.url = req.originalUrl;
   proxy.web(req, res, { target: 'http://localhost:3030' });
 });
+
+
+// Compression css, js, fonts
+function shouldCompress(req, res) {
+  if (req.headers['x-no-compression'] || !req.url.match(/(\.css|\.js|\.ttf|\.woff|\.eot|\.otf)/)) {
+    return false;
+  }
+
+  return compression.filter(req, res);
+}
+
+app.use(compression({ filter: shouldCompress }));
 
 // Static directory
 app.use('/static', Express.static(__dirname + '/../../static/'));

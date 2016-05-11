@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 
 import * as actionCreators from 'redux/modules';
 
@@ -34,6 +35,9 @@ export default class Posts extends Component {
 
     return (
       <section className="posts">
+        <Helmet
+          title="posts"
+        />
         <h1>Posts page</h1>
         <div className="posts__list">
           { // Render posts

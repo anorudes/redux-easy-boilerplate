@@ -9,7 +9,7 @@ export default class AsyncExample extends Component {
     return (
       <section className="example">
         <Helmet
-          title="example"
+          title="async example"
         />
         <h1>Async page</h1>
         example<br />
