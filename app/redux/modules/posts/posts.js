@@ -8,14 +8,18 @@ const initialState = {
 // Work with promise middleware
 // See in /app/redux/middleware/promise.js
 export default createReducer({
-  ['GET_POSTS_REQUEST']: (state, { payload }) =>
-    state.set('items', []), // for example, set empty array on request
+  ['GET_POSTS_REQUEST']: (state, { payload }) => ({ // for example, set empty array on request
+    ...state,
+    items: [],
+  }),
 
-  ['GET_POSTS_SUCCESS']: (state, { payload }) =>
-    state.set('items', payload.posts), // get posts from server
+  ['GET_POSTS_SUCCESS']: (state, { payload }) => ({ // get posts from server
+    ...state,
+    items: payload.posts,
+  }),
 
-  ['GET_POSTS_FAILURE']: (state, { payload }) =>
-    console.log('error'), // for example, error from server
+  ['GET_POSTS_FAILURE']: (state, { payload }) => // for example, error from server
+    console.log('error'),
 }, initialState);
 
 // Work with api middleware (will generate request promise).

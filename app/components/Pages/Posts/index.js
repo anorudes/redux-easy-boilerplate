@@ -8,7 +8,7 @@ import * as actionCreators from 'redux/modules';
 require('./styles.scss');
 
 @connect(
-  ({ posts }) => ({ posts }),
+  state => ({ ...state.posts }),
   dispatch => bindActionCreators({
     ...actionCreators.posts,
   }, dispatch),
@@ -16,7 +16,7 @@ require('./styles.scss');
 export default class Posts extends Component {
 
   static propTypes = {
-    posts: PropTypes.array,
+    items: PropTypes.array,
     apiGetPosts: PropTypes.func,
   };
 
@@ -30,14 +30,14 @@ export default class Posts extends Component {
   }
 
   render() {
-    const { posts } = this.props;
+    const { items } = this.props;
 
     return (
       <section className="posts">
         <h1>Posts page</h1>
         <div className="posts__list">
           { // Render posts
-            posts.get('items').map(post =>
+            items.map(post =>
               <div className="post__item" key={post.id}>
                 {post.id}) {post.text}
               </div>

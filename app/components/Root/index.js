@@ -12,9 +12,7 @@ import Header from 'components/Modules/Header';
 require('./styles/app.scss');
 
 @connect(
-  ({ app }) => ({
-    spinnerAsyncPage: app.get('spinnerAsyncPage'),
-  }),
+  state => ({ ...state.app }),
   dispatch => bindActionCreators({
     ...actionCreators.app,
   }, dispatch),
