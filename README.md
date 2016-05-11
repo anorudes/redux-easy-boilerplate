@@ -29,6 +29,11 @@ See commentaries in code
 Install [nodemon](https://github.com/remy/nodemon)<br />
 Install [concurrently](https://github.com/kimmobrunfeldt/concurrently)
 
+## How to remove [immutable-js](https://github.com/facebook/immutable-js)?
+
+See in branch: [master](https://github.com/anorudes/redux-easy-boilerplate/)<br />
+Also you can repeat commit [without_immutable](https://github.com/anorudes/redux-easy-boilerplate/commit/c0492e7a6ef370658bc4ababa8c78cfc7cce9a79)
+
 ## Start development
 
 ```$ npm run api-mon```
