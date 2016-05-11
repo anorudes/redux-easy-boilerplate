@@ -5,7 +5,7 @@ const Router = new Express.Router();
 
 export default [
 
-  // See in app/redux/modules/posts/posts
+  // See in /app/redux/modules/posts/posts.js
   Router.get('/api/posts', wrap(async function(req, res) {
     console.log(req.query.testParam); // example
 

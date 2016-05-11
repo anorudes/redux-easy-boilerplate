@@ -24,6 +24,8 @@ export default class Posts extends Component {
     const { apiGetPosts } = this.props;
 
     // Get posts from api server
+    // See in '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
+
     apiGetPosts();
   }
 
@@ -34,7 +36,7 @@ export default class Posts extends Component {
       <section className="posts">
         <h1>Posts page</h1>
         <div className="posts__list">
-          {
+          { // Render posts
             posts.get('items').map(post =>
               <div className="post__item" key={post.id}>
                 {post.id}) {post.text}

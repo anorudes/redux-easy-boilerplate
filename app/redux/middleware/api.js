@@ -1,5 +1,5 @@
 // Api middleware
-// See in app/redux/modules/posts apiGetPosts
+// See in /app/redux/modules/posts.js apiGetPosts
 
 import { API_URL } from '../../constants';
 import request from 'superagent-bluebird-promise';

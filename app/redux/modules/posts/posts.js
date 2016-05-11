@@ -6,7 +6,7 @@ const initialState = {
 };
 
 // Work with promise middleware
-// See in app/redux/middleware/promise
+// See in /app/redux/middleware/promise.js
 export default createReducer({
   ['GET_POSTS_REQUEST']: (state, { payload }) =>
     state.set('items', []), // for example, set empty array on request
@@ -19,13 +19,13 @@ export default createReducer({
 }, initialState);
 
 // Work with api middleware (will generate request promise).
-// See in app/redux/middleware/api
+// See in /app/redux/middleware/api.js
 export const apiGetPosts = () => ({
   mode: 'GET', // GET, POST
   type: 'GET_POSTS', // see: createReducer in this file
-  url: 'posts', // => api/posts (see in api/routes/posts)
+  url: 'posts', // => api/posts (see in /api/routes/posts.js)
   data: {
-    testParam: 'test', // query (if GET), body (if POST) (see in api/routes/posts)
+    testParam: 'test', // query (if GET), body (if POST) (see in /api/routes/posts.js)
   },
   onSuccess: (res, dispatch) => {
     // Callback on success

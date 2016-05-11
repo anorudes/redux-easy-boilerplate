@@ -25,7 +25,7 @@ const logPath = __dirname + '/../../logs/app.log';
 const accessLogStream = fs.createWriteStream(logPath, { flags: 'a' });
 
 const app = new Express();
-app.use(morgan('combined', { stream: accessLogStream }));
+app.use(morgan('combined', { stream: accessLogStream })); // logs
 const proxy = require('http-proxy').createProxyServer({});
 
 // Port for web-dev-server (bundle.js, bundle.css, etc...)
@@ -54,7 +54,7 @@ app.use('/dist', Express.static(__dirname + '/../../dist/'));
 const fetchData = (component, host, pathname, params) => {
   return new Promise(resolve => {
     switch (component) {
-      // Fetch state for opened post from api server
+      // Fetch state for posts from api server
       case 'posts':
         apiFetch(posts.apiGetPosts(), host).then(res => {
           resolve({
