@@ -35,7 +35,7 @@ export const apiGetPosts = () => ({
     // dispatch(OthereExampleAction)
   },
   onFailure: (res, dispatch) => {
-    // callback on faiulre
+    // callback on failure
     console.log(res); // respond from server
 
     // we can dispatch other action
@@ -45,7 +45,7 @@ export const apiGetPosts = () => ({
     // callback (success and failure)
     console.log(res); // respond from server
 
-    // We can dispatch other action
+    // we can dispatch other action
     // dispatch(OthereExampleAction)
   },
 });

@@ -1,5 +1,5 @@
 // Edited promise middleware
-// Original: https://github.com/pburtchaell/redux-promise-middleware
+// Original source and docs: https://github.com/pburtchaell/redux-promise-middleware
 
 import R from 'ramda';
 
