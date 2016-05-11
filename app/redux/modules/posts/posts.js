@@ -25,7 +25,7 @@ export const apiGetPosts = () => ({
   type: 'GET_POSTS', // see: createReducer in this file
   url: 'posts', // => api/posts (see in api/routes/posts)
   data: {
-    testParam: '1', // query (if GET), body (if POST) (see in api/routes/posts)
+    testParam: 'test', // query (if GET), body (if POST) (see in api/routes/posts)
   },
   onSuccess: (res, dispatch) => {
     // Callback on success
