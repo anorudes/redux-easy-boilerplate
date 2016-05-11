@@ -1,5 +1,8 @@
 Redux Easy Universal Boilerplate
 =========================
+[![bitHound Overall Score](https://www.bithound.io/github/anorudes/redux-easy-boilerplate/badges/score.svg)](https://www.bithound.io/github/anorudes/redux-easy-boilerplate)
+
+---
 
 ## About
 
@@ -12,13 +15,22 @@ Really easy react universal boilerplate with small code base and many commentari
 - React Router
 - Express
 - Sass
+- React-helmet
 - Mocha
 - Chai
 - Enzyme
 - Sinon
-- Others: api + promise middleware, bundle.css for server-side-rendering, vendor bundle, async pages, alias, 4 modes for run (with auto rimraf dist)
+- Others:
+  - ducks-modular-redux
+  - api + promise middleware
+  - bundle.css for server-side-rendering
+  - vendor bundle
+  - async pages
+  - webpack resolving alias
+  - 4 modes for run (with auto rimraf dist)
+  - gzip css, js, fonts
 
-Doesnt'have redux-form and bootstrap for your choice
+Doesn't have redux-form and bootstrap (you can add if needed)
 
 ## How it works
 
@@ -35,8 +47,8 @@ Install [concurrently](https://github.com/kimmobrunfeldt/concurrently)
 
 ```$ npm run start```
 
-after: open 'http://localhost:3000' in browser<br />
-hint: use this mode for dev
+after: open 'http://localhost:3000' in browser<br /><br />
+hint: use this mode for development
 
 ## Start development (server-side-rendering)
 
@@ -44,18 +56,20 @@ hint: use this mode for dev
 
 ```$ npm run start-ssr```
 
-after: open 'http://localhost:3000' in browser<br />
-hint: doesn't have hot reload, but you can mannualy refresh page in browser.<br />
-This mode need for test before build prod
+after: open 'http://localhost:3000' in browser<br /><br />
+hint: use this mode for test server-side-rendering before build. <br />
+doesn't have hot reload, but you can mannualy refresh page in browser.
 
 ## Start production
+
+```$ npm run build```
 
 ```$ npm run api:prod```
 
 ```$ npm run start:prod```
 
-after: open 'http://localhost' in browser<br />
-hint: this mode need if you dont' want server-side-rendering
+after: open 'http://localhost' in browser<br /><br />
+hint: use this mode for production on server (without server-side-rendering)
 
 ## Start production (server-side-rendering)
 
@@ -65,9 +79,8 @@ hint: this mode need if you dont' want server-side-rendering
 
 ```$ npm run start-ssr:prod```
 
-after: open 'http://localhost' in browser<br />
-hint: this mode doesn't have hot-reload and works only with build.<br />
-Use for production on server
+after: open 'http://localhost' in browser<br /><br />
+hint: use this mode for production on server
 
 ## Run tests
 
