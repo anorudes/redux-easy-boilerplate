@@ -28,24 +28,24 @@ export const apiGetPosts = () => ({
     testParam: '1', // query (if GET), body (if POST) (see in api/routes/posts)
   },
   onSuccess: (res, dispatch) => {
-    // callback on success
+    // Callback on success
     console.log(res); // respond from server
 
-    // we can dispatch other action
+    // We can dispatch other action
     // dispatch(OthereExampleAction)
   },
   onFailure: (res, dispatch) => {
-    // callback on failure
+    // Callback on failure
     console.log(res); // respond from server
 
-    // we can dispatch other action
+    // We can dispatch other action
     // dispatch(OthereExampleAction)
   },
   callback: (res, dispatch) => {
-    // callback (success and failure)
+    // Callback (success and failure)
     console.log(res); // respond from server
 
-    // we can dispatch other action
+    // We can dispatch other action
     // dispatch(OthereExampleAction)
   },
 });

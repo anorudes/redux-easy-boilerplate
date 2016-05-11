@@ -4,6 +4,8 @@ import wrap from 'express-async-wrap'; // can use async, await
 const Router = new Express.Router();
 
 export default [
+
+  // See in app/redux/modules/posts/posts
   Router.get('/api/posts', wrap(async function(req, res) {
     console.log(req.query.testParam); // example
 
