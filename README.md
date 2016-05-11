@@ -8,7 +8,6 @@ Really easy react universal boilerplate with small code base and many commentari
 - React
 - Redux
 - Server Side Rendering
-- Immutable
 - React Router
 - Express
 - Sass

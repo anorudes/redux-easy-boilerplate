@@ -1,7 +1,6 @@
 import Express from 'express';
 import React from 'react';
 import merge from 'merge';
-import Immutable from 'immutable';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { match, RouterContext } from 'react-router';
@@ -80,7 +79,7 @@ function handleRender(req, res) {
     } else if (renderProps) {
       const { location: { pathname }, params } = renderProps;
       const host = req.get('host').replace(/\:.*/, '');
-      const initialState = Immutable.fromJS(configureStore().getState()).toJS(); // Initial state from redux
+      const initialState = configureStore().getState();
 
       let component;
       const query = pathname.split('/')[1];
