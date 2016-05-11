@@ -5,7 +5,7 @@ const Router = new Express.Router();
 
 export default [
   Router.get('/api/posts', wrap(async function(req, res) {
-    console.log(res.query.testParam); // example
+    console.log(req.query.testParam); // example
 
     res.json({
       posts: [
