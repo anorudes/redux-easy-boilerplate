@@ -21,5 +21,4 @@ require('asset-require-hook')({
 
 global.__CLIENT__ = false;
 
-// TODO: remove timeout
-setTimeout(() => require('../app/server/server-ssr.js'), 1000);
+require('../app/server/server-ssr.js');
