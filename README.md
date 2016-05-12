@@ -13,7 +13,7 @@ Really easy react universal boilerplate with small code base and many commentari
 - Server Side Rendering
 - Immutable-js
 - React Router
-- Express
+- Api server on other port (express)
 - Sass
 - React-helmet
 - Mocha
