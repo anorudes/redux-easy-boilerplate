@@ -8,7 +8,7 @@
     "start:prod": "NODE_ENV=production node bin/server.js",
     "start-ssr:prod": "NODE_ENV=production node bin/server-ssr.js",
     "api-mon": "NODE_ENV=development nodemon --watch api bin/api.js",
-    "api-mon-debug": "concurrently --kill-others \"NODE_ENV=development nodemon --debug --watch api bin/api.js\"  \"node-inspector -p 3020\"",
+    "api-mon-debug": "NODE_ENV=development concurrently --kill-others \"nodemon --debug --watch api bin/api.js\"  \"node-inspector -p 3020\"",
     "api": "NODE_ENV=development node bin/api.js",
     "api:prod": "NODE_ENV=production node bin/api.js",
     "build": "rimraf dist && NODE_ENV=production webpack --progress --verbose --display-error-details --config webpack/common.config.js",
