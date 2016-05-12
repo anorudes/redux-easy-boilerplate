@@ -13,7 +13,7 @@ Really easy react universal boilerplate with small code base and many commentari
 - Server Side Rendering
 - React Router
 - Immutable-js (with_immutable branch. see below for details)
-- Express
+- Api server on other port (express)
 - Sass
 - React-helmet
 - Mocha
@@ -28,6 +28,7 @@ Really easy react universal boilerplate with small code base and many commentari
   - async pages
   - webpack resolving alias
   - 4 modes for run (with auto rimraf dist)
+  - api server
   - gzip css, js, fonts
 
 Doesn't have redux-form and bootstrap (you can add if needed)
