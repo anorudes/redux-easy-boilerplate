@@ -89,5 +89,4 @@ hint: use this mode for production on server
 
 ## How to remove [immutable-js](https://github.com/facebook/immutable-js)?
 
-See in branch: [master](https://github.com/anorudes/redux-easy-boilerplate/)<br />
-Also you can repeat commit [without_immutable](https://github.com/anorudes/redux-easy-boilerplate/commit/c0492e7a6ef370658bc4ababa8c78cfc7cce9a79)
+See branch: [master](https://github.com/anorudes/redux-easy-boilerplate/)<br />

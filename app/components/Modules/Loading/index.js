@@ -6,7 +6,7 @@ import React from 'react';
 require('./styles.scss');
 
 const Loading = () => (
-  <img className="component-loading" src="/static/images/loading.gif" />
+  <div className="component-loading">Loading...</div>
 );
 
 export default Loading;
