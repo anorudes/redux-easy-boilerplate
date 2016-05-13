@@ -71,7 +71,7 @@ const fetchData = (component, host, pathname, params) => {
         apiFetch(posts.apiGetPosts(), host).then(res => {
           resolve({
             posts: {
-              posts: res.posts,
+              items: res.posts,
             },
           });
         });

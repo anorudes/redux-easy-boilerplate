@@ -1,4 +1,5 @@
 import { createReducer } from '../../utils/createReducer';
+import Immutable from 'immutable';
 
 // initial state before request data from server
 const initialState = {
@@ -12,7 +13,7 @@ export default createReducer({
     state.set('items', []), // for example, set empty array on request
 
   ['GET_POSTS_SUCCESS']: (state, { payload }) =>
-    state.set('items', payload.posts), // get posts from server
+    state.set('items', Immutable.fromJS(payload.posts)), // get posts from server
 
   ['GET_POSTS_FAILURE']: (state, { payload }) =>
     console.log('error'), // for example, error from server
