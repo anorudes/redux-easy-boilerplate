@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import R from 'ramda';
 
 import * as actionCreators from 'redux/modules';
 
@@ -27,7 +28,7 @@ export default class Posts extends Component {
     // Get posts from api server
     // See in '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
 
-    !items && apiGetPosts();
+    R.isEmpty(items) && apiGetPosts();
   }
 
   render() {
