@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import { asyncComponent } from './utils/asyncComponent'; /* for show loading component */
+import { asyncComponent } from './utils/asyncComponent'; /* for async page, show loading component */
 
 import Root from './components/Root';
 import Posts from './components/Pages/Posts';
