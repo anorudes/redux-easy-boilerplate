@@ -30,8 +30,13 @@ export default class Root extends Component {
   };
 
   componentDidMount() {
-    const { appMount } = this.props;
+    const { appMount, hideSpinnerAsyncPage } = this.props;
 
+    // for server-side-rendering (if we open async page)
+    // see in /app/redux/modules/app/index.js
+    hideSpinnerAsyncPage();
+
+    // for server-side-rendering
     // see /app/components/Pages/Posts/ and /app/server/server-ssr.js and /app/redux/modules/app/
     appMount();
   }
