@@ -43,7 +43,7 @@ Install [concurrently](https://github.com/kimmobrunfeldt/concurrently)
 
 ## Start development
 
-```$ npm run api-mon```
+```$ npm run api```
 
 ```$ npm run start```
 
@@ -52,7 +52,7 @@ hint: use this mode for development
 
 ## Start development (server-side-rendering)
 
-```$ npm run api-mon```
+```$ npm run api```
 
 ```$ npm run start-ssr```
 
