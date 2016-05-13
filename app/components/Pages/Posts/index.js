@@ -25,7 +25,7 @@ export default class Posts extends Component {
   componentDidMount() {
     const { apiGetPosts, appMounted } = this.props;
 
-    if (!appMounted) { // what? appMounted? // see /app/components/Root/ and /app/server/server-ssr.js and /app/redux/modules/app/
+    if (!appMounted) { // what? appMounted? it's need for server-side-rendering, to avoid double fetch. see /app/components/Root/ and /app/server/server-ssr.js and /app/redux/modules/app/
       apiGetPosts(); // get posts from api server. see '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
     }
   }

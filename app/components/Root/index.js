@@ -36,7 +36,7 @@ export default class Root extends Component {
     // see in /app/redux/modules/app/index.js
     hideSpinnerAsyncPage();
 
-    // for server-side-rendering
+    // it's need for server-side-rendering, to avoid double fetch.
     // see /app/components/Pages/Posts/ and /app/server/server-ssr.js and /app/redux/modules/app/
     appMount();
   }
