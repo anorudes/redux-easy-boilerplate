@@ -22,12 +22,12 @@ export default class Posts extends Component {
   };
 
   componentDidMount() {
-    const { apiGetPosts } = this.props;
+    const { apiGetPosts, items } = this.props;
 
     // Get posts from api server
     // See in '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
 
-    apiGetPosts();
+    !items && apiGetPosts();
   }
 
   render() {
