@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import R from 'ramda';
 
 import * as actionCreators from 'redux/modules';
 
@@ -23,9 +24,9 @@ export default class Posts extends Component {
   };
 
   componentDidMount() {
-    const { apiGetPosts, appMounted } = this.props;
+    const { items, apiGetPosts, appMounted } = this.props;
 
-    if (!appMounted) { // what? appMounted? it's need for server-side-rendering, to avoid double fetch. see /app/components/Root/ and /app/server/server-ssr.js and /app/redux/modules/app/
+    if (!appMounted || R.isEmpty(items)) { // what? appMounted? it's need for server-side-rendering, to avoid double fetch. see /app/components/Root/ and /app/server/server-ssr.js and /app/redux/modules/app/
       apiGetPosts(); // get posts from api server. see '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
     }
   }
