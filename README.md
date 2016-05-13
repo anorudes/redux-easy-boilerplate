@@ -39,9 +39,9 @@ See commentaries in code
 
 ## Installation
 
-Install [rimraf](https://github.com/isaacs/rimraf): npm install rimraf -g<br />
-Install [nodemon](https://github.com/remy/nodemon): npm install nodemon -g<br />
-Install [concurrently](https://github.com/kimmobrunfeldt/concurrently): npm install -g concurrently
+Install [rimraf](https://github.com/isaacs/rimraf): ```$ npm install rimraf -g```<br />
+Install [nodemon](https://github.com/remy/nodemon): ```$ npm install nodemon -g```<br />
+Install [concurrently](https://github.com/kimmobrunfeldt/concurrently): ```$ npm install -g concurrently```
 
 ## Start development
 
