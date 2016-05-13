@@ -110,6 +110,7 @@ function handleRender(req, res) {
 
         const finishState = merge.recursive(initialState, {
           ...appState,
+          appMounted: true,
         });
 
         const store = configureStore(finishState);

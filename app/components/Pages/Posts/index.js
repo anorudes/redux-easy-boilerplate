@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import R from 'ramda';
 
 import * as actionCreators from 'redux/modules';
 
@@ -10,7 +9,7 @@ import * as actionCreators from 'redux/modules';
 require('./styles.scss');
 
 @connect(
-  state => ({ ...state.posts }),
+  state => ({ ...state.posts, ...state.app }),
   dispatch => bindActionCreators({
     ...actionCreators.posts,
   }, dispatch),
@@ -20,15 +19,15 @@ export default class Posts extends Component {
   static propTypes = {
     items: PropTypes.array,
     apiGetPosts: PropTypes.func,
+    appMounted: PropTypes.bool,
   };
 
   componentDidMount() {
-    const { apiGetPosts, items } = this.props;
+    const { apiGetPosts, appMounted } = this.props;
 
-    // Get posts from api server
-    // See in '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
-
-    R.isEmpty(items) && apiGetPosts();
+    if (!appMounted) { // what? appMounted? // see /app/components/Root/ and /app/server/server-ssr.js and /app/redux/modules/app/
+      apiGetPosts(); // get posts from api server. see '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
+    }
   }
 
   render() {

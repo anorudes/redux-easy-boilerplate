@@ -90,5 +90,4 @@ hint: use this mode for production on server
 
 ## How to add [immutable-js](https://github.com/facebook/immutable-js)?
 
-See in branch: [with_immutable](https://github.com/anorudes/redux-easy-boilerplate/tree/with_immutable)<br />
-Also you can revert commit [without_immutable](https://github.com/anorudes/redux-easy-boilerplate/commit/c0492e7a6ef370658bc4ababa8c78cfc7cce9a79)
+See branch: [with_immutable](https://github.com/anorudes/redux-easy-boilerplate/tree/with_immutable)<br />

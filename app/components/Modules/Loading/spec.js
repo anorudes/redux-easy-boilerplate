@@ -5,6 +5,6 @@ describe('Loading component', () => {
   const element = shallow(<Loading />);
 
   it('render', () => {
-    expect(element.find('img')).to.have.length(1);
+    expect(element.find('div')).to.have.length(1);
   });
 });

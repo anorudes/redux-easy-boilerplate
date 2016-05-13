@@ -26,12 +26,14 @@ export default class Root extends Component {
     history: PropTypes.object,
     spinnerAsyncPage: PropTypes.bool,
     hideSpinnerAsyncPage: PropTypes.func,
+    appMount: PropTypes.func,
   };
 
   componentDidMount() {
-    const { hideSpinnerAsyncPage } = this.props;
+    const { appMount } = this.props;
 
-    hideSpinnerAsyncPage();
+    // see /app/components/Pages/Posts/ and /app/server/server-ssr.js and /app/redux/modules/app/
+    appMount();
   }
 
   componentDidUpdate(prevProps) {
