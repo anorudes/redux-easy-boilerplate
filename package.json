@@ -98,8 +98,6 @@
     "react-addons-test-utils": "^15.0.2",
     "react-dom": "15.0.2",
     "react-helmet": "^3.0.1",
-    "react-notification-system": "^0.2.6",
-    "react-onclickoutside": "^5.1.1",
     "react-prop-types": "^0.3.0",
     "react-transform-hmr": "^1.0.1",
     "redux": "^3.3.1",
