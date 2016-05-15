@@ -1,5 +1,8 @@
 {
   "name": "redux-easy-boilerplate",
+  "engines": {
+    "node": ">=5.0"
+  },
   "version": "3.0.1",
   "description": "Start your project easy and fast with modern tools",
   "scripts": {
