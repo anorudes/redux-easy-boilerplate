@@ -91,7 +91,6 @@
     "node-sass": "^3.1.2",
     "path-chunk-webpack-plugin": "^1.0.0",
     "postcss-loader": "^0.9.1",
-    "pure-render-decorator": "^1.1.1",
     "ramda": "^0.21.0",
     "react-addons-css-transition-group": "^15.0.2",
     "react-addons-perf": "^15.0.2",
