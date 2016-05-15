@@ -6,7 +6,7 @@ Redux Easy Universal Boilerplate
 
 ## About
 
-Really easy react universal boilerplate with small code base and many commentaries
+Really easy react universal boilerplate with many commentaries
 
 - React
 - Redux
