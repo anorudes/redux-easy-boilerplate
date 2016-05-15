@@ -10,7 +10,7 @@ import * as actionCreators from 'redux/modules';
 require('./styles.scss');
 
 @connect(
-  state => ({ ...state.posts, ...state.app }),
+  state => ({ ...state.posts }),
   dispatch => bindActionCreators({
     ...actionCreators.posts,
   }, dispatch),
