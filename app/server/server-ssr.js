@@ -110,9 +110,6 @@ function handleRender(req, res) {
 
         const finishState = merge.recursive(initialState, {
           ...appState,
-          app: {
-            appMounted: true, // t's need for server-side-rendering, to avoid double fetch. see /app/components/Root/ and /app/components/Pages/Posts/ and and /app/redux/modules/app/
-          },
         });
 
         const store = configureStore(finishState);
