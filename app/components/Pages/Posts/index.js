@@ -10,7 +10,7 @@ import * as actionCreators from 'redux/modules';
 require('./styles.scss');
 
 @connect(
-  ({ posts, app }) => ({ posts, app }),
+  ({ posts }) => ({ posts }),
   dispatch => bindActionCreators({
     ...actionCreators.posts,
   }, dispatch),
@@ -19,15 +19,14 @@ export default class Posts extends Component {
 
   static propTypes = {
     posts: PropTypes.object,
-    app: PropTypes.object,
     apiGetPosts: PropTypes.func,
   };
 
   componentDidMount() {
-    const { apiGetPosts, app, posts } = this.props;
+    const { apiGetPosts, posts } = this.props;
     const items = posts.get('items').toJS();
 
-    if (!app.get('appMounted') || R.isEmpty(items)) { // what? appMounted? it's need for server-side-rendering, to avoid double fetch. see /app/components/Root/ and /app/server/server-ssr.js and /app/redux/modules/app/
+    if (R.isEmpty(items)) {
       apiGetPosts(); // get posts from api server. see '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
     }
   }
