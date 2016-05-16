@@ -1,42 +1,54 @@
-const path = require('path');
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const postcssImport = require('postcss-import');
 const merge = require('webpack-merge');
-
 const development = require('./dev.config.js');
 const production = require('./prod.config.js');
-
-require('babel-polyfill').default;
+const developmentSSR = require('./dev.ssr.config.js');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 const TARGET = process.env.npm_lifecycle_event;
-
-const PATHS = {
-  app: path.join(__dirname, '../src'),
-  build: path.join(__dirname, '../dist'),
-};
-
 process.env.BABEL_ENV = TARGET;
 
-const common = {
-  entry: [
-    PATHS.app,
-  ],
+var devUrl;
 
+// location dist for dev and prod
+if (!global.ssr && process.env.NODE_ENV === 'development') {
+  devUrl = 'http://localhost:3000/dist/';
+}
+
+if (global.ssr && process.env.NODE_ENV === 'development') {
+  devUrl = 'http://localhost:3001/dist/';
+}
+
+if (process.env.NODE_ENV === 'production') {
+  devUrl = '/dist/';
+}
+
+const common = {
   output: {
-    path: PATHS.build,
-    filename: 'bundle.js',
+    path: __dirname + '/../dist/',
+    publicPath: devUrl,
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
   },
 
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.scss'],
-    modulesDirectories: ['node_modules', PATHS.app],
+    modulesDirectories: ['node_modules'],
+    // alias for beautiful import
+    alias: {
+      components: path.join(__dirname, '../app/components/'),
+      'redux/modules': path.join(__dirname, '../app/redux/modules/'),
+      constants: path.join(__dirname, '../app/constants/'),
+      decorators: path.join(__dirname, '../app/decorators/'),
+      utils: path.join(__dirname, '../app/utils/'),
+      test: path.join(__dirname, '../app/test/'),
+    },
   },
 
   module: {
     loaders: [{
-      test: /bootstrap-sass\/assets\/javascripts\//,
-      loader: 'imports?jQuery=jquery',
-    }, {
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff',
     }, {
@@ -56,33 +68,65 @@ const common = {
       loader: 'url?limit=10000&mimetype=image/svg+xml',
     }, {
       test: /\.js$/,
-      loaders: ['babel-loader'],
       exclude: /node_modules/,
+      loader: 'babel-loader',
     }, {
       test: /\.png$/,
       loader: 'file?name=[name].[ext]',
     }, {
       test: /\.jpg$/,
       loader: 'file?name=[name].[ext]',
+    }, {
+      test: /\.gif$/,
+      loader: 'file?name=[name].[ext]',
+    }, {
+      test: /packery/,
+      loader: 'imports?define=>false&this=>window',
     }],
   },
 
-  postcss: (webpack) => {
+  plugins: [
+    // generate bundle.css for server-side-rendering
+    new ExtractTextPlugin('bundle.css'),
+
+    // define global constants
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: process.env.NODE_ENV === 'development' ? '"development"' : '"production"',
+      },
+      __DEVELOPMENT__: process.env.NODE_ENV === 'development',
+      __PRODUCTION__: process.env.NODE_ENV === 'production',
+      __CLIENT__: true,
+    }),
+
+    // chunks for generate vendor bundle
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: (module) => {
+        return module.resource &&
+          module.resource.indexOf('node_modules') !== -1 &&
+          module.resource.indexOf('.css') === -1;
+      },
+    }),
+  ],
+
+  postcss: (wp) => {
     return [
       autoprefixer({
         browsers: ['last 2 versions'],
-      }),
-      postcssImport({
-        addDependencyTo: webpack,
       }),
     ];
   },
 };
 
-if (TARGET === 'start' || !TARGET) {
+if (process.env.NODE_ENV === 'development' && !global.ssr) {
   module.exports = merge(development, common);
 }
 
-if (TARGET === 'build' || !TARGET) {
+if (process.env.NODE_ENV === 'development' && global.ssr) {
+  module.exports = merge(developmentSSR, common);
+}
+
+if (process.env.NODE_ENV === 'production') {
   module.exports = merge(production, common);
 }

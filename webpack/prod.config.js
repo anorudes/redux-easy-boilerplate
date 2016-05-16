@@ -4,33 +4,29 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
 
-  entry: ['bootstrap-loader/extractStyles'],
-
-  output: {
-    publicPath: 'dist/',
+  entry: {
+    main: ['./app/index'],
   },
 
   module: {
     loaders: [{
       test: /\.scss$/,
-      loader: 'style!css!postcss-loader!sass',
+      loader: ExtractTextPlugin.extract('style-loader', 'css?minimize!postcss-loader!sass-loader'),
     }],
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"',
-      },
-      __DEVELOPMENT__: false,
-    }),
     new ExtractTextPlugin('bundle.css'),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
       },
+    }),
+    new webpack.ProvidePlugin({
+      Promise: 'exports?global.Promise!es6-promise',
+      fetch: 'exports?self.fetch!whatwg-fetch',
     }),
   ],
 };

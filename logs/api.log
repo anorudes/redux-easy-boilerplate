@@ -1,0 +1,1 @@
+::ffff:127.0.0.1 - - [30/Apr/2016:10:49:25 +0000] "GET /api/posts HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"

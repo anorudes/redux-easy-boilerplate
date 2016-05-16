@@ -1,0 +1,23 @@
+.header {
+  padding: 10px 0px 13px 20px;
+
+  background: rgba(59, 68, 75, .1);
+}
+
+.header__menu {
+  list-style: none;
+  padding: 0;
+  margin : 0;
+
+  li {
+    display: inline-block;
+
+    padding: 0px 15px;
+
+    a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+  }
+}
