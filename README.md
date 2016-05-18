@@ -8,26 +8,27 @@ Redux Easy Universal Boilerplate
 
 Really easy react universal boilerplate with many commentaries
 
-- React
-- Redux
+- [React](https://facebook.github.io/react/)
+- [Redux](http://redux.js.org/)
+- [React Router](https://github.com/reactjs/react-router)
+- [Immutable-js](http://facebook.github.io/immutable-js/)
+- [Sass](http://sass-lang.com/)
+- [React-helmet](https://github.com/nfl/react-helmet)
 - Server Side Rendering
-- Immutable-js
-- React Router
 - Api server on other port (express)
-- Sass
-- React-helmet
-- Mocha
-- Chai
-- Enzyme
-- Sinon
+- [Mocha](https://mochajs.org/)
+- [Chai](http://chaijs.com/)
+- [Enzyme](https://github.com/airbnb/enzyme)
+- [Sinon](http://sinonjs.org/)
 - Others:
-  - ducks-modular-redux
-  - api + promise middleware
+  - [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)
+  - api + [promise](https://www.npmjs.com/package/redux-promise-middleware) middleware
   - bundle.css for server-side-rendering
   - vendor bundle
   - async pages
   - webpack resolving alias
   - 4 modes for run (with auto rimraf dist)
+  - api server
   - gzip css, js, fonts
 
 Doesn't have redux-form and bootstrap (you can add if needed)
