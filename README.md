@@ -22,7 +22,7 @@ Really easy react universal boilerplate with many commentaries
 - [Sinon](http://sinonjs.org/)
 - Others:
   - [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)
-  - [api](https://www.npmjs.com/package/redux-api-middleware) + [promise](https://www.npmjs.com/package/redux-promise-middleware) middleware
+  - api + [promise](https://www.npmjs.com/package/redux-promise-middleware) middleware
   - bundle.css for server-side-rendering
   - vendor bundle
   - async pages
