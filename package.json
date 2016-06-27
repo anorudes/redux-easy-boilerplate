@@ -96,7 +96,7 @@
     "postcss-loader": "0.8.2",
     "ramda": "^0.20.1",
     "react-addons-css-transition-group": "0.14.8",
-    "react-addons-perf": "0.14.8",
+    "react-addons-perf": "15.1.0",
     "react-addons-test-utils": "0.14.8",
     "react-dom": "15.1.0",
     "react-helmet": "3.1.0",
