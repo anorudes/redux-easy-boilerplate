@@ -110,7 +110,7 @@ const common = {
     }),
   ],
 
-  postcss: (wp) => {
+  postcss: () => {
     return [
       autoprefixer({
         browsers: ['last 2 versions'],

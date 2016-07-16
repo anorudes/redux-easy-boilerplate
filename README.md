@@ -56,7 +56,9 @@ hint: use this mode for development
 
 ```$ npm run api```
 
-```$ npm run start-ssr```
+Don't forget install concurrently: `npm install -g concurrently`
+
+```$ npm run start-ssr``` or ```$ sudo npm run start-ssr```
 
 after: open 'http://localhost:3000' in browser<br /><br />
 hint: use this mode for test server-side-rendering before build. <br />

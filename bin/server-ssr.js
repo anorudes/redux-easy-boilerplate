@@ -8,7 +8,7 @@ const ignore = [
       extensions: ['.scss'],
     },
   ],
-  'react-remove-prop-types', ['babel-plugin-webpack-alias', {
+  'babel-plugin-transform-react-remove-prop-types', ['babel-plugin-webpack-alias', {
     config: __dirname + '/../webpack/common.config.js',
   }],
 ];
