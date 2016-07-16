@@ -8,21 +8,21 @@ Redux Easy Universal Boilerplate
 
 Really easy react universal boilerplate with many commentaries
 
-- React
-- Redux
+- [React](https://facebook.github.io/react/)
+- [Redux](http://redux.js.org/)
+- [React Router](https://github.com/reactjs/react-router)
+- [Immutable-js](http://facebook.github.io/immutable-js/) ([`with_immutable branch`](https://github.com/anorudes/redux-easy-boilerplate/tree/with_immutable). see below for details)
+- [Sass](http://sass-lang.com/)
+- [React-helmet](https://github.com/nfl/react-helmet)
 - Server Side Rendering
-- React Router
-- Immutable-js (with_immutable branch. see below for details)
 - Api server on other port (express)
-- Sass
-- React-helmet
-- Mocha
-- Chai
-- Enzyme
-- Sinon
+- [Mocha](https://mochajs.org/)
+- [Chai](http://chaijs.com/)
+- [Enzyme](https://github.com/airbnb/enzyme)
+- [Sinon](http://sinonjs.org/)
 - Others:
-  - ducks-modular-redux
-  - api + promise middleware
+  - [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)
+  - api + [promise](https://www.npmjs.com/package/redux-promise-middleware) middleware
   - bundle.css for server-side-rendering
   - vendor bundle
   - async pages
@@ -91,3 +91,7 @@ hint: use this mode for production on server
 ## How to add [immutable-js](https://github.com/facebook/immutable-js)?
 
 See branch: [with_immutable](https://github.com/anorudes/redux-easy-boilerplate/tree/with_immutable)<br />
+
+## License
+
+MIT
