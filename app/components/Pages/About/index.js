@@ -19,7 +19,7 @@ export default class About extends Component {
         <h1>Example page</h1>
         window height = {windowHeight} (see __CLIENT__ condition in code)<br />
 
-        <img src="/static/images/example.jpg" />
+        <img src="/static/images/example.jpg" alt="' />
       </section>
     );
   }
