@@ -11,8 +11,8 @@ Really easy react universal boilerplate with many commentaries
 - [React](https://facebook.github.io/react/)
 - [Redux](http://redux.js.org/)
 - [React Router](https://github.com/reactjs/react-router)
-- [PostCss](https://github.com/postcss/postcss)
-- [Css modules](https://github.com/gajus/react-css-modules)
+- [React CSS modules](https://github.com/gajus/react-css-modules)
+- [PostCSS](https://github.com/postcss/postcss)
 - [React-helmet](https://github.com/nfl/react-helmet)
 - Server Side Rendering
 - Api server on other port (express)
