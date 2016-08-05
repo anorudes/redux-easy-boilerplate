@@ -1,5 +1,5 @@
-import About from './';
 import { shallow } from 'enzyme';
+import About from './';
 
 describe('About component', () => {
   const element = shallow(<About />);

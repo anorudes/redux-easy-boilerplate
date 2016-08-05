@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 /* component styles */
-require('./styles.scss');
+import s from './styles.css';
 
-export default class About extends Component {
+class About extends Component {
   render() {
     // Get window height if client (just for example)
     // Why need?
@@ -12,7 +12,7 @@ export default class About extends Component {
     const windowHeight = __CLIENT__ ? window.innerHeight : null;
 
     return (
-      <section className="about">
+      <section className={s.root}>
         <Helmet
           title="about"
         />
@@ -24,3 +24,5 @@ export default class About extends Component {
     );
   }
 }
+
+export default About;

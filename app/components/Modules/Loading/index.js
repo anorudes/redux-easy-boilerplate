@@ -3,10 +3,10 @@
 import React from 'react';
 
 /* component styles */
-require('./styles.scss');
+import s from './styles.css';
 
 const Loading = () => (
-  <div className="component-loading">Loading...</div>
+  <div className={s.root}>Loading...</div>
 );
 
 export default Loading;

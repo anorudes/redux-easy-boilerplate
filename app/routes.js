@@ -4,8 +4,8 @@ import { Route, IndexRoute } from 'react-router';
 import { asyncComponent } from './utils/asyncComponent'; /* for async page, show loading component */
 
 import Root from './components/Root';
-import Posts from './components/Pages/Posts';
-import About from './components/Pages/About';
+import Posts from './components/Containers/Posts';
+import About from './components/Containers/About';
 
 export default (
   <Route path="/" component={Root}>
@@ -13,8 +13,8 @@ export default (
     { /* async component */}
     <Route path="/async-example" getComponent={(location, callback) =>
       __CLIENT__
-        ? asyncComponent(require.ensure([], require => callback('', require('./components/Pages/AsyncExample').default), 'async-example'))
-        : callback('', require('./components/Pages/AsyncExample').default)
+        ? asyncComponent(require.ensure([], require => callback('', require('./components/Containers/AsyncExample').default), 'async-example'))
+        : callback('', require('./components/Containers/AsyncExample').default)
     } />
 
     <Route path="/posts" component={Posts} />

@@ -9,7 +9,9 @@ import Loading from 'components/Modules/Loading';
 import Header from 'components/Modules/Header';
 
 /* global styles for app */
-require('./styles/app.scss');
+if (__CLIENT__) {
+  require('./styles/app.css');
+}
 
 @connect(
   state => ({ ...state.app }),

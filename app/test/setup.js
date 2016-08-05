@@ -21,7 +21,7 @@ global.sinon = sinon;
 global.fdescribe = (...args) => describe.only(...args);
 global.fit = (...args) => it.only(...args);
 
-window.matchMedia = window.matchMedia || function() {
+window.matchMedia = window.matchMedia || function matchMedia() {
   return {
     matches: () => {},
     addListener: () => {},

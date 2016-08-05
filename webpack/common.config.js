@@ -1,10 +1,8 @@
 const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
 const merge = require('webpack-merge');
 const development = require('./dev.config.js');
 const production = require('./prod.config.js');
 const developmentSSR = require('./dev.ssr.config.js');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 const TARGET = process.env.npm_lifecycle_event;
@@ -12,7 +10,7 @@ process.env.BABEL_ENV = TARGET;
 
 var devUrl;
 
-// location dist for dev and prod
+// Location dist for dev and prod
 if (!global.ssr && process.env.NODE_ENV === 'development') {
   devUrl = 'http://localhost:3000/dist/';
 }
@@ -34,9 +32,9 @@ const common = {
   },
 
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json', '.scss'],
+    extensions: ['', '.jsx', '.js', '.json', '.css'],
     modulesDirectories: ['node_modules'],
-    // alias for beautiful import
+    // Webpack alias for beautiful import
     alias: {
       components: path.join(__dirname, '../app/components/'),
       'redux/modules': path.join(__dirname, '../app/redux/modules/'),
@@ -49,47 +47,51 @@ const common = {
 
   module: {
     loaders: [{
+      // Loader for fonts (woff)
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff',
     }, {
+      // Loader for fonts (woff2)
       test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff2',
     }, {
+      // Loader for fonts (ttf)
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/octet-stream',
     }, {
+      // Loader for fonts (otf)
       test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-otf',
     }, {
+      // Loader for fonts (eot)
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file',
     }, {
+      // Loader for images (svg)
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=image/svg+xml',
     }, {
+      // Loader for js
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
     }, {
+      // Loader for images (png)
       test: /\.png$/,
       loader: 'file?name=[name].[ext]',
     }, {
+      // Loader for images (jpg)
       test: /\.jpg$/,
       loader: 'file?name=[name].[ext]',
     }, {
+      // Loader for images (gif)
       test: /\.gif$/,
       loader: 'file?name=[name].[ext]',
-    }, {
-      test: /packery/,
-      loader: 'imports?define=>false&this=>window',
     }],
   },
 
   plugins: [
-    // generate bundle.css for server-side-rendering
-    new ExtractTextPlugin('bundle.css'),
-
-    // define global constants
+    // Define global constants
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: process.env.NODE_ENV === 'development' ? '"development"' : '"production"',
@@ -99,24 +101,21 @@ const common = {
       __CLIENT__: true,
     }),
 
-    // chunks for generate vendor bundle
+    // Chunks for generate vendor bundle
     new webpack.optimize.CommonsChunkPlugin({
+      minChunks: 2,
       name: 'vendor',
-      minChunks: (module) => {
-        return module.resource &&
-          module.resource.indexOf('node_modules') !== -1 &&
-          module.resource.indexOf('.css') === -1;
-      },
     }),
   ],
 
-  postcss: () => {
-    return [
-      autoprefixer({
-        browsers: ['last 2 versions'],
-      }),
-    ];
-  },
+  postcss: () => [
+    require('postcss-nested'),
+    require('postcss-short'),
+    require('autoprefixer')({
+      browsers: ['> 5%'],
+      remove: false,
+    }),
+  ],
 };
 
 if (process.env.NODE_ENV === 'development' && !global.ssr) {

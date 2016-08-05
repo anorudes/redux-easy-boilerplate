@@ -1,10 +1,10 @@
-.header {
+.root {
   padding: 10px 0px 13px 20px;
 
   background: rgba(59, 68, 75, .1);
 }
 
-.header__menu {
+.menu {
   list-style: none;
   padding: 0;
   margin : 0;

@@ -16,7 +16,7 @@ export const apiFetch = (action, host, cookies = {}) => {
       stringifyCookies = JSON.stringify({
         ...cookies,
       });
-    } catch (e) { }
+    } catch (e) {}
 
     promise = promise.set('cookie', stringifyCookies);
   }

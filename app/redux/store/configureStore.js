@@ -1,7 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import { batchedSubscribe } from 'redux-batched-subscribe';
-import { unstable_batchedUpdates as batchedUpdates } from 'react-dom';
 import createLogger from 'redux-logger';
 import rootReducer from '../';
 import { promiseMiddleware } from '../middleware/promise';
@@ -27,7 +25,7 @@ const createStoreWithMiddleware = applyMiddleware(
 )(createStore);
 
 export default function configureStore(initialState) {
-  const store = createStoreWithMiddleware(rootReducer, initialState, batchedSubscribe(batchedUpdates));
+  const store = createStoreWithMiddleware(rootReducer, initialState);
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

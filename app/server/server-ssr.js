@@ -9,17 +9,15 @@ import cookieParser from 'cookie-parser';
 import fs from 'fs';
 import morgan from 'morgan';
 import compression from 'compression';
+import { posts } from '../redux/modules';
+import configureStore from '../redux/store/configureStore';
+import routes from '../routes.js';
+import { apiFetch } from './utils/api';
+import { renderFullPage } from './utils/render';
 
 global.location = {};
 global.window = {};
 global.document = {};
-
-import { posts } from '../redux/modules';
-import configureStore from '../redux/store/configureStore';
-import routes from '../routes.js';
-
-import { apiFetch } from './utils/api';
-import { renderFullPage } from './utils/render';
 
 const logPath = __dirname + '/../../logs/app.log';
 const accessLogStream = fs.createWriteStream(logPath, { flags: 'a' });
@@ -63,7 +61,7 @@ app.use(compression({ filter: shouldCompress }));
 app.use('/static', Express.static(__dirname + '/../../static/'));
 app.use('/dist', Express.static(__dirname + '/../../dist/'));
 
-const fetchData = (component, host, pathname, params) => {
+const fetchData = (component, host, pathname) => {
   return new Promise(resolve => {
     switch (component) {
       // Fetch state for posts from api server
@@ -105,7 +103,6 @@ function handleRender(req, res) {
       // Get state (fetch from api server)
 
       return fetchData(component, host, pathname, params).then(appState => {
-
         // Merge initial state with fetch state
 
         const finishState = merge.recursive(initialState, {
@@ -129,7 +126,6 @@ function handleRender(req, res) {
         // Send the rendered page back to the client
         res.end(renderFullPage(html, devPort, host, finalState, head));
       });
-
     } else {
       res.json();
     }

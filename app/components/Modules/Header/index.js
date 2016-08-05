@@ -4,11 +4,11 @@ import React from 'react';
 import { Link } from 'react-router';
 
 /* component styles */
-require('./styles.scss');
+import s from './styles.css';
 
 const Header = () => (
-  <div className="header">
-    <ul className="header__menu">
+  <div className={s.root}>
+    <ul className={s.menu}>
       <li>
         <Link to="/posts">
           Posts

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 /* component styles */
-require('./styles.scss');
+import s from './styles.css';
 
-export default class AsyncExample extends Component {
+class AsyncExample extends Component {
   render() {
     return (
-      <section className="example">
+      <section className={s.root}>
         <Helmet
           title="async example"
         />
@@ -22,3 +22,5 @@ export default class AsyncExample extends Component {
     );
   }
 }
+
+export default AsyncExample;

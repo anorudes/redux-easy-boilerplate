@@ -1,5 +1,5 @@
-import Header from './';
 import { shallow } from 'enzyme';
+import Header from './';
 
 describe('Header component', () => {
   const element = shallow(<Header />);

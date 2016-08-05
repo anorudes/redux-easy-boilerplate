@@ -7,16 +7,9 @@ import R from 'ramda';
 import * as actionCreators from 'redux/modules';
 
 /* component styles */
-require('./styles.scss');
+import s from './styles.css';
 
-@connect(
-  state => ({ ...state.posts }),
-  dispatch => bindActionCreators({
-    ...actionCreators.posts,
-  }, dispatch),
-)
-export default class Posts extends Component {
-
+export class Posts extends Component {
   static propTypes = {
     items: PropTypes.array,
     apiGetPosts: PropTypes.func,
@@ -34,15 +27,15 @@ export default class Posts extends Component {
     const { items } = this.props;
 
     return (
-      <section className="posts">
+      <section className={s.root}>
         <Helmet
           title="posts"
         />
         <h1>Posts page</h1>
-        <div className="posts__list">
+        <div className={s.list}>
           { // Render posts
             items.map(post =>
-              <div className="post__item" key={post.id}>
+              <div className={s.item} key={post.id}>
                 {post.id}) {post.text}
               </div>
             )
@@ -52,3 +45,10 @@ export default class Posts extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({ ...state.posts }),
+  dispatch => bindActionCreators({
+    ...actionCreators.posts,
+  }, dispatch),
+)(Posts);

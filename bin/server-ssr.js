@@ -1,17 +1,19 @@
 const fs = require('fs');
 const config = JSON.parse(fs.readFileSync('./.babelrc'));
 
-// Ignore scss, remove prop-types, webpack alias
+// Remove prop-types, webpack alias
 const ignore = [
-  [
-    'babel-plugin-transform-require-ignore', {
-      extensions: ['.scss'],
-    },
-  ],
   'babel-plugin-transform-react-remove-prop-types', ['babel-plugin-webpack-alias', {
     config: __dirname + '/../webpack/common.config.js',
   }],
 ];
+
+const hook = require('css-modules-require-hook');
+hook({
+  generateScopedName: process.env.NODE_ENV === 'production'
+    ? '[hash:base64:5]'
+    : '[name]__[local]___[hash:base64:5]',
+});
 
 config.plugins = config.plugins.concat(ignore);
 require('babel-core/register')(config);

@@ -13,11 +13,12 @@ module.exports = {
   },
 
   module: {
+    // Loader fo css modules (https://github.com/gajus/react-css-modules)
     loaders: [{
-      test: /\.scss$/,
+      test: /\.css$/,
       loader: ExtractTextPlugin.extract({
         notExtractLoader: 'style-loader',
-        loader: 'css?minimize!postcss-loader!sass-loader',
+        loader: 'css?minimize&module&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
       }),
     }],
   },

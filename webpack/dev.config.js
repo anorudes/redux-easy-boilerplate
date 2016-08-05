@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 
 module.exports = {
-  // devtool: 'source-map',
   devtool: 'eval-cheap-module-source-map',
 
   entry: {
@@ -13,9 +12,10 @@ module.exports = {
   },
 
   module: {
+    // Loader fo css modules (https://github.com/gajus/react-css-modules)
     loaders: [{
-      test: /\.scss$/,
-      loader: 'style-loader!css!postcss-loader!sass-loader',
+      test: /\.css$/,
+      loader: 'style!css?module&localIdentName=[path]__[name]__[local]!postcss',
     }],
   },
 
