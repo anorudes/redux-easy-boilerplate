@@ -9,6 +9,7 @@ const ignore = [
   }],
 ];
 
+// Hook for react css modules (need for server-side-rendering and tests)
 const hook = require('css-modules-require-hook');
 hook({
   generateScopedName: process.env.NODE_ENV === 'production'
@@ -18,6 +19,8 @@ hook({
 
 config.plugins = config.plugins.concat(ignore);
 require('babel-core/register')(config);
+
+// Hook for images (need for server-sider-rendering and tests)
 require('asset-require-hook')({
   extensions: ['jpg', 'png'],
 });
