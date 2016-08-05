@@ -11,7 +11,6 @@ Really easy react universal boilerplate with many commentaries
 - [React](https://facebook.github.io/react/)
 - [Redux](http://redux.js.org/)
 - [React Router](https://github.com/reactjs/react-router)
-- [Immutable-js](http://facebook.github.io/immutable-js/) ([`with_immutable branch`](https://github.com/anorudes/redux-easy-boilerplate/tree/with_immutable). see below for details)
 - [PostCss](https://github.com/postcss/postcss)
 - [Css modules](https://github.com/gajus/react-css-modules)
 - [React-helmet](https://github.com/nfl/react-helmet)
