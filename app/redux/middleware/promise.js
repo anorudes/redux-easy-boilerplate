@@ -1,8 +1,6 @@
 // Edited promise middleware
 // Original source and docs: https://github.com/pburtchaell/redux-promise-middleware
 
-import R from 'ramda';
-
 const isPromise = (value) => {
   if (value !== null && typeof value === 'object') {
     return value.promise && typeof value.promise.then === 'function';
@@ -54,27 +52,15 @@ export function promiseMiddleware(config = {}) {
        */
       action.payload.promise = promise.then(
         (resolved = {}) => {
-          if (!R.isEmpty(resolved)) {
-            const resolveAction = getResolveAction();
-            return dispatch(isThunk(resolved) ? resolved.bind(null, resolveAction) : {
-              ...resolveAction,
-              ...isAction(resolved) ? resolved : {
-                ...!!resolved && {
-                  payload: resolved,
-                },
+          const resolveAction = getResolveAction(resolved && !resolved.ok);
+          return dispatch(isThunk(resolved) ? resolved.bind(null, resolveAction) : {
+            ...resolveAction,
+            ...isAction(resolved) ? resolved : {
+              ...!!resolved && {
+                payload: resolved.body,
               },
-            });
-          } else {
-            const resolveAction = getResolveAction(true);
-            return dispatch(isThunk(resolved) ? resolved.bind(null, resolveAction) : {
-              ...resolveAction,
-              ...isAction(resolved) ? resolved : {
-                ...!!resolved && {
-                  payload: resolved,
-                },
-              },
-            });
-          }
+            },
+          });
         },
         (rejected = {}) => {
           const resolveAction = getResolveAction(true);
