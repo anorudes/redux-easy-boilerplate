@@ -109,6 +109,7 @@ const common = {
   ],
 
   postcss: () => [
+    require('postcss-partial-import'),
     require('postcss-nested'),
     require('postcss-short'),
     require('autoprefixer')({

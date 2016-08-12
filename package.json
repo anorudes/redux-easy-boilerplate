@@ -97,6 +97,7 @@
     "path-chunk-webpack-plugin": "1.2.0",
     "postcss-loader": "0.9.1",
     "postcss-nested": "1.0.0",
+    "postcss-partial-import": "2.0.0",
     "postcss-short": "1.4.0",
     "ramda": "0.21.0",
     "react-addons-css-transition-group": "15.3.0",
