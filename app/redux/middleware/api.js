@@ -31,6 +31,7 @@ export const apiMiddleware = store => next => action => {
             if (action.onFailure) {
               action.onFailure(data, store.dispatch);
             }
+            return data;
           })
           .tap(res => {
             if (action.callback) {
