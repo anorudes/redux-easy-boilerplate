@@ -22,7 +22,7 @@ export const apiMiddleware = store => next => action => {
       payload: {
         promise: requestPromise
           .promise()
-          .then(res => res.body)
+          .then(res => res)
           .catch(res => {
             const data = res.res;
             if (action.callback) {
