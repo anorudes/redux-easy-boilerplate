@@ -24,7 +24,7 @@ export default createReducer({
 
 // Work with api middleware (will generate request promise).
 // See in /app/redux/middleware/api.js
-export const apiGetPosts = () => ({
+export const apiGetPosts = (callback) => ({
   mode: 'GET', // GET, POST
   type: 'GET_POSTS', // see: createReducer in this file
   url: 'posts', // => api/posts (see in /api/routes/posts.js)
@@ -33,23 +33,16 @@ export const apiGetPosts = () => ({
   },
   onSuccess: (res, dispatch) => {
     // Callback on success
-    console.log(res); // respond from server
 
     // We can dispatch other action
-    // dispatch(OthereExampleAction)
+    // for example: dispatch(OthereExampleAction)
+
+    callback && callback(res.body); // for server-side-rendering (see: app/server/server-ssr.js)
   },
   onFailure: (res, dispatch) => {
     // Callback on failure
-    console.log(res); // respond from server
 
     // We can dispatch other action
-    // dispatch(OthereExampleAction)
-  },
-  callback: (res, dispatch) => {
-    // Callback (success and failure)
-    console.log(res); // respond from server
-
-    // We can dispatch other action
-    // dispatch(OthereExampleAction)
+    // for example: dispatch(OthereExampleAction)
   },
 });
