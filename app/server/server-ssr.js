@@ -12,13 +12,11 @@ import compression from 'compression';
 import { posts } from '../redux/modules';
 import configureStore from '../redux/store/configureStore';
 import routes from '../routes.js';
-import { apiFetch } from './utils/api';
 import { renderFullPage } from './utils/render';
 
 global.location = {};
 global.window = {};
 global.document = {};
-
 const logPath = __dirname + '/../../logs/app.log';
 const accessLogStream = fs.createWriteStream(logPath, { flags: 'a' });
 
@@ -35,6 +33,8 @@ const devPort = process.env.NODE_ENV === 'development'
 const port = process.env.NODE_ENV === 'development'
   ? 3000
   : 80;
+
+const initialStore = configureStore();
 
 // Activate cookie parser
 app.use(cookieParser());
@@ -61,18 +61,18 @@ app.use(compression({ filter: shouldCompress }));
 app.use('/static', Express.static(__dirname + '/../../static/'));
 app.use('/dist', Express.static(__dirname + '/../../dist/'));
 
-const fetchData = (component, host, pathname) => {
+const fetchData = (dispatch, component, params) => { // why params? come in handy
   return new Promise(resolve => {
     switch (component) {
       // Fetch state for posts from api server
       case 'posts':
-        apiFetch(posts.apiGetPosts(), host).then(res => {
+        dispatch(posts.apiGetPosts(res => {
           resolve({
             posts: {
               items: res.posts,
             },
           });
-        });
+        }));
         break;
 
       default:
@@ -101,14 +101,11 @@ function handleRender(req, res) {
       }
 
       // Get state (fetch from api server)
-
-      return fetchData(component, host, pathname, params).then(appState => {
+      return fetchData(initialStore.dispatch, component, params).then(appState => {
         // Merge initial state with fetch state
-
         const finishState = merge.recursive(initialState, {
           ...appState,
         });
-
         const store = configureStore(finishState);
 
         const html = renderToString(

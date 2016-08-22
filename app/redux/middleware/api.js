@@ -25,22 +25,16 @@ export const apiMiddleware = store => next => action => {
           .then(res => res)
           .catch(res => {
             const data = res.res;
-            if (action.callback) {
-              action.callback(data, store.dispatch);
-            }
+
             if (action.onFailure) {
-              action.onFailure(data, store.dispatch);
+              setTimeout(() => action.onFailure(data, store.dispatch), 1);
             }
+
             return data;
           })
           .tap(res => {
-            if (action.callback) {
-              setTimeout(() => action.callback(res, store.dispatch), 10);
-            }
-          })
-          .tap(res => {
             if (action.onSuccess) {
-              action.onSuccess && action.onSuccess(res, store.dispatch);
+              setTimeout(() => action.onSuccess(res, store.dispatch), 1);
             }
           }),
         data: { ...action.data },
