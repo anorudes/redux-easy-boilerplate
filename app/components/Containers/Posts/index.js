@@ -46,7 +46,7 @@ export default asyncConnect([{
       return dispatch(apiGetPosts());
     }
   },
-}])(connect( // Conect to redux posts reducer // see: app/redux/modules/posts
+}])(connect( // Conect to redux posts store // see: app/redux/modules/posts
   state => ({ ...state.posts }),
   dispatch => bindActionCreators({
     ...actionCreators.posts,

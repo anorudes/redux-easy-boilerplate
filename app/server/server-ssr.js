@@ -69,6 +69,7 @@ function handleRender(req, res) {
       const host = req.get('host').replace(/\:.*/, '');
       const store = configureStore();
 
+      // Get data // ex: items. see: app/components/containers/posts/
       loadOnServer({ ...renderProps, store }).then(() => {
         const html = renderToString(
           <Provider store={store} key="provider">
