@@ -1,18 +1,16 @@
 import Express from 'express';
 import React from 'react';
-import merge from 'merge';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
-import { match, RouterContext } from 'react-router';
+import { match } from 'react-router';
 import Helmet from 'react-helmet';
 import cookieParser from 'cookie-parser';
 import fs from 'fs';
+import { ReduxAsyncConnect, loadOnServer } from 'redux-connect'
 import morgan from 'morgan';
 import compression from 'compression';
-import { posts } from '../redux/modules';
 import configureStore from '../redux/store/configureStore';
 import routes from '../routes.js';
-import { apiFetch } from './utils/api';
 import { renderFullPage } from './utils/render';
 
 global.location = {};
@@ -61,26 +59,6 @@ app.use(compression({ filter: shouldCompress }));
 app.use('/static', Express.static(__dirname + '/../../static/'));
 app.use('/dist', Express.static(__dirname + '/../../dist/'));
 
-const fetchData = (component, host, pathname) => {
-  return new Promise(resolve => {
-    switch (component) {
-      // Fetch state for posts from api server
-      case 'posts':
-        apiFetch(posts.apiGetPosts(), host).then(res => {
-          resolve({
-            posts: {
-              items: res.posts,
-            },
-          });
-        });
-        break;
-
-      default:
-        resolve({});
-    }
-  });
-};
-
 function handleRender(req, res) {
   return match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
     if (error) {
@@ -88,32 +66,13 @@ function handleRender(req, res) {
     } else if (redirectLocation) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
-      const { location: { pathname }, params } = renderProps;
       const host = req.get('host').replace(/\:.*/, '');
-      const initialState = configureStore().getState();
+      const store = configureStore();
 
-      let component;
-      const query = pathname.split('/')[1];
-
-      // Detect route page
-      if (query === 'posts' || !query) {
-        component = 'posts';
-      }
-
-      // Get state (fetch from api server)
-
-      return fetchData(component, host, pathname, params).then(appState => {
-        // Merge initial state with fetch state
-
-        const finishState = merge.recursive(initialState, {
-          ...appState,
-        });
-
-        const store = configureStore(finishState);
-
+      loadOnServer({ ...renderProps, store }).then(() => {
         const html = renderToString(
-          <Provider store={store}>
-            <RouterContext {...renderProps} />
+          <Provider store={store} key="provider">
+            <ReduxAsyncConnect {...renderProps} />
           </Provider>
         );
 
@@ -126,8 +85,6 @@ function handleRender(req, res) {
         // Send the rendered page back to the client
         res.end(renderFullPage(html, devPort, host, finalState, head));
       });
-    } else {
-      res.json();
     }
   });
 }

@@ -2,9 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import R from 'ramda';
+import { asyncConnect } from 'redux-connect';
 
 import * as actionCreators from 'redux/modules';
+import { apiGetPosts } from 'redux/modules/posts/posts';
 
 /* component styles */
 import s from './styles.css';
@@ -12,16 +13,7 @@ import s from './styles.css';
 export class Posts extends Component {
   static propTypes = {
     items: PropTypes.array,
-    apiGetPosts: PropTypes.func,
   };
-
-  componentDidMount() {
-    const { items, apiGetPosts } = this.props;
-
-    if (R.isEmpty(items)) {
-      apiGetPosts(); // get posts from api server. see '/app/redux/modules/posts/posts.js' and  '/api/routes/posts.js'
-    }
-  }
 
   render() {
     const { items } = this.props;
@@ -34,7 +26,7 @@ export class Posts extends Component {
         <h1>Posts page</h1>
         <div className={s.list}>
           { // Render posts
-            items.map(post =>
+            items && items.map(post =>
               <div className={s.item} key={post.id}>
                 {post.id}) {post.text}
               </div>
@@ -46,9 +38,17 @@ export class Posts extends Component {
   }
 }
 
-export default connect(
+
+export default asyncConnect([{
+  promise: ({ store: { dispatch, getState } }) => {
+    if (!getState().posts.items) {
+      // Get items from api server // see: app/redux/modules/posts
+      return dispatch(apiGetPosts());
+    }
+  },
+}])(connect( // Conect to redux posts reducer // see: app/redux/modules/posts
   state => ({ ...state.posts }),
   dispatch => bindActionCreators({
     ...actionCreators.posts,
   }, dispatch),
-)(Posts);
+)(Posts));

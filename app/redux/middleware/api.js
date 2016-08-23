@@ -17,34 +17,31 @@ export const apiMiddleware = store => next => action => {
           ...action.data,
         });
 
-    next({
-      type: action.type,
-      payload: {
-        promise: requestPromise
-          .promise()
-          .then(res => res)
-          .catch(res => {
-            const data = res.res;
-            if (action.callback) {
-              action.callback(data, store.dispatch);
-            }
-            if (action.onFailure) {
-              action.onFailure(data, store.dispatch);
-            }
-            return data;
-          })
-          .tap(res => {
-            if (action.callback) {
-              setTimeout(() => action.callback(res, store.dispatch), 10);
-            }
-          })
-          .tap(res => {
-            if (action.onSuccess) {
-              action.onSuccess && action.onSuccess(res, store.dispatch);
-            }
-          }),
-        data: { ...action.data },
-      },
+    return new Promise((resolve, reject) => {
+      next({
+        type: action.type,
+        payload: {
+          promise: requestPromise
+            .promise()
+            .then(res => {
+              if (action.onSuccess) {
+                action.onSuccess && action.onSuccess(res, store.dispatch);
+              }
+              resolve(res);
+              return res;
+            })
+            .catch(res => {
+              const data = res.res;
+              if (action.onFailure) {
+                action.onFailure(data, store.dispatch);
+              }
+
+              reject(res);
+              return data;
+            }),
+          data: { ...action.data },
+        },
+      });
     });
   } else {
     next(action);

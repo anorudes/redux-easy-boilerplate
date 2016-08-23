@@ -2,7 +2,7 @@ import { createReducer } from '../../utils/createReducer';
 
 // initial state before request data from server
 const initialState = {
-  items: [],
+  items: null,
 };
 
 // Work with promise middleware
@@ -10,7 +10,7 @@ const initialState = {
 export default createReducer({
   ['GET_POSTS_REQUEST']: (state, { payload }) => ({ // for example, set empty array on request
     ...state,
-    items: [],
+    items: null,
   }),
 
   ['GET_POSTS_SUCCESS']: (state, { payload }) => ({ // get posts from server
@@ -33,21 +33,12 @@ export const apiGetPosts = () => ({
   },
   onSuccess: (res, dispatch) => {
     // Callback on success
-    console.log(res); // respond from server
 
     // We can dispatch other action
     // dispatch(OthereExampleAction)
   },
   onFailure: (res, dispatch) => {
     // Callback on failure
-    console.log(res); // respond from server
-
-    // We can dispatch other action
-    // dispatch(OthereExampleAction)
-  },
-  callback: (res, dispatch) => {
-    // Callback (success and failure)
-    console.log(res); // respond from server
 
     // We can dispatch other action
     // dispatch(OthereExampleAction)
