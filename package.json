@@ -3,7 +3,7 @@
   "engines": {
     "node": ">=5.0"
   },
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Start your project easy and fast with modern tools",
   "scripts": {
     "start": "rimraf dist && NODE_ENV=development node bin/server.js",
