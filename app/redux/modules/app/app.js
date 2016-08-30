@@ -1,4 +1,4 @@
-import { createReducer } from '../../utils/createReducer';
+import createReducer from '../../utils/createReducer';
 
 // Spinner hidden by default
 const initialState = {
@@ -25,4 +25,3 @@ export const showSpinnerAsyncPage = () => ({
 export const hideSpinnerAsyncPage = () => ({
   type: 'HIDE_SPINNER_ASYNC_PAGE',
 });
-

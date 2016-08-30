@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from '../';
-import { promiseMiddleware } from '../middleware/promise';
-import { apiMiddleware } from '../middleware/api';
+import promiseMiddleware from '../middleware/promise';
+import apiMiddleware from '../middleware/api';
 
 const __PRODUCTION__ = __PRODUCTION__ || process.env.NODE_ENV === 'production'; // eslint-disable-line
 

@@ -11,7 +11,7 @@ import morgan from 'morgan';
 import compression from 'compression';
 import configureStore from '../redux/store/configureStore';
 import routes from '../routes.js';
-import { renderFullPage } from './utils/render';
+import renderFullPage from './utils/render';
 
 global.location = {};
 global.window = {};

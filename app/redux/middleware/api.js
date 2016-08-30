@@ -4,7 +4,7 @@
 import request from 'superagent-bluebird-promise';
 import { API_URL } from '../../constants';
 
-export const apiMiddleware = store => next => action => {
+const apiMiddleware = store => next => action => {
   if (action.url) {
     // Generate promise
     const requestPromise = action.mode === 'GET'
@@ -47,3 +47,5 @@ export const apiMiddleware = store => next => action => {
     next(action);
   }
 };
+
+export default apiMiddleware;

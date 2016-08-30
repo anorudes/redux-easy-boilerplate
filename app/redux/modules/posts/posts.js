@@ -1,4 +1,4 @@
-import { createReducer } from '../../utils/createReducer';
+import createReducer from '../../utils/createReducer';
 
 // initial state before request data from server
 const initialState = {

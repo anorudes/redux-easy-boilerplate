@@ -1,4 +1,4 @@
-export const renderFullPage = (html, devPort, domain, initialState = null, head) => {
+export default function renderFullPage(html, devPort, domain, initialState = null, head) {
   // Add bundle.css for server side rendering and start:prod
   const bundleCSS = initialState !== null || process.env.NODE_ENV === 'production'
     ? `<link rel="stylesheet" type="text/css" href="http://${domain}:${devPort}/dist/bundle.css"></style>`
@@ -30,4 +30,4 @@ export const renderFullPage = (html, devPort, domain, initialState = null, head)
       </body>
     </html>
     `;
-};
+}

@@ -9,7 +9,7 @@ const isPromise = (value) => {
 
 const defaultTypes = ['REQUEST', 'SUCCESS', 'FAILURE'];
 
-export function promiseMiddleware(config = {}) {
+export default function promiseMiddleware(config = {}) {
   const promiseTypeSuffixes = config.promiseTypeSuffixes || defaultTypes;
 
   return (_ref) => {
