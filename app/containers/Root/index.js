@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Helmet from 'react-helmet';
 
 import * as actionCreators from 'redux/modules';
 
@@ -51,11 +50,6 @@ export default class Root extends Component {
 
     return (
       <section>
-        { /* title, meta tags */ }
-        <Helmet
-          title="posts"
-        />
-
         <Header />
         {
           spinnerAsyncPage
