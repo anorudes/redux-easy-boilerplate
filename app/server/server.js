@@ -1,6 +1,6 @@
 import Express from 'express';
 import http from 'http';
-import { renderFullPage } from './utils/render';
+import renderFullPage from './utils/render';
 const webpack = require('webpack');
 const webpackConfig = require('../../webpack/common.config');
 const compiler = webpack(webpackConfig);
