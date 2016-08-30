@@ -13,7 +13,7 @@ export default (
     { /* async component */}
     <Route path="/async-example" getComponent={(location, callback) =>
       __CLIENT__
-        ? asyncComponent(require.ensure([], require => callback('', require('./components/Containers/AsyncExample').default), 'async-example'))
+        ? asyncComponent(require.ensure([], require => callback('', require('./components/AsyncExample').default), 'async-example'))
         : callback('', require('./components/AsyncExample').default)
     } />
 
