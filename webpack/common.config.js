@@ -37,6 +37,7 @@ const common = {
     // Webpack alias for beautiful import
     alias: {
       components: path.join(__dirname, '../app/components/'),
+      containers: path.join(__dirname, '../app/containers/'),
       'redux/modules': path.join(__dirname, '../app/redux/modules/'),
       constants: path.join(__dirname, '../app/constants/'),
       decorators: path.join(__dirname, '../app/decorators/'),

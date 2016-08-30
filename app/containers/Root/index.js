@@ -5,8 +5,8 @@ import Helmet from 'react-helmet';
 
 import * as actionCreators from 'redux/modules';
 
-import Loading from 'components/Modules/Loading';
-import Header from 'components/Modules/Header';
+import Loading from 'components/Loading';
+import Header from 'components/Header';
 
 /* global styles for app */
 if (__CLIENT__) {
