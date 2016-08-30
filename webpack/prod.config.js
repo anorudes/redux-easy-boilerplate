@@ -22,7 +22,10 @@ module.exports = {
 
   plugins: [
     // Save all styles in bundle.css with extract-text-plugin
-    new ExtractTextPlugin('bundle.css'),
+    new ExtractTextPlugin({
+      filename: 'bundle.css',
+      allChunks: true,
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     // Minify bundle

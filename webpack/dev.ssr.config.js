@@ -18,13 +18,16 @@ module.exports = {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract({
         notExtractLoader: 'style-loader',
-        loader: 'css?minimize&module&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
+        loader: 'css?module&minimize&localIdentName=[path]__[name]__[local]!postcss',
       }),
     }],
   },
 
   plugins: [
-    new ExtractTextPlugin('bundle.css'),
+    new ExtractTextPlugin({
+      filename: 'bundle.css',
+      allChunks: true,
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
