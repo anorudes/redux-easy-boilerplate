@@ -32,8 +32,6 @@ Really easy react universal boilerplate with many commentaries
   - api server
   - gzip css, js, fonts
 
-Doesn't have redux-form and bootstrap (you can add if needed)
-
 ## How it works
 
 See commentaries in code
@@ -91,9 +89,9 @@ hint: use this mode for production on server
 
 ```$ npm run test```
 
-## How to add [immutable-js](https://github.com/facebook/immutable-js)?
+## How to add [react-formal](https://github.com/jquense/react-formal) for forms?
 
-See branch: [with_immutable](https://github.com/anorudes/redux-easy-boilerplate/tree/with_immutable)<br />
+See branch: [feature/react-formal](https://github.com/anorudes/redux-easy-boilerplate/tree/feature/react-formal)<br />
 
 ## License
 
