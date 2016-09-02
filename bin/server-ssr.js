@@ -13,7 +13,7 @@ const hook = require('css-modules-require-hook');
 hook({
   generateScopedName: process.env.NODE_ENV === 'production'
     ? '[hash:base64:5]'
-    : '[path]__[local]',
+    : '[path]__[local]__[hash:base64:3]',
 });
 
 config.plugins = config.plugins.concat(ignore);
