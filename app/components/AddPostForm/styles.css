@@ -1,0 +1,13 @@
+.root {
+  position: relative;
+
+  margin-top: 10px;
+
+  :global .validation-error {
+    position: absolute;
+    color: red;
+
+    left: 0;
+    margin-top: 30px;
+  }
+}

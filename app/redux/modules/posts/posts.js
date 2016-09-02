@@ -20,6 +20,17 @@ export default createReducer({
 
   ['GET_POSTS_FAILURE']: (state, { payload }) => // for example, error from server
     console.log('error'),
+
+  ['ADD_POST']: (state, { payload }) => ({
+    ...state,
+    items: [
+      ...state.items, {
+        id: state.items.length + 1,
+        text: payload,
+      },
+    ],
+  }),
+
 }, initialState);
 
 // Work with api middleware (will generate request promise).
@@ -43,4 +54,10 @@ export const apiGetPosts = () => ({
     // We can dispatch other action
     // dispatch(OthereExampleAction)
   },
+});
+
+// Example simple action
+export const addPost = (text) => ({
+  type: 'ADD_POST',
+  payload: text,
 });

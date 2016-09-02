@@ -7,16 +7,25 @@ import { asyncConnect } from 'redux-connect';
 import * as actionCreators from 'redux/modules';
 import { apiGetPosts } from 'redux/modules/posts/posts';
 
+import AddPostForm from 'components/AddPostForm';
+
 /* component styles */
 import s from './styles.css';
 
 export class Posts extends Component {
   static propTypes = {
     items: PropTypes.array,
+    addPost: PropTypes.func,
+  };
+
+  addPost = (data) => {
+    const { addPost } = this.props;
+
+    addPost(data.text);
   };
 
   render() {
-    const { items } = this.props;
+    const { items, addPost } = this.props;
 
     return (
       <section className={s.root}>
@@ -33,6 +42,8 @@ export class Posts extends Component {
             )
           }
         </div>
+
+        <AddPostForm handleSubmit={this.addPost} />
       </section>
     );
   }

@@ -14,6 +14,7 @@ Really easy react universal boilerplate with many commentaries
 - [React CSS modules](https://github.com/gajus/react-css-modules)
 - [PostCSS](https://github.com/postcss/postcss)
 - [Redux-connect](https://github.com/makeomatic/redux-connect)
+- [React-formal](https://github.com/jquense/react-formal)
 - [React-helmet](https://github.com/nfl/react-helmet)
 - Server Side Rendering
 - Api server on other port (express)
@@ -31,8 +32,6 @@ Really easy react universal boilerplate with many commentaries
   - 4 modes for run (with auto rimraf dist)
   - api server
   - gzip css, js, fonts
-
-Doesn't have redux-form and bootstrap (you can add if needed)
 
 ## How it works
 
