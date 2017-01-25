@@ -39,6 +39,7 @@ const common = {
       components: path.join(__dirname, '../app/components/'),
       containers: path.join(__dirname, '../app/containers/'),
       'redux/modules': path.join(__dirname, '../app/redux/modules/'),
+      'redux/store': path.join(__dirname, '../app/redux/store/'),
       constants: path.join(__dirname, '../app/constants/'),
       decorators: path.join(__dirname, '../app/decorators/'),
       utils: path.join(__dirname, '../app/utils/'),
