@@ -12,7 +12,6 @@ export default function renderFullPage(html, devPort, domain, initialState = nul
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <meta property="og:type" content="website" />
         <meta property="og:url" content=${head || ''} />
-        ${head ? head.title.toString() : ''}
         ${head ? head.meta.toString() : ''}
         ${bundleCSS}
         <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
