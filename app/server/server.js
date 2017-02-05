@@ -11,7 +11,7 @@ const proxy = require('http-proxy').createProxyServer({});
 // Port for web-dev-server and server app (bundle.js, bundle.css, dist, static)
 const port = process.env.NODE_ENV === 'development'
   ? 3000
-  : 80;
+  : (process.env.PORT || 80);
 
 app.use(require('morgan')('short'));
 
